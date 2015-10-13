@@ -8,7 +8,7 @@
 	if(!defined('LIVE')) DEFINE('LIVE', true);
 	
 	//errors emailed here
-	DEFINE('CONTACT_EMAIL', 'contactus@dukesnuz.com');
+	DEFINE('CONTACT_EMAIL', 'hello@dukesnuz.com');
 	DEFINE('CONTACT_EMAIL_2', 'david@ajaxtransport.com');
 	
 	
@@ -20,7 +20,7 @@
     //define('MYSQL_ADMIN', '../../includes_2/mysql.inc.php');
 
     //define url link when using MOD_WRITE
-   // define('MODWRITE', '/dukesnuz/david/petringa/');
+    define('MODWRITE', '/dukesnuz/david/petringa/');
 	// ="/dukesnuz/david/petringa/";
 
 	
