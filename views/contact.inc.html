@@ -1,0 +1,45 @@
+<!--/******************ALso uses pages  contact.php, contact.inc.html, ajax_contact.php contact.js********/-->
+<section>
+       
+      <div class="content">
+      	<h1>Contact</h1>
+
+
+    	<div id="contact_error" style="color:red;font-weight: bold"></div>
+    	
+    	<!--autofocus
+    		/contact/dukesnuz/david/petringa/
+    		contact.php
+    		-->
+    	<form name="contact" method="post" action="/contact/dukesnuz/david/petringa/" id="contact">
+    		<fieldset>
+    			<legend>Your Name and Email Address</legend>
+    			<p><label class="question" for="first_name">What is your first name?</label>
+    				<input type="text" id="first_name" name="first_name" placeholder="Enter your first name." size="50" value="" required  />
+    			</p>
+    			<p><label class="question" for="last_name">What is your last name?</label>
+    				<input type="text" id="last_name" name="last_name" placeholder="Enter your last name." size="50" value="" required />
+    			</p>
+    			
+    			<p><label class="question" for"email">What is your email address?</label>
+    				<input type="email" id="email" name="email" placeholder="Your email address." size="50" value="" required />
+    			</p>
+    		</fieldset>
+    		
+    			<fieldset>
+    				<legend>Your Message</legend>
+    				<p><label class="question" for="message">Your message</label>
+    					<textarea id="message" name="message" rows="7" cols="50" placeholder="Your message." value="" required></textarea>
+    				</p>
+    			</fieldset>
+    		
+    		<div id="buttons">
+    			<input type="submit" value="Submit" id="submit" /> or
+    			<input type="reset" value="Erase and start over" />
+    		</div>
+    		
+    	</form>
+   
+    </div>
+  </section>
+ 
