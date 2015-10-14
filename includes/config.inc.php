@@ -10,7 +10,7 @@
 	//errors emailed here
 	DEFINE('CONTACT_EMAIL', 'hello@dukesnuz.com');
 	DEFINE('CONTACT_EMAIL_2', 'david@ajaxtransport.com');
-	
+	DEFINE('CONTACT_EMAIL_ASCII', '&#104 &#101 &#108 &#108 &#111 &#64 &#100 &#117 &#107 &#101 &#115 &#110 &#117 &#122 &#46 &#99 &#111 &#109');
 	
      //define connection to database                   
    // define('MYSQL', '../include_2/mysqli_connect.php');

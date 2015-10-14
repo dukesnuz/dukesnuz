@@ -112,13 +112,15 @@ aside{
 footer{
 	width:100%;
 	float:left;
-	 
+	 color:#ffffff; 
 	/*margin-top: 10px;*/
 	border-top:1px solid #000000;
     padding-bottom:3%;
 }
 
-
+footer a{
+	 color:#ffffff; 
+}
 
 /***********************Guest book retrieve************************/
 #gb_retrieve{
@@ -161,6 +163,7 @@ td{
     padding-bottom:3%;
 	padding-top:3%;
 	float:left;
+	
 }
 footer .social ul{
 	/*display:inline;*/
@@ -169,7 +172,7 @@ footer .social ul{
 
 footer .social li{
 	/*display: inline;*/
-	 
+	
 	
 	
 }
@@ -326,6 +329,7 @@ footer .social ul{
 	display:inline;
 	list-style: none;
 	margin-left: 0px;
+	
 }
 
 footer .social li{

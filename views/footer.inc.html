@@ -1,5 +1,21 @@
 <footer id="footer">
-	 
+	    		<div class="social">
+		
+	    	<ul>
+	    	    <!--<li><a href="./index.php">HOME</a></li>-->
+	    		<li><a href="<?php echo MODWRITE;?>">HOME</a></li>
+	    		<!--<li><a href="./about.php">ABOUT</a></li>-->
+	    		<li><a href="/about<?php echo MODWRITE;?>">ABOUT</a></li>
+	    		<li><a href="/shop<?php echo MODWRITE;?>">STORE</a></li>
+	    		<!--<li><a href="./contact.php">CONTACT</a></li>-->
+	    		<li><a href="/contact<?php echo MODWRITE;?>">CONTACT</a></li>
+	    		<li>
+      	        	<a href="mailto:<?php echo CONTACT_EMAIL_ASCII;?>"><?php echo CONTACT_EMAIL_ASCII;?></a>
+      	        </li>
+	    	</ul>
+	    </div>	
+	    
+	    
   
 		<div class="social">
 			<ul>
@@ -30,7 +46,7 @@
     	
 
 	     <div class="copy">
-	     	<p style="font-style:normal;margin-bottom: 2px">Built by me for me</p>
+	     	<p style="font-style:normal;margin-bottom: 2px">Built by David Petringa for me</p>
 	     	<?php
 	     	//get currebt year
 	     	$now = new DateTime();
@@ -39,7 +55,7 @@
 		</div>	
    
    
-   
+
    
    
 			</footer>
