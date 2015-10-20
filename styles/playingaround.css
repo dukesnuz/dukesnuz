@@ -5,6 +5,9 @@
 
 body {  }
 
+.maincontent{
+	height:400px;
+}
 
 .footer{
    width:860px;
