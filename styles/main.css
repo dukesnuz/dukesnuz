@@ -281,8 +281,8 @@ input,textarea{
 	margin-top:3%;
 	padding:3%;
 	float: left;
-	width:44%;
-	 	
+	width:43.5%;
+	border-right:1px solid black;	
 	
 }
 
@@ -290,8 +290,8 @@ input,textarea{
 	margin-top:3%;
     padding:3%;
 	float: left;
-	width:44%;
-	 
+	width:43.5%;
+	
 	 
 }
 
