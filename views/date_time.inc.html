@@ -1,0 +1,174 @@
+<style>
+
+/*
+@font-face {
+    font-family: 'radiolandregular';
+    src: url('../styles/web_fonts/radioland_regular_macroman/RADIOLAND-webfont.eot');
+    src: url('../styles/web_fonts/radioland_regular_macroman/RADIOLAND-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../styles/web_fonts/radioland_regular_macroman/RADIOLAND-webfont.woff') format('woff'),
+         url('../styles/web_fonts/radioland_regular_macroman/RADIOLAND-webfont.ttf') format('truetype'),
+         url('../styles/web_fonts/radioland_regular_macroman/RADIOLAND-webfont.svg#radiolandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*/
+
+
+@font-face {
+    font-family: 'radioland_slimregular';
+    src: url('/../styles/web_fonts/radiolandslim_regular_macroman/RADIOLANDSLIM-webfont.eot');
+    src: url('/../styles/web_fonts/radiolandslim_regular_macroman/RADIOLANDSLIM-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/../styles/web_fonts/radiolandslim_regular_macroman/RADIOLANDSLIM-webfont.woff') format('woff'),
+         url('/../styles/web_fonts/radiolandslim_regular_macroman/RADIOLANDSLIM-webfont.ttf') format('truetype'),
+         url('/../styles/web_fonts/radiolandslim_regular_macroman/RADIOLANDSLIM-webfont.svg#radioland_slimregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+body, footer{
+	background-color:#000000;
+	
+}
+
+
+	#clock{
+		font-family:radioland_slimregular, Arial, sans-serif;
+		/*font-family:radiolandregular, Arial, sans-serif;*/
+		font-weight: normal;
+    	font-style: normal;
+    
+    
+		font-size: 10em;
+		text-align:center;
+		color:#32CD32;
+		border: 30px dashed #ffffff;
+		width:80%;
+		/*background-image: -moz-linear-gradient(center bottom, blue, #ffffff);*/
+		background-color:#000000;
+		margin:5%;
+		padding:2%;
+	   
+	  /* -webkit-linear-gradient(center top, #b1b1b1, #ffffff);
+	    -moz-linear-gradient(center top, #b1b1b1, #ffffff);
+	    -o-linear-gradient(center top, #b1b1b1, #ffffff);
+	    -ms-linear-gradient(center top,#b1b1b1, #ffffff);
+	       linear-gradient(center top, #b1b1b1, #ffffff);
+	    */
+	}
+	.clock p, .clock h1, .clock h2{
+		font-size: 3em;
+		text-align: center;
+		margin: 0px
+		padding:0px;
+		line-height:.25em;
+		width:auto;
+	
+	}
+	.clock h1{
+		margin-top:2px;
+		font-size: 6em;
+	}
+	.clock h2{
+		font-size: 2em;
+		margin-bottom:10px;
+	}
+	
+	.wrapper{
+		background-color:#fffff;
+	}
+	header{
+		background-color: transparent;
+		
+	}
+	
+aside{
+	padding:15px;
+	position: absolute;
+	margin-top:2px;
+	margin-left:2px;
+	font-size: 1.25em;
+	font-style: bold;
+	background-color: rgba(0,0,0, .5);
+	border: 3px solid green;
+	
+	border-radius: 25px;
+}
+
+aside a{
+	color:#ffffff;
+	font-size: bold;
+}
+
+.description{
+	font-siz:1em;
+	position:relative;
+	margin: 0px 0px 12% 12%;
+	padding:2%;
+	width:35%;
+	background-color: #D3D3D3;
+	margin-top: 1px;
+	border-radius: 10% 10% 0 0;
+	/*border: 3px dotted  #101722;*/
+	line-height: 1.5em;
+	box-shadow: -200px -100px 300px #DC143C;
+	float:left;
+}
+
+
+</style>
+<div class="wrapper">
+	
+
+<section>
+ <div class= "content_wide clock" >
+
+
+	<header>
+		<h1 class="title">The Clock</h1>
+	</header>
+	
+<aside>
+	<a href="#footer" class="tweet">Tweet This Page</a>
+</aside>
+
+<?php
+     echo "<p>Today is $date.</p>";
+	 echo "<p>This is day $dayofyear for the year.</p>";
+	 echo "<p>There are $daysleft days left in the year.</p>";
+?>
+
+
+
+<h2>The current time is:</h2>
+<div id="clock">Time</div>
+
+
+	
+	
+</div>
+
+    <div class="description">
+	  <p>
+	  	I used PHP coding to retrieve the current date, day of week, day of year and days left in the year.
+		For the time I used javascript. To create the blinking words and button, I used javascript setInterval
+		and jQuery CSS.
+		I used CSS linear-gradient to create the background color for the body.
+		Page displays best using Firefox Browser.
+		<br>
+		A really fantastic book to learn Javascript and jQuery is
+		<a href="http://amzn.to/1LVt5W9" target="blank">
+			Sams Teach Yourself jQuery and Javascript in 24 Hours by Brad Dayley
+		</a>
+	</p>
+ </div>
+ 
+
+</section>
+</div>
+<script type="text/javascript" src="<?php echo $folder_level; ?>js/time.js"></script>
