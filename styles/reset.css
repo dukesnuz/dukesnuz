@@ -39,6 +39,8 @@ q:before, q:after {
 a{
 	text-decoration: none;
 }
-
+img{
+	border:0px;
+}
 
 /* end reset browser styles */
