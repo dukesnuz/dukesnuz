@@ -1,5 +1,18 @@
 <?php
-require('./includes/config.inc.php');
+//check if config file exists
+	if(file_exists("./includes/config.inc.php"))
+		{
+    		 require('./includes/config.inc.php');
+    		 $folder_level = FOLDER_LEVEL_1;
+ 		}elseif(file_exists("../includes/config.inc.php"))
+ 		{
+ 			 require('../includes/config.inc.php');
+ 			 $folder_level = FOLDER_LEVEL_2;
+ 		}else{
+ 			 $body = "Page:header.inc.html\rline10-config.inc.php file not found\rEND email";
+ 			 mail("hello@dukesnuz.com","ERROR DukesNuz",$body,"hello@dukesnuz.com");
+ 			 die("OOppss! System error. We apologize for in inconvenience. Error has been reported to Dukesnez");
+ 		}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +21,7 @@ require('./includes/config.inc.php');
 
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
 		<title>
 		<?php
@@ -31,25 +44,23 @@ require('./includes/config.inc.php');
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<link rel='stylesheet' href="/styles/nav.css">
+		<link rel='stylesheet' href="<?php echo $folder_level; ?>styles/nav.css">
 		
-		<link rel="stylesheet" media="all" href="/styles/styles.css" type="text/css" />
+		<link rel="stylesheet" media="all" href="<?php echo $folder_level; ?>styles/styles.css" type="text/css" />
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		
-		<script src="/js/_js.js"></script>
-        <script src="/js/video_js.js"></script><!--used for video on home page-->
+		<script src="<?php echo $folder_level; ?>js/_js.js"></script>
+		
+        <script src="<?php echo $folder_level; ?>js/video_js.js"></script>
+        <!--used for video on home page -->
         
-        <!--below used for dev
-		<link rel="stylesheet" media="all" href="styles/styles.css" type="text/css" />
-		<script src="js/_js.js"></script>
-        <script src="js/video_js.js"></script><!--used for video on home page-->
-        <!--END links for dev-->
+       
 	</head>
 
 	<body>
 		
-		<!--<div>-->
+	 
 <article>
 	<section>
 			<header>
@@ -64,11 +75,18 @@ require('./includes/config.inc.php');
 	    				<li><a href="<?php echo MODWRITE;?>">HOME</a></li>
 	    				<!--<li><a href="./about.php">ABOUT</a></li>-->
 	    				<li><a href="/about<?php echo MODWRITE;?>">ABOUT</a></li>
-	    				<li><a href="/shop<?php echo MODWRITE;?>">Store</a></li>
+	    				 <li><a href="/about<?php echo MODWRITE;?>">STORE</a></li>
 	    				<!--<li><a href="./contact.php">CONTACT</a></li>-->
 	    				<li><a href="/contact<?php echo MODWRITE;?>">CONTACT</a></li>
 					
-			
+						<li><a href="#">Coding Playground</a>
+							<ul>
+								<li><a href="/coding/playground/flickr<?php echo MODWRITE;?>">flickr</a></li>
+								<li><a href="/coding/playground/clock<?php echo MODWRITE;?>">Clock</a></li>
+							</ul>
+						</li>	
+						
+						
 						<li><a href="#">Art Galleries | I coded these</a>
 							<ul>
 								<li><a href="http://dukesnuz.com/d/artgallery/gallery_1.php" target="blank">Art Gallery One</a></li>
@@ -147,7 +165,7 @@ require('./includes/config.inc.php');
 						
 						
 				</ul>
-		  </div>	<!--end menu -->
+		 
 		  </div>	<!--end menu wrap-->
 		 
 			</nav>
@@ -166,3 +184,4 @@ require('./includes/config.inc.php');
 	 </div>	
 		
 		  	</header>
+		  	
