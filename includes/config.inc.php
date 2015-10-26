@@ -3,14 +3,14 @@
     //echo 'config';
     // are we live
     //use below for devlopement
-     //if(!defined('LIVE')) DEFINE('LIVE', false);
+    // if(!defined('LIVE')) DEFINE('LIVE', false);
 	//use below for live
 	if(!defined('LIVE')) DEFINE('LIVE', true);
 	
 	//errors emailed here
 	DEFINE('CONTACT_EMAIL', 'hello@dukesnuz.com');
 	DEFINE('CONTACT_EMAIL_2', 'david@ajaxtransport.com');
-	DEFINE('CONTACT_EMAIL_ASCII', '&#104&#101&#108&#108&#111&#64&#100&#117&#107&#101&#115&#110&#117&#122&#46&#99&#111&#109');
+	DEFINE('CONTACT_EMAIL_ASCII', '&#104;&#101;&#108;&#108;&#111;&#64;&#100;&#117;&#107;&#101;&#115;&#110;&#117;&#122;&#46;&#99;&#111;&#109;');
 	
      //define connection to database                   
    // define('MYSQL', '../include_2/mysqli_connect.php');
@@ -22,7 +22,23 @@
     //define url link when using MOD_WRITE
     define('MODWRITE', '/dukesnuz/david/petringa/');
 	// ="/dukesnuz/david/petringa/";
-
+	
+	//For LIVE or Dev
+	if(LIVE)
+	{
+	   //if access from level 1 directory = main folder
+	   //Live
+	   define('FOLDER_LEVEL_1','/');
+	   define('FOLDER_LEVEL_2', '/');
+	}else{
+		//if access from level 1 directory = main folder
+		//Dev 
+	   define('FOLDER_LEVEL_1','./');
+	   define('FOLDER_LEVEL_2', "../");
+	   
+		
+	}
+	
 	
 	function my_error_handler($e_number, $e_message, $e_file, $e_line, $e_vars)
 	{
