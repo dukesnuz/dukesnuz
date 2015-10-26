@@ -44,7 +44,7 @@ if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['em
 					mail($_POST['email'],"David Recieved Your Contact Message",$body,'FROM:'.CONTACT_EMAIL);
 					
 					//Send email to me
-					mail(CONTACT_EMAIL,"Contact Message in on dukesNuz",$body,'FROM:'.CONTACT_EMAIL_2);
+					mail(CONTACT_EMAIL_2,"Contact Message in on dukesNuz",$body,'FROM:'.CONTACT_EMAIL);
 					
 					exit;
 				}else{
