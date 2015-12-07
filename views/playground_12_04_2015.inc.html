@@ -1,0 +1,81 @@
+
+<!--
+	for ref.
+	http://www.w3schools.com/css/css3_gradients.asp
+	http://www.w3schools.com/css/css3_2dtransforms.asp
+	
+-->
+<style>
+
+	#grad{
+	    background: -moz-repeating-radial-gradient(#FFA860,#0A1146  10%, white 15%);
+	    background: -ms-repeating-radial-gradient(#FFA860,#0A1146  10%, white 15%);
+	    background: -o-repeating-radial-gradient(#FFA860,#0A1146  10%, white 15%);
+	    background: -webkit-repeating-radial-gradient(#FFA860,#0A1146  10%, white 15%);
+	    background: repeating-radial-gradient(#FFA860,#0A1146  10%, white 15%);
+	    padding:20%;
+		width:300px;
+		height:300px;
+		border-radius:90%;
+		margin-left: 5%;;
+	}
+	
+	#grad:hover{
+	
+		-moz-transform:scale(.8);
+		-ms-transform:scale(.8);
+		-o-transform:scale(.8);
+		-webkit-transform:scale(.8);
+		transform:scale(.8);
+		
+		-moz-transform:rotate(180deg);
+		-ms-transform:rotate(180deg);
+		-o-transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+		transform:rotate(180deg);
+		
+	}
+	p{
+		font-size: 2.5em;
+		width:100%;
+		text-align:center;
+		color:#ffffff;
+		font-weight: bold;
+	}
+	
+	h1{
+		color:#EC6B00;
+	}
+		        /*-moz-transform:scale(.5);
+				-ms-transform:scale(.5);
+				-o-transform:scale(.5);
+				-webkit-transform:scale(.5);
+				tranform:scale(.5);*/
+</style>
+
+<section>
+       
+      <div class="content" >
+      	
+      	
+	<h1>CSS3 Repeating Radial Gradient and Transform</h1>
+
+
+<div id="grad"><p >&#8681; Hover &#8681; </p></div>
+
+
+    <aside style="margin-top:15%;">
+       <h3>These are the CSS3 styles I used in creating the circle</h3>
+       <ul>
+         	<li><a href="http://www.w3schools.com/css/css3_gradients.asp">Repeating Radial Gradient</a></li>
+       	    <li><a href="http://www.w3schools.com/css/css3_2dtransforms.asp">Transforms Scale and Rotate</a></li>
+       	    <li><a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">Border Radius</a></li>
+       </ul>
+       <p>Transform scale is not working correctly in this example.</p>
+   </aside> 
+   
+ 
+      </div>
+  </section>
+  
+  
