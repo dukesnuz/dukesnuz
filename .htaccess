@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+Options -MultiViews
+
+RewriteEngine on
+#http://httpd.apache.org/docs/2.4/mod/mod_rewrite.html
+
+#http://httpd.apache.org/docs/2.4/mod/core.html#if
+ 
+
+RewriteRule ^dukesnuz/david/petringa/?$  index.php
+RewriteRule ^about/dukesnuz/david/petringa/?$  about.php
+RewriteRule ^contact/dukesnuz/david/petringa/?$  contact.php
+RewriteRule ^shop/dukesnuz/david/petringa/?$  store.php
+
+RewriteRule ^coding/playground/menu/dukesnuz/david/petringa/?$ coding-playground/coding_playground.php
+
+RewriteRule ^coding/playground/flickr/dukesnuz/david/petringa/?$ coding-playground/flickr.php
+RewriteRule ^coding/playground/clock/dukesnuz/david/petringa/?$ coding-playground/date_time.php
+RewriteRule ^coding/playground/css3/radial/gradient/transform/scale/rotate/dukesnuz/david/petringa/?$ coding-playground/playground_12_04_2015.php
+RewriteRule ^coding/playground/storing/sessions/in/a/database/php/mysqli/dukesnuz/david/petringa/?$ coding-playground/sessions.php 
+RewriteRule ^coding/playground/storing/sessions/in/a/database/php/mysqli/dukesnuz/david/petringa/?$ coding-playground/sessions.php?logout=true            
+
+
+
+</IfModule>
