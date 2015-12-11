@@ -2,7 +2,7 @@
 /***********************Using book PHP Advanced and Object Orietned Programming page 82***********************************/
 require('db_sessions.inc.php');
 
-
+mail(CONATCT_EMAIL,'Sesion page accssed',SITE_NAME,CONTACT_EMAIL);
 
 $title = "Storing Session Data";
 
@@ -67,6 +67,24 @@ if(isset($_POST['session_1'])  )
 			
 		
 
+		/////////////
+			if(isset($_GET['logout']))
+		{
+			
+			   session_destroy();
+			   echo '<p style="color:green">Session Destroyed. Session no longer stored in database.</p>';    
+		
+		}else{
+			if(empty($_SESSION))
+				{
+				   // echo '<p>There is no active session.</p>';
+			
+			    }else{
+			    	echo '<p><a href="/coding/playground/storing/sessions/in/a/database/php/mysqli'.MODWRITE.'?logout=true"><span style="color:red">Click here to destroy current session</span></a></p>';
+			    }
+			    
+		}
+		/////////////////////
 		
 
 //store dummy sessions
@@ -89,30 +107,12 @@ if(empty($_SESSION))
 	}
 
 
-
-	
-	if(isset($_GET['logout']))
-		{
-			
-			   session_destroy();
-			   echo '<p>Session Destroyed. Session no longer stored in database. Refresh Page to show there is no active session.</p>';    
-		
-		}else{
-			if(empty($_SESSION))
-				{
-				    echo '<p>There is no active session.</p>';
-			
-			    }else{
-			    	echo '<p><a href="/coding/playground/storing/sessions/in/a/database/php/mysqli'.MODWRITE.'?logout=true">Destroy current session</a></p>';
-			    }
-			    
-		}
-
 		session_write_close();
 ?>
 
-
+<!--
 <p><a href="/coding/playground/storing/sessions/in/a/database/php/mysqli<?php echo MODWRITE;?>">Refresh Page</a></p>
+-->
 
 <aside>
 	<h4>Credit for the creation of this page.</h4>

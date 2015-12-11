@@ -2,9 +2,9 @@
 /***********************Using book PHP Advanced and Object Orietned Programming page 82***********************************/
 
 
-$sdbc = NULL;
+$dbc = NULL;
 //set time to delete expired session
-$expire = 60;
+$expire = 10;
 
 define('ERROR',"<p style='color:red'>OOppss! System Error. We apologize.</p>");
 
@@ -79,14 +79,16 @@ function clean_session($expire){
 	global $dbc;
 	
        $q = sprintf('DELETE FROM sessions WHERE DATE_ADD(last_accessed, INTERVAL %d SECOND) < NOW()', (int) $expire); 
-      
+     
 		$r = mysqli_query($dbc,$q);
 		
 if(mysqli_affected_rows($dbc) ==1)
 	{
-		//echo 'true3';
+		echo '<p>Garbage Collection Performed.</p>';
+		mail(CONATCT_EMAIL,'Garbage Collection Performed',SITE_NAME.'script db_sessions.inc.php-line 88',CONTACT_EMAIL);
 	}else{
-		 //echo ERROR;
+		 echo 'Garbage collection error'.ERROR;
+		 mail(CONATCT_EMAIL,'Garbage Collection Error',SITE_NAME.'script db_sessions.inc.php-line 88',CONTACT_EMAIL);
 	}
 	
 }
