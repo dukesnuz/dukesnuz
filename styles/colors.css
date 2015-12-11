@@ -62,16 +62,13 @@ header, footer{
 	 
 }
 aside a {
-	color:#140808 ;
- 
+	color:#8B8080;
 }
 
 
 footer{
 	color:#ffffff;
 	background-color:#8B8080;
-	 
-	
 } 
 
 
@@ -79,9 +76,7 @@ footer{
 /**************Links********************/
 a{
 	color:#8B8080;
-	
 }
 a:hover{
 	color:green;
-	
 }
