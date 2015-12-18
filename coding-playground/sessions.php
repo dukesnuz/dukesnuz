@@ -2,12 +2,13 @@
 /***********************Using book PHP Advanced and Object Orietned Programming page 82***********************************/
 require('db_sessions.inc.php');
 
-mail(CONATCT_EMAIL,'Sesion page accssed',SITE_NAME,CONTACT_EMAIL);
+
 
 $title = "Storing Session Data";
 
 include('../views/header.inc.html');
 
+mail(CONTACT_EMAIL,'Session page accssed',SITE_NAME.'Line10',CONTACT_EMAIL);
 
 ?>
 <section>
@@ -25,6 +26,7 @@ include('../views/header.inc.html');
 
 
 $ip = $_SERVER['REMOTE_ADDR'];
+$ip = 99;
 
 if(isset($_POST['session_1'])  )
 		{
@@ -40,8 +42,9 @@ if(isset($_POST['session_1'])  )
 			
 ?>
 		<p>Set session data in one or two fields.</p>
-		
-		<form action= "/coding/playground/storing/sessions/in/a/database/php/mysqli<?php echo MODWRITE;?>" method ="post">
+		//for testing use http://localhost/dukesnuz/coding-playground/sessions.php
+		//for live use /coding/playground/storing/sessions/in/a/database/php/mysqli<?php echo MODWRITE;?>
+		<form action= "http://localhost/dukesnuz/coding-playground/sessions.php" method ="post">
 			<fieldset>
 				<legend>Create Session Data</legend>
 				<p><label class="question">Session 1</label>
