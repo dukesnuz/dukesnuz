@@ -7,19 +7,29 @@ RewriteEngine on
 #http://httpd.apache.org/docs/2.4/mod/core.html#if
  
 
-RewriteRule ^dukesnuz/david/petringa/?$  index.php
-RewriteRule ^about/dukesnuz/david/petringa/?$  about.php
-RewriteRule ^contact/dukesnuz/david/petringa/?$  contact.php
-RewriteRule ^shop/dukesnuz/david/petringa/?$  store.php
+RewriteRule ^(dukesnuz/david/petringa)/?$  index.php
 
-RewriteRule ^coding/playground/menu/dukesnuz/david/petringa/?$ coding-playground/coding_playground.php
 
-RewriteRule ^coding/playground/flickr/dukesnuz/david/petringa/?$ coding-playground/flickr.php
+#RewriteRule ^about/dukesnuz/david/petringa/?$  about.php
+#RewriteRule ^contact/dukesnuz/david/petringa/?$  contact.php
+#RewriteRule ^shop/dukesnuz/david/petringa/?$  store.php #page name changed to shop in order to use below rule
+
+#above rewritten to one line below
+RewriteRule ^([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ $1.php
+
+
+
+
+#RewriteRule ^coding/playground/menu/dukesnuz/david/petringa/?$ coding-playground/coding_playground.php
+#RewriteRule ^coding/playground/flickr/dukesnuz/david/petringa/?$ coding-playground/flickr.php
+
 RewriteRule ^coding/playground/clock/dukesnuz/david/petringa/?$ coding-playground/date_time.php
 RewriteRule ^coding/playground/css3/radial/gradient/transform/scale/rotate/dukesnuz/david/petringa/?$ coding-playground/playground_12_04_2015.php
 RewriteRule ^coding/playground/storing/sessions/in/a/database/php/mysqli/dukesnuz/david/petringa/?$ coding-playground/sessions.php 
 RewriteRule ^coding/playground/storing/sessions/in/a/database/php/mysqli/dukesnuz/david/petringa/?$ coding-playground/sessions.php?logout=true            
 
 
+#try to make page names similiar to flckr and menu in order to be able to use the below line for more than one page
+RewriteRule ^coding/playground/([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ coding-playground/$1.php
 
 </IfModule>
