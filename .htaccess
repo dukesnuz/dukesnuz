@@ -1,6 +1,8 @@
 <IfModule mod_rewrite.c>
 Options -MultiViews
-
+################################
+#######Last edit 12192015#######
+################################
 RewriteEngine on
 #http://httpd.apache.org/docs/2.4/mod/mod_rewrite.html
 
