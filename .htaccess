@@ -2,36 +2,40 @@
 Options -MultiViews
 ################################
 #######Last edit 12192015#######
+##Great URL: http://yourdomain.com/furniture/brown-leather-couch
+##http://www.brickmarketing.com/blog/url-tips-for-seo.htm
+##http://httpd.apache.org/docs/2.4/mod/mod_rewrite.html
+##http://httpd.apache.org/docs/2.4/mod/core.html#if
 ################################
 RewriteEngine on
-#http://httpd.apache.org/docs/2.4/mod/mod_rewrite.html
-
-#http://httpd.apache.org/docs/2.4/mod/core.html#if
- 
 
 RewriteRule ^(dukesnuz/david/petringa)/?$  index.php
 
-
+##########Primary root folder##########################
 #RewriteRule ^about/dukesnuz/david/petringa/?$  about.php
 #RewriteRule ^contact/dukesnuz/david/petringa/?$  contact.php
 #RewriteRule ^shop/dukesnuz/david/petringa/?$  store.php #page name changed to shop in order to use below rule
 
 #above rewritten to one line below
 RewriteRule ^([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ $1.php
+########END Primary root folder#######################
 
 
+##########Playground folder#############################
+#try to make page names similiar in order to be able to use the below line for more than one page
+RewriteRule ^coding/playground/([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ coding-playground/$1.php
 
-
-#RewriteRule ^coding/playground/menu/dukesnuz/david/petringa/?$ coding-playground/coding_playground.php
-#RewriteRule ^coding/playground/flickr/dukesnuz/david/petringa/?$ coding-playground/flickr.php
-
-RewriteRule ^coding/playground/clock/dukesnuz/david/petringa/?$ coding-playground/date_time.php
 RewriteRule ^coding/playground/css3/radial/gradient/transform/scale/rotate/dukesnuz/david/petringa/?$ coding-playground/playground_12_04_2015.php
 RewriteRule ^coding/playground/storing/sessions/in/a/database/php/mysqli/dukesnuz/david/petringa/?$ coding-playground/sessions.php 
 RewriteRule ^coding/playground/storing/sessions/in/a/database/php/mysqli/dukesnuz/david/petringa/?$ coding-playground/sessions.php?logout=true            
+##############END playground folder####################
 
 
-#try to make page names similiar to flckr and menu in order to be able to use the below line for more than one page
-RewriteRule ^coding/playground/([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ coding-playground/$1.php
+#below works for files in subfolder-uses subfolder name ie self-study-courses name dividers will be whatever is used in folder name and modwrite in config
+#this line replaced with below line RewriteRule ^([A-Za-z\+\-]+)/([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ $1/$2.php
+#can go into config file and change the modwrite used in order to change the ending of the url 
+#the below line should work with most folders and scripts used
+
+RewriteRule ^([A-Za-z\+\-]+)/([A-Za-z\+\-]+)/([A-Za-z\+\-]+)/?$ $1/$2.php                 
 
 </IfModule>
