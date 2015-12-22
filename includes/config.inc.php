@@ -3,7 +3,7 @@
     //echo 'config';
     // are we live
     //use below for devlopement
-     if(!defined('LIVE')) DEFINE('LIVE', false);
+    if(!defined('LIVE')) DEFINE('LIVE', false);
 	//use below for live
 	//if(!defined('LIVE')) DEFINE('LIVE', true);
 	
@@ -22,6 +22,7 @@
 
     //define url link when using MOD_WRITE
     define('MODWRITE', '/dukesnuz/david/petringa/');
+	define('MODWRITE2', '/dukesnuz-david-petringa/');
 	// ="/dukesnuz/david/petringa/";
 	
 	//For LIVE or Dev
