@@ -4,7 +4,7 @@
 $title = "Pictures";
 
 include('./views/header.inc.html');
-//$dbc = include('../include_2/mysqli_connect.php');
+
 ?>
 <section>
        
