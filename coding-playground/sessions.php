@@ -3,18 +3,16 @@
 require('db_sessions.inc.php');
 
 
-
 $title = "Storing Session Data";
 
 include('../views/header.inc.html');
 
 mail(CONTACT_EMAIL,'Session page accssed',SITE_NAME.'Line10',CONTACT_EMAIL);
-
 ?>
 <section>
 	 <div class="content">
 <header style="background-color: #ffffff;text-align: center">
-<h1>Storing Session Data in Mysql</h1>
+<h1>Storing Session Data in MySQL</h1>
     <p>This script will store session data in a mysql database. Type values into one or both input fields. Click submit.
 	Session data will be created and stored in the database.  By clicking Destroy Session, the session data is deleted from
 	the database and current session is destroyed.  Click Refresh page to display this result.
@@ -26,7 +24,6 @@ mail(CONTACT_EMAIL,'Session page accssed',SITE_NAME.'Line10',CONTACT_EMAIL);
 
 
 $ip = $_SERVER['REMOTE_ADDR'];
-$ip = 99;
 
 if(isset($_POST['session_1'])  )
 		{
@@ -42,9 +39,8 @@ if(isset($_POST['session_1'])  )
 			
 ?>
 		<p>Set session data in one or two fields.</p>
-		//for testing use http://localhost/dukesnuz/coding-playground/sessions.php
-		//for live use /coding/playground/storing/sessions/in/a/database/php/mysqli<?php echo MODWRITE;?>
-		<form action= "http://localhost/dukesnuz/coding-playground/sessions.php" method ="post">
+		
+		<form action= "/coding/playground/storing/sessions/in/a/database/php/mysqli<?php echo MODWRITE;?>" method ="post">
 			<fieldset>
 				<legend>Create Session Data</legend>
 				<p><label class="question">Session 1</label>

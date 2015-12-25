@@ -11,7 +11,7 @@ include('../views/header.inc.html');
       <div class="content" >
       	
 <h1>My Pictures</h1>
-<h2>Coded using HTML, CSS, PHP, MySQLi and Filemaker</h2>  	
+<h2>Coded using HTML, CSS, PHP, MySQL and Filemaker</h2>  	
 
 
 <?php
@@ -85,9 +85,9 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 			}else{   
             ?>
             <aside><p>Please select a catagory to view pictures. I created this script using HTML, CSS and PHP.  The data 
-            for each picture is stored in a MySQLi database.  I developed a Filemaker solution to be used to input the data in the 
-            MySQLi database. I am using the Filemaker script Execute SQL to insert and edit each record in the MySQLi database.
-            The Select Catagory data ia also being retrieved from MySQLi. I am using the MySQLi Gorup By and Having clauses to
+            for each picture is stored in a MySQL database.  I developed a Filemaker solution to be used to input the data in the 
+            MySQL database. I am using the Filemaker script Execute SQL to insert and edit each record in the MySQL database.
+            The Select Catagory data ia also being retrieved from MySQL. I am using the MySQL Gorup By and Having clauses to
             retrieve only one Catagory.
             If you select the catagory &quot;Filemaker&quot;, you can see a screen shot of the Filemaker layout.
             </p><p>I hope you enjoy my pictures.</p></aside>
@@ -132,7 +132,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 
 	<aside>
 			<ul>
-				<li>Check out my code for this script on <a href="https://github.com/dukesnuz/Git-DukesNuz/blob/2fcdffbbca0212075a1c783c82f369b5211e43d8/coding-playground/storing-picture-data-php-mysqli-filemaker.php" target="blank">GitHub</a></li>
+				<li>Check out my code for this script on <a href="https://github.com/dukesnuz/Git-DukesNuz/blob/1e2a1077bd35cceb54c558f7b65e6f85378c8fef/coding-playground/storing-picture-data-php-mysqli-filemaker.php" target="blank">GitHub</a></li>
 				<li>My other <a href="<?php echo URL;?>/d/artgallery/gallery_1.php">Art Gallery</a> using jQuery Anything Slider.</li>
 				<li>Another <a href="<?php echo URL;?>/d/artgallery/gallery_2.php">Art Gallery</a> using jQuery Plugin Anything Slider.</li>
 			</ul>
