@@ -87,6 +87,8 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
             <aside><p>Please select a catagory to view pictures. I created this script using HTML, CSS and PHP.  The data 
             for each picture is stored in a MySQLi database.  I developed a Filemaker solution to be used to input the data in the 
             MySQLi database. I am using the Filemaker script Execute SQL to insert and edit each record in the MySQLi database.
+            The Select Catagory data ia also being retrieved from MySQLi. I am using the MySQLi Gorup By and Having clauses to
+            retrieve only one Catagory.
             If you select the catagory &quot;Filemaker&quot;, you can see a screen shot of the Filemaker layout.
             </p><p>I hope you enjoy my pictures.</p></aside>
             <?php
