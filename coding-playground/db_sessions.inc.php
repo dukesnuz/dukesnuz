@@ -5,9 +5,7 @@
 $dbc = NULL;
 //set time to delete expired session
 $expire = 10;
-$_SESSION['uid'] = 90;
-$_SESSION['uid'] = 100;
-$ip = $_SERVER['REMOTE_ADDR'];
+
 define('ERROR',"<p style='color:red'>OOppss! System Error. We apologize.</p>");
 
 
@@ -40,35 +38,17 @@ function read_session($sid){
 }
 
 //define function for writing data
-$ip ="77";
-$datas = "a";
-function write_session($sid,$datas, $ip){
+function write_session($sid, $data){
 	global $dbc;
-	$ip = $_SERVER['REMOTE_ADDR'];
-	if(isset($_SESSION['uid']))
-		{
-			$uid = $_SESSION['uid'];
-		}else{
-			$uid = NULL;
-		}
-	if(isset($_SESSION['cid']))
-		{
-			$cid = $_SESSION['cid'];
-		}else{
-			$cid = NULL;
-		}
-	$q = sprintf('REPLACE INTO sessions(id, data, ip, uid, cid) 
-				             VALUES ("%s","%s", "%s", "i","i")', mysqli_real_escape_string($dbc, $sid), 
-				     					                         mysqli_real_escape_string($dbc,$data),
-				     					                         mysqli_real_escape_string($dbc, $uid),
-				     					                         mysqli_real_escape_string($dbc, $cid),
-					                                             mysqli_real_escape_string($dbc, $ip) );
+	$q = sprintf('REPLACE INTO sessions(id, data) 
+				VALUES ("%s","%s")', mysqli_real_escape_string($dbc, $sid), 
+				     mysqli_real_escape_string($dbc,$data));
 		$r = mysqli_query($dbc,$q);
 		if(mysqli_affected_rows($dbc) ==1)
 		{
-		    echo 'true';
+		    //echo 'true';
 		}else{
-		    echo ERROR;
+		 // echo ERROR;
 		}
 			 
 }
