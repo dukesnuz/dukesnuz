@@ -132,7 +132,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 
 	<aside>
 			<ul>
-				<li>Check out my code for this script on <a href="https://github.com/dukesnuz/Git-DukesNuz/blob/1e2a1077bd35cceb54c558f7b65e6f85378c8fef/coding-playground/storing-picture-data-php-mysqli-filemaker.php" target="blank">GitHub</a></li>
+				<li>Check out my code for this script on <a href="https://github.com/dukesnuz/Git-DukesNuz/blob/c4b3a0c62479e1c0541539869f0c593fe4a6daaf/coding-playground/storing-picture-data-php-mysqli-filemaker.php" target="blank">GitHub</a></li>
 				<li>My other <a href="<?php echo URL;?>/d/artgallery/gallery_1.php">Art Gallery</a> using jQuery Anything Slider.</li>
 				<li>Another <a href="<?php echo URL;?>/d/artgallery/gallery_2.php">Art Gallery</a> using jQuery Plugin Anything Slider.</li>
 			</ul>
