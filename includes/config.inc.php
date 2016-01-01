@@ -3,9 +3,9 @@
     //echo 'config';
     // are we live
     //use below for devlopement
-    if(!defined('LIVE')) DEFINE('LIVE', false);
+    //if(!defined('LIVE')) DEFINE('LIVE', false);
 	//use below for live
-	//if(!defined('LIVE')) DEFINE('LIVE', true);
+	if(!defined('LIVE')) DEFINE('LIVE', true);
 	
 	//errors emailed here
 	DEFINE('CONTACT_EMAIL', 'hello@dukesnuz.com');
@@ -16,7 +16,10 @@
      //define connection to database                   
    // define('MYSQL', '../include_2/mysqli_connect.php');
    //below uses ModWrite
-	define('MYSQL','../include_2/mysqli_connect.php');
+    define('MYSQL1','./include_2/mysqli_connect.php');
+    define('MYSQL','../include_2/mysqli_connect.php');
+	
+	
     //below for admin folder
     //define('MYSQL_ADMIN', '../../includes_2/mysql.inc.php');
 
