@@ -1,0 +1,90 @@
+ <section>
+       
+      <div class="content" style="padding-bottom: 1px;">
+ <?php
+ 		if($view_table ==="1")
+ 				{
+      	            echo "<h1>Site Statistics For ".SITE_NAME."</h1>";
+ 				}
+  if($view_table ==="1")
+  			{
+  			?>
+  									<h3>Pages viewed &#124; Sorted by pages with most hits</h3>
+								 
+							     <table id='gb_retrieve'>
+							                     <tr>
+							                        <td>Page Hits</td>
+							                     	<td>Page Last acceessed </td>
+							                     	<td>Page</td>
+							                     	<td>Title</td>
+							                     	<td>Browser</td>
+							                     </tr>
+							                   
+									<?php 
+							                 while($row = mysqli_fetch_array($r, MYSQLI_ASSOC))
+							                       {
+							                    
+							            echo "<tr>
+							                       	<td>".$row['hits']."</td>
+							                   		<td>". date('m/d/y  h:i:s A',$row['page_time'])."</td>
+							                      
+							                      	<td>".$row['page']."</td>
+							                      
+							                      	<td><a href=".$row['url_complete'].">".$row['page_title']."</a></td>
+							                      
+												  	<td>".$row['browser']."</td>
+											</tr>";
+												     }
+								?>     
+											
+								  </table>
+								  
+								  
+<?php
+    }elseif($view_table ==="2"){
+    	
+  
+    /*************************************************table 2***************************************************************************/
+	?>
+								 <h3>List of last 25 page views &#124; Sorted by most recent viewed</h3>
+								 
+							   <table id='gb_retrieve'>
+							                     <tr>
+							                     	<td>Page Last acceessed </td>
+							                     	<td>Page</td>
+							                     	<td>Title</td>
+							                     	<td>Browser</td>
+							                     </tr>
+							                   
+									<?php	 
+							                 while($row = mysqli_fetch_array($r, MYSQLI_ASSOC))
+							                       {
+							                    
+							             echo "<tr>
+							                   		<td>". date('m/d/y  h:i:s',$row['page_time'])."</td>
+							                      
+							                      	<td>".$row['page']."</td>
+							                      
+							                      	<td><a href=".$row['url_complete'].">".$row['page_title']."</a></td>
+							                       	<td>".$row['browser']."</td>
+											</tr>";
+												     }
+										?>		     
+											
+								  </table>
+								  
+								  
+								  <p>Statistics since January 1, 2016</p>
+								  <p>Time is in
+								  	<a href="http://www.worldtimeserver.com/current_time_in_UTC.aspx" target="blank">Coordinated Universal Time &#40;UTC&#41;</a></p>
+<?php
+	}else{
+		echo "<p>OOOpppss! System error. We apoligize for the issue.</p>";
+	}		  
+?>
+
+
+
+
+      </div>
+  </section>
