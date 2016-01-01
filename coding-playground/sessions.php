@@ -7,7 +7,7 @@ $title = "Storing Session Data";
 
 include('../views/header.inc.html');
 
-mail(CONTACT_EMAIL,'Session page accssed',SITE_NAME.'Line10',CONTACT_EMAIL);
+//mail(CONTACT_EMAIL,'Session page accssed',SITE_NAME.'Line10',CONTACT_EMAIL);
 ?>
 <section>
 	 <div class="content">
