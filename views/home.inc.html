@@ -36,6 +36,22 @@
     		/contact/dukesnuz/david/petringa/
     		index.php
     		-->
+     <!----Start random picture--------->
+    		           <h3 style="margin-left:5%">Picture of the Day</h3>
+       <?php
+           if(mysqli_num_rows($rp) >0)
+           			$row_pic = mysqli_fetch_array($rp, MYSQLI_ASSOC);
+           		     	if($row_pic['gallery_select'] ==="GalleryTwo")
+							{
+				    			 echo '<div style="text-align:center">
+				    			 	<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:228px;height:300px;"></a></div>';
+							}else{
+							 	 echo '<div style="text-align:center">
+							 	 	<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:300px;height:228px;"></a></div>';
+							}
+        ?>
+        
+        <!-----------------END random picture------------------------>
          	<h3 style="margin-left:5%">Sign My Guest Book</h3>
     	
     	<div id="gb_error" style="color:red;font-weight: bold"></div>
@@ -79,7 +95,23 @@
              <!--add twitter timeline-->
                   <a class="twitter-timeline"  href="https://twitter.com/Dukesnuz" data-widget-id="655881430338174976">Tweets by @Dukesnuz</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
+        
+        
+        
+        <h3 style="margin-top:20px;">Five Most Viewed Pages</h3>  
+        <?php
+              if(mysqli_num_rows($r) >0)
+							{
+						       echo "<ul style='list-style: none;'>";
+							                 while($row = mysqli_fetch_array($r, MYSQLI_ASSOC))
+							                       {
+							                      	echo  "<li><a href=".$row['url_complete'].">".$row['page_title']."</a></li>";
+							                       }
+							   echo '</ul>';				   
+							}							
+         ?>
+       
+        
     </div>
     
 
