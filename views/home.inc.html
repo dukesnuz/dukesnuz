@@ -28,16 +28,28 @@
     <div class="left_side">
     	<div style="margin-left:5%;margin-bottom:5%;">
            <!--Start quote of the day-->
+           
+            <!--JavaScript code for single Quote of the Day, http://www.tqpage.com/-->
+           <p>
+           <script language="javascript" src="http://www.quotationspage.com/data/1qotd.js"></script> 
+           <!--http://www.quotationspage.com/useourquotes.php-->
+          </p>
+           <!--End JavaScript Quotations code-->
+           
+           
+          <p>
            <script type="text/javascript" src="http://www.brainyquote.com/link/quotebr.js"></script>
            <small><i><a href="http://www.brainyquote.com/quotes_of_the_day.html" target="_blank">more Quotes</a></i></small>
+          </P>
+ 
+          <!--END Quote of the day-->
          </div>
-			<!--END Quote of the day-->
 			 <!--autofocus
     		/contact/dukesnuz/david/petringa/
     		index.php
     		-->
      <!----Start random picture--------->
-    		           <h3 style="margin-left:5%">Picture of the Day</h3>
+    		           <h3 style="margin-left:5%">A Random Picture</h3>
        <?php
            if(mysqli_num_rows($rp) >0)
            			$row_pic = mysqli_fetch_array($rp, MYSQLI_ASSOC);
