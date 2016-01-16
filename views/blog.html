@@ -1,0 +1,386 @@
+<!--
+<link rel='stylesheet' href="../styles/nav.css">
+<link rel="stylesheet" media="all" href="../styles/styles.css" type="text/css" />
+-->
+<style>
+	*{
+		box-sizing: border-box;
+	}
+/*****clear padding and margins from external stlye sheet**/
+article,header,section,aside,.menu,.content,article,.content aside, h1,h2,h3,p{
+	padding:0px;
+	margin: 0px;
+	}
+
+.menu ul, .menu li{
+	padding:0px;
+	margin: 0px;
+	}
+
+h1,h2,h3{
+ 	text-align: center;
+ 	}
+ 
+  .header_blog h1{
+ 	font-size: 2.25em;
+	}
+h2{
+ 	font-size: 2em;
+ 	}
+h3{
+ 	font-size: 1.5em;
+	}
+.menu h3{
+	margin:15px 0px; 	
+ 	}
+p{
+ 	font-size: 1em;
+ 	}
+ 
+.menu ul{
+	width:90%;
+	margin-left: 10%;
+	}
+ 
+.menu li{
+ 	list-style: none;
+ 	margin-bottom:15px;
+ 	font-size: 1.25em;
+ 	border: 2px dashed;
+	border-color: rgba( 20,  8,  8, .1);
+ 	width:100%;
+ 	padding:5px;
+ 	text-align: center;
+ 	margin-left:-20px;
+ 	}
+ 
+.post{
+ 	border: 1px solid gray;
+ 	background-color:rgba( 20,  8,  8, .1);
+ 	margin:10% 5%;
+ 	}
+
+.post h3, .post p{
+	margin: 0px;
+ 	padding: 2px;
+ 	background-color:#ffffff;
+	}
+
+ 
+ 
+.align_center{
+ 	text-align: center;
+ 	background-color:rgba(139,128,128,.1);
+ 	}
+ 
+ .tags, .say{
+ 	font-size: .80em;
+ 	/*color: #140808;
+ 	background-color:rgba(139,128,128,.1);*/
+ 	font-style:italic;
+ 	padding: 1px;
+ 	text-align: left;
+ 	width:300px;
+ 	margin:10px 0px;
+ 	text-indent: 25px;
+ 	}
+ 
+.say {
+	width:90%;
+	font-size: 1em;
+	}
+
+
+.header_blog h1{
+	margin-top:-38px;
+	margin-left:-600px;
+	padding:0px;
+	}
+
+.menu{
+	background-color:#ffffff;
+	width:100%;
+	height:100%;
+	}
+
+.content{
+	background-color:#ffffff;;
+	width:100%;
+	height:100%;	
+	}
+
+.content header h2{
+	background-color:#ffffff;
+	padding: 1px;
+	font-size: 2em;
+	margin-left:0px;
+	}	
+
+.content aside{
+    background-color:gray;
+    width:100%;
+    }
+    
+.lower_strip{
+ 	background-color:rgba( 20,  8,  8,.1);
+ 	color:#fffff;
+ 	width:100%;
+    padding:3%;
+    margin-top:5%;
+ 	}
+
+.lower_strip_right{
+    background-color:rgba( 20,  8,  8,.1);
+ 	width:100%;
+ 	padding:5%;
+    margin-top:5%;
+ 	}  
+ 
+.post img, .desc{
+ 	border: 5px  outset black;
+ 	margin-bottom:2px;
+ 	line-height: 1.5em;
+	}
+   
+.error{
+	font-style: bold;
+	color:#483D8B;
+	font-size: 1.25em;
+	text-align: center;
+	} 
+@media screen and (min-width:480px)
+{
+	
+.menu li{
+	padding:3px;
+	}
+	
+.menu{
+	 float: left;
+	 width:20%;
+		/*
+		position: relative;
+		
+		margin-right:-20%;
+		
+		margin-bottom: -2000px;
+		padding-bottom: 2000px;*/
+	}
+	
+.content{
+	float:left;
+	width:80%;
+	border-right:2px dashed;
+	border-color: rgba( 20,  8,  8, .1);
+	}
+	
+.content aside{
+    float:right;
+    padding:3px;
+    width:30%;	
+    }
+    
+.lower_strip{
+    float:left;
+    position: relative;
+    width:60%;
+    border-right:2px dashed;
+	border-color: rgba( 20,  8,  8, .1);
+	 /* margin-bottom: -500px;
+    padding-bottom: 500px;
+   z-index: -99999;*/
+    /*
+    		position:relative;
+	float:left;
+	background-color:#ffffff;
+	width: 100%;
+	margin-bottom:-2000px;
+	padding-bottom:2000px;*/
+    }
+    
+.lower_strip_right{
+ 	postion:relative;
+ 	float:left;
+ 	width:40%;
+ 	margin-bottom: -500px;
+    padding-bottom: 500px;
+    z-index: -99999;
+  /*position: relative;
+    float: left;
+    width: 125px;
+    background-color: #f452d5;
+    margin-right: -125px;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;*/
+ 	}
+ 	
+
+}
+
+</style>
+
+
+<article>
+
+<header class="header_blog">
+	<h1>Duke's Blog</h1>
+</header>
+
+
+
+
+
+
+<section class="content">
+	
+	  <aside>
+		<form method="post" action="" />
+		<label for="search">Search</label>
+		<input type="text" name="search" placeholder="Search in Construction"/>
+		<input type="submit" value ="Search" name="button" />
+		</form>
+	
+	  </aside>
+	 
+<?php
+/////////////////////////////////////////
+
+echo '<header><h2>'.$catagory.'</h2></header>';
+
+
+if(mysqli_num_rows($r) >0)
+				{
+				   while($row=mysqli_fetch_array($r, MYSQLI_ASSOC))
+					 {
+					     //types  Plain_text   |    HTML_code | URL_link   | IMG_link  |  
+					     if(isset($catagory))
+						 	{
+						 		
+						 	}
+						if($row['html_type'] ==="Plain_text")
+					    	{
+                            echo '<section class="post">';	
+							echo '<header><h3>'.$row['title'].'</h3></header>';
+							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="align_center">'.$row['html'].'</div>';
+							echo '<div class="tags">tags:'.$row['tags'].'</div>';
+							//echo '<div >url file:'.$row['url_file'].'</div>';
+							echo '</section>';
+							
+					    	}elseif($row['html_type'] ==="HTML_code")
+					    	{					  
+							echo '<section class="post">';	
+							echo '<header><h3>'.$row['title'].'</h3></header>';
+							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="align_center">'.$row['html'].'</div>';
+							echo '<div class="tags">tags:'.$row['tags'].'</div>';
+							//echo '<p>url file:'.$row['url_file'].'</p>';
+							echo '</section>';
+							
+						   }elseif($row['html_type'] === "URL_link")
+						   {
+					        echo '<section class="post">';	
+							echo '<header><h3>'.$row['title'].'</h3></header>';
+							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="say">'.$row['teaser'].'</div>';
+							echo '<div class="align_center"><a href="http://'.$row['html'].'" target="blank">Read More</a></div>';
+							echo '<div class="tags"> tags:'.$row['tags'].'</div>';
+							//echo '<p> tags:'.$row['url_file'].'</p>';
+							echo '</section>';
+							
+						    }elseif($row['html_type'] === "IMG_link")
+							{
+							echo '<section class="post">';
+							echo '<header><h3>'.$row['title'].'</h3></header>';
+							echo '<div class="say">'.$row['say'].'</div>';
+						
+							   if($row['gallery_select'] ==="GalleryTwo")
+							      {
+				    		       	echo '<div class="align_center"><a href="http://'.$row['html'].'" target="blank">
+				    		       	     <img src="'.$row['img_url'].'" alt="'.$row['alt'].'" style="width:228px;height:300px;">
+				    		       </a></div>';
+				    		       
+				    		         //echo '<p style="text-align:center"><img src="'.$row['img_url'].'" alt="'.$row['alt'].'" style="width:228px;height:300px;"></p>';
+							      }else{
+							       
+							      	 echo '<div class="align_center"><a href="http://'.$row['html'].'" target="blank">
+							      	 	<img src="'.$row['img_url'].'" alt="'.$row['alt'].'"  style="width:300px;height:228px;">
+							      	 </a></div>';
+							      	 
+							        //echo '<p style="text-align:center"><img src="'.$row['img_url'].'" alt="'.$row['alt'].'" style="width:300px;height:228px;"></p>';
+							      }
+
+							echo '<div class="tags"> tags:'.$row['tags'].'</div>';
+							//echo '<p> tags:'.$row['url_file'].'</p>';
+							echo '</section>';
+							
+						   }else{
+						
+						   }//END IF
+						 }//END while
+				}else{
+					$blog = "<p class='error'>OOppss! We apologize. There are currently no blog posts. Please check back later.</p>";
+					echo $blog;
+				}
+/////////////////////////////////
+?>
+</section>
+
+
+<aside class="menu">
+	         <h3>Catagories</h3>
+	          <?php
+	          if(mysqli_num_rows($rm) >0 )
+	       	 	{
+	       	 			echo '<ul>';
+	       	 			echo "<li><a href='/blog/'>All</a></li>";
+	     			while($row=mysqli_fetch_array($rm, MYSQLI_ASSOC))
+		     				{
+			  					
+			  					//echo "<li><a href='./blog.php?catagory=$row[catagory]'>$row[catagory]</a></li>";
+			  				    $url_cat= strtolower($row['url_cat']);
+			  					//echo "<li><a href='/catagory/blog/$url_file/'>$row[catagory]</a></li>";
+			  					echo "<li><a href='/catagory/blog/$url_cat/'>$row[catagory]</a></li>";
+								
+		     				}
+						echo '</ul>';
+	       		 }
+	       		 
+            ?>
+          </aside>
+          
+<!------bottom section-->
+<section class="lower_strip">
+
+	 <!----Start random picture--------->
+    		           <h3>Picture of the Day</h3>
+       <?php
+           if(mysqli_num_rows($rp) >0)
+           			$row_pic = mysqli_fetch_array($rp, MYSQLI_ASSOC);
+           		     	if($row_pic['gallery_select'] ==="GalleryTwo")
+							{
+				    			 echo '<div style="text-align:center">
+				    			 	<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:228px;height:300px;"></a></div>';
+							}else{
+							 	 echo '<div style="text-align:center">
+							 	 	<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:300px;height:228px;"></a></div>';
+							}
+        ?>
+        
+        <!-----------------END random picture------------------------>
+
+</section>
+
+<section class="lower_strip_right">
+		
+		<div class="desc">
+			I am using a model view controller 
+			<a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">(MVC)</a>
+			 pattern for this web page.  
+	       I using PHP for the controller, HTML for the view and for the modal mySQL.  I also developed a Filemaker solution. The FM solution
+	       stores the blog data.  I use the execute SQL script to upload, edit and delete all blog post data. <!--A screen shot of the FM solution
+	        can be found here.-->
+		</div>
+	</section>
+	
+</article>
