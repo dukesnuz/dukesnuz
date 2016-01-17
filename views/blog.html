@@ -245,26 +245,31 @@ p{
 <?php
 /////////////////////////////////////////
 
-echo '<header><h2>'.$catagory.'</h2></header>';
-
+//echo '<header><h2>'.$catagory.'</h2></header>';
+//grab catagory for header
+	if(!empty($catagory))
+		{
+			$row=mysqli_fetch_array($r, MYSQLI_ASSOC);
+			echo '<header><h2>'.$row['catagory'].'</h2></header>';
+		}else{
+			echo '<header><h2>All</h2></header>';
+		}
 
 if(mysqli_num_rows($r) >0)
 				{
 				   while($row=mysqli_fetch_array($r, MYSQLI_ASSOC))
 					 {
 					     //types  Plain_text   |    HTML_code | URL_link   | IMG_link  |  
-					     if(isset($catagory))
-						 	{
-						 		
-						 	}
+	
 						if($row['html_type'] ==="Plain_text")
 					    	{
                             echo '<section class="post">';	
 							echo '<header><h3>'.$row['title'].'</h3></header>';
 							echo '<div class="say">'.$row['say'].'</div>';
 							echo '<div class="align_center">'.$row['html'].'</div>';
+							echo '<div class="say">'.$row['teaser'].'</div>';
 							echo '<div class="tags">tags:'.$row['tags'].'</div>';
-							//echo '<div >url file:'.$row['url_file'].'</div>';
+							
 							echo '</section>';
 							
 					    	}elseif($row['html_type'] ==="HTML_code")
@@ -273,8 +278,9 @@ if(mysqli_num_rows($r) >0)
 							echo '<header><h3>'.$row['title'].'</h3></header>';
 							echo '<div class="say">'.$row['say'].'</div>';
 							echo '<div class="align_center">'.$row['html'].'</div>';
+							echo '<div class="say">'.$row['teaser'].'</div>';
 							echo '<div class="tags">tags:'.$row['tags'].'</div>';
-							//echo '<p>url file:'.$row['url_file'].'</p>';
+							
 							echo '</section>';
 							
 						   }elseif($row['html_type'] === "URL_link")
@@ -284,8 +290,9 @@ if(mysqli_num_rows($r) >0)
 							echo '<div class="say">'.$row['say'].'</div>';
 							echo '<div class="say">'.$row['teaser'].'</div>';
 							echo '<div class="align_center"><a href="http://'.$row['html'].'" target="blank">Read More</a></div>';
+							echo '<div class="say">'.$row['teaser'].'</div>';
 							echo '<div class="tags"> tags:'.$row['tags'].'</div>';
-							//echo '<p> tags:'.$row['url_file'].'</p>';
+							
 							echo '</section>';
 							
 						    }elseif($row['html_type'] === "IMG_link")
@@ -309,9 +316,9 @@ if(mysqli_num_rows($r) >0)
 							      	 
 							        //echo '<p style="text-align:center"><img src="'.$row['img_url'].'" alt="'.$row['alt'].'" style="width:300px;height:228px;"></p>';
 							      }
-
+                            echo '<div class="say">'.$row['teaser'].'</div>';
 							echo '<div class="tags"> tags:'.$row['tags'].'</div>';
-							//echo '<p> tags:'.$row['url_file'].'</p>';
+						
 							echo '</section>';
 							
 						   }else{
@@ -329,11 +336,13 @@ if(mysqli_num_rows($r) >0)
 
 <aside class="menu">
 	         <h3>Catagories</h3>
-	          <?php
+	         
+	         <?php
+
 	          if(mysqli_num_rows($rm) >0 )
 	       	 	{
-	       	 			echo '<ul>';
-	       	 			echo "<li><a href='/blog/'>All</a></li>";
+	       	 		echo '<ul>';
+	       	 		echo "<li><a href='/blog/'>All</a></li>";
 	     			while($row=mysqli_fetch_array($rm, MYSQLI_ASSOC))
 		     				{
 			  					
@@ -341,7 +350,7 @@ if(mysqli_num_rows($r) >0)
 			  				    $url_cat= strtolower($row['url_cat']);
 			  					//echo "<li><a href='/catagory/blog/$url_file/'>$row[catagory]</a></li>";
 			  					echo "<li><a href='/catagory/blog/$url_cat/'>$row[catagory]</a></li>";
-								
+
 		     				}
 						echo '</ul>';
 	       		 }
@@ -378,7 +387,8 @@ if(mysqli_num_rows($r) >0)
 			<a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">(MVC)</a>
 			 pattern for this web page.  
 	       I using PHP for the controller, HTML for the view and for the modal mySQL.  I also developed a Filemaker solution. The FM solution
-	       stores the blog data.  I use the execute SQL script to upload, edit and delete all blog post data. <!--A screen shot of the FM solution
+	       stores the blog data.  I use the execute SQL script to upload, edit and delete all blog post data.  The code is on
+	       <a href="https://github.com/dukesnuz/Git-DukesNuz/commit/c4c29d09874fc471047c9e58e028091e8e039693">GitHub</a>.<!--A screen shot of the FM solution
 	        can be found here.-->
 		</div>
 	</section>
