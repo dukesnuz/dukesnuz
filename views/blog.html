@@ -249,8 +249,8 @@ p{
 //grab catagory for header
 	if(!empty($catagory))
 		{
-			$row=mysqli_fetch_array($r, MYSQLI_ASSOC);
-			echo '<header><h2>'.$row['catagory'].'</h2></header>';
+			$rowc=mysqli_fetch_array($c, MYSQLI_ASSOC);
+			echo '<header><h2>'.$rowc['catagory'].'</h2></header>';
 		}else{
 			echo '<header><h2>All</h2></header>';
 		}
@@ -388,7 +388,7 @@ if(mysqli_num_rows($r) >0)
 			 pattern for this web page.  
 	       I using PHP for the controller, HTML for the view and for the modal mySQL.  I also developed a Filemaker solution. The FM solution
 	       stores the blog data.  I use the execute SQL script to upload, edit and delete all blog post data.  The code is on
-	       <a href="https://github.com/dukesnuz/Git-DukesNuz/commit/c4c29d09874fc471047c9e58e028091e8e039693">GitHub</a>.<!--A screen shot of the FM solution
+	       <a href="https://github.com/dukesnuz/Git-DukesNuz/commit/830cf3b14f5b7c3b072df73cc9e6152f206fed95">GitHub</a>.<!--A screen shot of the FM solution
 	        can be found here.-->
 		</div>
 	</section>

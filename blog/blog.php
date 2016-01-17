@@ -39,7 +39,8 @@ if(!empty($_GET['catagory']))
 
 	}
      $r = mysqli_query($dbc, $q);
- 
+     //below used to grab catagory for header
+     $c = mysqli_query($dbc, $q);
      
      /**************************Grab a random picture*********************************************/
 	 $qp = "SELECT picture_name, comment, img_url, gallery_select, alt 
