@@ -340,11 +340,17 @@ if(mysqli_num_rows($r) >0)
 /////////////////////////////////
 ?>
 </section>
-
+			<aside>
+	         			<form method="post" action="" />
+							<label  class="question" for="search">Search</label>
+							<input type="text" name="search" placeholder="Search in Construction"/>
+							<input type="submit" value ="Search" name="button" />
+						</form>
+	         		</aside>
 
 <aside class="menu">
 	         <h3>Catagories</h3>
-	         
+
 	         <?php
 
 	          if(mysqli_num_rows($rm) >0 )
@@ -396,7 +402,7 @@ if(mysqli_num_rows($r) >0)
 			 pattern for this web page.  
 	       I using PHP for the controller, HTML for the view and for the modal mySQL.  I also developed a Filemaker solution. The FM solution
 	       stores the blog data.  I use the execute SQL script to upload, edit and delete all blog post data.  The code is on
-	       <a href="https://github.com/dukesnuz/Git-DukesNuz/commit/aeac587a0384de577229d5d1a1d1b0d5e3daeb0e">GitHub</a>.<!--A screen shot of the FM solution
+	       <a href="https://github.com/dukesnuz/Git-DukesNuz/commit/390cb8b5ea81ea45417db12df51f47e507ca4604">GitHub</a>.<!--A screen shot of the FM solution
 	        can be found here.-->
 		</div>
 	</section>
