@@ -70,7 +70,7 @@ if(isset($_POST['address']))
 					$body .= URL."\n\r";
 					$body .="Email End";
 					
-					mail($_POST['email'],"You are subscribed",$body,'FROM:'.CONTACT_EMAIL);
+					mail($_POST['address'],"You are subscribed to DukesNuz",$body,'FROM:'.CONTACT_EMAIL);
 					
 					//Send email to me
 					mail(CONTACT_EMAIL,"Subscriber to Duke's Blog",$body,'FROM:'.CONTACT_EMAIL);
