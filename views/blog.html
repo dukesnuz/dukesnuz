@@ -1,6 +1,7 @@
 <!--
 <link rel='stylesheet' href="../styles/nav.css">
 <link rel="stylesheet" media="all" href="../styles/styles.css" type="text/css" />
+page is also using ajax_add_email.php and add_email_form.inc.html
 -->
 <style>
 	*{
@@ -73,7 +74,7 @@ p{
  	background-color:rgba(139,128,128,.1);
  	}
  
- .tags, .say{
+.tags, .say{
  	font-size: .80em;
  	/*color: #140808;
  	background-color:rgba(139,128,128,.1);*/
@@ -141,7 +142,9 @@ p{
  	margin-bottom:2px;
  	line-height: 1.5em;
 	}
-   
+.desc{
+	padding:15px;
+}
 .error{
 	font-style: bold;
 	color:#483D8B;
@@ -233,14 +236,19 @@ p{
 
 <section class="content">
 	
-	  <aside>
-		<form method="post" action="" />
-		<label for="search">Search</label>
-		<input type="text" name="search" placeholder="Search in Construction"/>
-		<input type="submit" value ="Search" name="button" />
-		</form>
 	
+	    <aside>
+		   <?php include('../site_utilities/add_email_form.inc.html');?>
+	
+   <!--
+			<form method="post" action="" />
+				<label for="search">Search</label>
+				<input type="text" name="search" placeholder="Search in Construction"/>
+				<input type="submit" value ="Search" name="button" />
+			</form>
+	-->
 	  </aside>
+	 
 	 
 <?php
 /////////////////////////////////////////
@@ -388,7 +396,7 @@ if(mysqli_num_rows($r) >0)
 			 pattern for this web page.  
 	       I using PHP for the controller, HTML for the view and for the modal mySQL.  I also developed a Filemaker solution. The FM solution
 	       stores the blog data.  I use the execute SQL script to upload, edit and delete all blog post data.  The code is on
-	       <a href="https://github.com/dukesnuz/Git-DukesNuz/commit/830cf3b14f5b7c3b072df73cc9e6152f206fed95">GitHub</a>.<!--A screen shot of the FM solution
+	       <a href="https://github.com/dukesnuz/Git-DukesNuz/commit/aeac587a0384de577229d5d1a1d1b0d5e3daeb0e">GitHub</a>.<!--A screen shot of the FM solution
 	        can be found here.-->
 		</div>
 	</section>
