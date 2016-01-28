@@ -189,9 +189,9 @@ p{
     width:60%;
     border-right:2px dashed;
 	border-color: rgba( 20,  8,  8, .1);
-	 /* margin-bottom: -500px;
+    margin-bottom: -500px;
     padding-bottom: 500px;
-   z-index: -99999;*/
+    z-index: -99999;
     /*
     		position:relative;
 	float:left;
@@ -205,7 +205,7 @@ p{
  	postion:relative;
  	float:left;
  	width:40%;
- 	margin-bottom: -500px;
+ 	/*margin-bottom: -500px;
     padding-bottom: 500px;
     z-index: -99999;
   /*position: relative;
@@ -273,10 +273,10 @@ if(mysqli_num_rows($r) >0)
 					    	{
                             echo '<section class="post">';	
 							echo '<header><h3>'.$row['title'].'</h3></header>';
-							echo '<div class="say">'.$row['say'].'</div>';
-							echo '<div class="align_center">'.$row['html'].'</div>';
 							echo '<div class="say">'.$row['teaser'].'</div>';
-							echo '<div class="tags">tags:'.$row['tags'].'</div>';
+							echo '<div class="align_center">'.$row['html'].'</div>';
+							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="tags">tags:&nbsp;'.$row['tags'].'</div>';
 							
 							echo '</section>';
 							
@@ -284,10 +284,10 @@ if(mysqli_num_rows($r) >0)
 					    	{					  
 							echo '<section class="post">';	
 							echo '<header><h3>'.$row['title'].'</h3></header>';
-							echo '<div class="say">'.$row['say'].'</div>';
-							echo '<div class="align_center">'.$row['html'].'</div>';
 							echo '<div class="say">'.$row['teaser'].'</div>';
-							echo '<div class="tags">tags:'.$row['tags'].'</div>';
+							echo '<div class="align_center">'.$row['html'].'</div>';
+							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="tags">tags:&nbsp;'.$row['tags'].'</div>';
 							
 							echo '</section>';
 							
@@ -295,11 +295,10 @@ if(mysqli_num_rows($r) >0)
 						   {
 					        echo '<section class="post">';	
 							echo '<header><h3>'.$row['title'].'</h3></header>';
-							echo '<div class="say">'.$row['say'].'</div>';
 							echo '<div class="say">'.$row['teaser'].'</div>';
 							echo '<div class="align_center"><a href="http://'.$row['html'].'" target="blank">Read More</a></div>';
-							echo '<div class="say">'.$row['teaser'].'</div>';
-							echo '<div class="tags"> tags:'.$row['tags'].'</div>';
+							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="tags"> tags:&nbsp;'.$row['tags'].'</div>';
 							
 							echo '</section>';
 							
@@ -307,7 +306,7 @@ if(mysqli_num_rows($r) >0)
 							{
 							echo '<section class="post">';
 							echo '<header><h3>'.$row['title'].'</h3></header>';
-							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="say">'.$row['teaser'].'</div>';
 						
 							   if($row['gallery_select'] ==="GalleryTwo")
 							      {
@@ -324,8 +323,8 @@ if(mysqli_num_rows($r) >0)
 							      	 
 							        //echo '<p style="text-align:center"><img src="'.$row['img_url'].'" alt="'.$row['alt'].'" style="width:300px;height:228px;"></p>';
 							      }
-                            echo '<div class="say">'.$row['teaser'].'</div>';
-							echo '<div class="tags"> tags:'.$row['tags'].'</div>';
+                            echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="tags"> tags:&nbsp;'.$row['tags'].'</div>';
 						
 							echo '</section>';
 							
@@ -376,7 +375,7 @@ if(mysqli_num_rows($r) >0)
 <section class="lower_strip">
 
 	 <!----Start random picture--------->
-    		           <h3>Picture of the Day</h3>
+    		           <h3>My Pictures</h3>
        <?php
            if(mysqli_num_rows($rp) >0)
            			$row_pic = mysqli_fetch_array($rp, MYSQLI_ASSOC);
@@ -397,6 +396,11 @@ if(mysqli_num_rows($r) >0)
 <section class="lower_strip_right">
 		
 		<div class="desc">
+		  <p>
+		  	This blog will contain posts that seem relevent and interesting to me.  I hope you also enjoy them and find this blog useful.
+		  </p>
+		  <br/>
+		  <p>
 			I am using a model view controller 
 			<a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">(MVC)</a>
 			 pattern for this web page.  
@@ -404,6 +408,7 @@ if(mysqli_num_rows($r) >0)
 	       stores the blog data.  I use the execute SQL script to upload, edit and delete all blog post data.  The code is on
 	       <a href="https://github.com/dukesnuz/Git-DukesNuz/commit/390cb8b5ea81ea45417db12df51f47e507ca4604">GitHub</a>.<!--A screen shot of the FM solution
 	        can be found here.-->
+	      </p>
 		</div>
 	</section>
 	
