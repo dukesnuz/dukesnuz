@@ -110,6 +110,22 @@
         
         
         
+          <h3 style="margin-top:20px;">Recent Blog Posts</h3>  
+         <?php
+              if(mysqli_num_rows($b) >0)
+							{
+						       echo "<ul style='list-style: none;'>";
+							                 while($row = mysqli_fetch_array($b, MYSQLI_ASSOC))
+							                       {
+							                      	echo  "<li><a href='/blog/'>".$row['title']."&nbsp;&nbsp;Read More&nbsp;&#10144;</a></li>";
+							                       }
+							   echo '</ul>';				   
+							}							
+         ?>
+         
+         
+         
+        
         <h3 style="margin-top:20px;">Five Most Viewed Pages</h3>  
         <?php
               if(mysqli_num_rows($r) >0)
