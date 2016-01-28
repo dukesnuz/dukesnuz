@@ -1,7 +1,10 @@
 <!--blog.php also uses blog.inc.html-->
+<<<<<<< HEAD
 <!--http://skillcrush.com/blog/-->
 <!--http://skillcrush.com/category/blog/social-media-and-marketing/-->
 <!--http://skillcrush.com/2014/10/17/ultimate-guide-hashtags/-->
+=======
+>>>>>>> blog
 
 <?php
 $title = "Duke's Blog";
@@ -18,12 +21,20 @@ require(MYSQL);
 	$rm= mysqli_query($dbc, $qm);
 	
 
+<<<<<<< HEAD
 //////////////////////END Grab catagpries	
+=======
+//////////////////////END Grab catagpries
+>>>>>>> blog
 if(!empty($_GET['catagory']))
 	{
 		$catagory = $_GET['catagory'];
 		
+<<<<<<< HEAD
 		$q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type, b.title,b.say,b.teaser,b.html,b.tags,b.url_cat  FROM blog AS b 
+=======
+		$q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat  FROM blog AS b 
+>>>>>>> blog
             	LEFT JOIN Artgallery AS a on b.artgallery_id = a.artgallery_id 
 				where b.status = 'true'
 				AND
@@ -32,9 +43,15 @@ if(!empty($_GET['catagory']))
 				LIMIT 15";
 
 	}else{
+<<<<<<< HEAD
 		$catagory = "All";
 		
 	    $q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type, b.title,b.say,b.teaser,b.html,b.tags,b.url_cat FROM blog AS b 
+=======
+		$catagory = "";
+		
+	    $q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat FROM blog AS b 
+>>>>>>> blog
             	LEFT JOIN Artgallery AS a on b.artgallery_id = a.artgallery_id 
 				where b.status = 'true'
 				ORDER BY date_created DESC
@@ -42,7 +59,12 @@ if(!empty($_GET['catagory']))
 
 	}
      $r = mysqli_query($dbc, $q);
+<<<<<<< HEAD
      
+=======
+     //below used to grab catagory for header
+     $c = mysqli_query($dbc, $q);
+>>>>>>> blog
      
      /**************************Grab a random picture*********************************************/
 	 $qp = "SELECT picture_name, comment, img_url, gallery_select, alt 
