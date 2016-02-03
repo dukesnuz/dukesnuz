@@ -15,7 +15,8 @@
 					first_name 	:$('#first_name').val(),
 					last_name  	:$('#last_name').val(),
 					email 		:$('#email').val(),
-					message	:$('#message').val()
+					subject		:$('#subject').val(),
+					message	    :$('#message').val()
 			     },
 	
 					

@@ -13,15 +13,15 @@ if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['em
 	
    // echo 4;
 	//,page_name,type
-	$q= 'REPLACE INTO contact(first_name,last_name,message,email,type,page_name,ip) 
-			VALUES(?,?,?,?,?,?,?)';
+	$q= 'REPLACE INTO contact(first_name,last_name,subject,message,email,type,page_name,ip) 
+			VALUES(?,?,?,?,?,?,?,?)';
 		//echo 5;	
 		$stmt = mysqli_prepare($dbc,$q);
 		//echo 55;	
 		$page_name= "contact.php";
 		$type ="contact";
 		$ip= $_SERVER['REMOTE_ADDR'];
-		mysqli_stmt_bind_param($stmt, 'sssssss',$_POST['first_name'],$_POST['last_name'],$_POST['message'],$_POST['email'],$type,$page_name,$ip);
+		mysqli_stmt_bind_param($stmt, 'ssssssss',$_POST['first_name'],$_POST['last_name'],$_POST['subject'],$_POST['message'],$_POST['email'],$type,$page_name,$ip);
 			
 		//echo 6;			
 			mysqli_stmt_execute($stmt);
@@ -34,6 +34,7 @@ if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['em
 					$body .="Thank you for contacting me.\n";
 					$body .="I will respond back to you shortly.\n\r";
 					$body .="Your message:\n";
+					$body .=$_POST['subject']."\n";
 					$body .=$_POST['message']."\n";
 					$body .="Your email:\n";
 					$body .=$_POST['email']."\n\r";
