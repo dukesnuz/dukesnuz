@@ -1,0 +1,44 @@
+<!--page is also using ajax_add_email.php and add_email_form.inc.html-->
+<script>
+$(document).ready(function() {
+	$('#add_email').submit(function(){
+	var formData = $(this).serialize();
+	$.post('../ajax/ajax_add_email.php',formData,processData);
+		function processData(data){
+			if(data=='pass'){
+					//$('#content').html('<p class="error">Your email settings have been updated.</p>');
+					//$('#content').html('<p class="error">Your email settings have been updated.</p>');
+			 		$('#email_reply').text('Thank you for subscribing.');
+				 	$('#add_email').hide();
+				}else{	
+			    	if ($('#empty').length==0){
+				  		$('#email_reply').html('<p class="error">Address not entered. Please try again.</p>');
+				 	}; //end #fail
+				
+			   if ($('#fail').length==0){
+					//$('#content').append('<p class="error">System error proccess not completed. Please try again.</p>');
+					$('#email_reply').text('OOPS! Did you enter your email address correctly?');
+				}; //end #fail
+				//
+				if(data=='added'){
+					//$('#content').html('<p class="error">Your email settings have been updated.</p>');
+					//$('#content').html('<p class="error">Your email settings have been updated.</p>');
+			 		$('#email_reply').text('You are already subscribed.');
+					$('#add_email').hide();
+					}
+				
+				} //end process data
+			} //end if
+		return false;
+		});// end submit
+}); // end ready
+</script>
+
+<!--class="subform" class="email_settings"-->
+
+<div id="email_reply">Sign up to receive emails from Duke</div>
+<form action="../ajax/ajax_add_email.php" method="post" id="add_email">
+	<p><label class="question" for="email">Enter your email</label></p>
+	<p><input type="text" name="address" placeholder="Enter your email"></p>
+	<p><input type="submit"  name="submit" value="Duke Sign Me Up" size="50" id="button" /></p>
+</form>
