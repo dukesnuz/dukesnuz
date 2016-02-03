@@ -66,6 +66,6 @@ require(MYSQL);
 							}
            
 
-include('..//views/footer.inc.html');
+include('../views/footer.inc.html');
 
      
