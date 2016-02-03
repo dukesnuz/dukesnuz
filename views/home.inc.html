@@ -117,7 +117,7 @@
 						       echo "<ul style='list-style: none;'>";
 							                 while($row = mysqli_fetch_array($b, MYSQLI_ASSOC))
 							                       {
-							                      	echo  "<li><a href='/blog/'>".$row['title']."&nbsp;&nbsp;Read More&nbsp;&#10144;</a></li>";
+							                      	echo  "<li><a href='/catagory/blog/".$row['url_cat']."/'>".$row['title']."&nbsp;&nbsp;Read More&nbsp;&#10144;</a></li>";
 							                       }
 							   echo '</ul>';				   
 							}							
