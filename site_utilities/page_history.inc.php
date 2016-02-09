@@ -191,26 +191,52 @@ if(isset($dbh))
 
 /*****************************Grab location information***************************************************************/
 /*******************************from the book PHP ADvanced and Object Orieted programming page 340********************/
-//$ip = "76.107.223.9";
+
+    //$fp = fopen($url, 'r');
+	//if(!file_exists(fopen($url, 'r')))
+	//exit("File not found page_history.inc.php line 199");
+		
+		
+    //$ip = "76.107.223.9";
 
 	$url = 'http://freegeoip.net/csv/'.$ip;
-	$fp = fopen($url, 'r');
-	$read = fgetcsv($fp);
-	fclose($fp);
-	$country_abbr = $read[1];
-	$country =$read[2];
-	$state_abbr = $read[3];
-	$state = $read[4];
-	$city = $read[5];
-	$zip = $read[6];
-	$time_zone = $read[7];
-	$latitude = $read[8];
-	$longitude = $read[9];
-	$metro_code = $read[10];
+	//$fp = @fopen($url, 'r');
+	if(!file_exists($url))
+	//check if fopen works
+	//if($fp != TRUE)
+	{
+		$country_abbr = "Null";
+		$country = "Null";
+		$state_abbr = "Null";
+		$state = "Null";
+		$city = "Null";
+		$zip = "Null";
+		$time_zone = "Null";
+		$latitude = "Null";
+		$longitude = "Null";
+		$metro_code = "Null";
+	}else{
+		$fp = fopen($url, 'r');	
+		$read = fgetcsv($fp);
+		fclose($fp);
+		$country_abbr = $read[1];
+		$country =$read[2];
+		$state_abbr = $read[3];
+		$state = $read[4];
+		$city = $read[5];
+		$zip = $read[6];
+		$time_zone = $read[7];
+		$latitude = $read[8];
+		$longitude = $read[9];
+		$metro_code = $read[10];
+	}
 
+	
+		
 /*****************************END Grab location information**********************************************************/
 
 //echo $user_agent;
+//echo $country_abbr;
 
 
     $q= "INSERT INTO page_history (user_id,track_id,item_id,item_name, page_title, page,ip,host,page_from,page_time,url_complete,browser,country,country_abbr,state_abbr,state,city,zip,time_zone,latitude,longitude,metro_code,user_agent)
