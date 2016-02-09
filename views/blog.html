@@ -2,6 +2,7 @@
 <link rel='stylesheet' href="../styles/nav.css">
 <link rel="stylesheet" media="all" href="../styles/styles.css" type="text/css" />
 page is also using ajax_add_email.php and add_email_form.inc.html
+checking git
 -->
 <style>
 	*{
@@ -348,14 +349,14 @@ if(mysqli_num_rows($r) >0)
 	         		</aside>
 
 <aside class="menu">
-	         <h3>Catagories</h3>
+	         
 
 	         <?php
 
-	          if(mysqli_num_rows($rm) >0 )
+	          if(mysqli_num_rows($rm) > 0 )
 	       	 	{
 	       	 		echo '<ul>';
-	       	 		echo "<li><a href='/blog/'>All</a></li>";
+	       	 		echo "<li><a href='/blog/'><h3>Catagories</h3></a></li>";
 	     			while($row=mysqli_fetch_array($rm, MYSQLI_ASSOC))
 		     				{
 			  					
@@ -406,7 +407,7 @@ if(mysqli_num_rows($r) >0)
 			 pattern for this web page.  
 	       I using PHP for the controller, HTML for the view and for the modal mySQL.  I also developed a Filemaker solution. The FM solution
 	       stores the blog data.  I use the execute SQL script to upload, edit and delete all blog post data.  The code is on
-	       <a href="https://github.com/dukesnuz/Git-DukesNuz/commit/390cb8b5ea81ea45417db12df51f47e507ca4604">GitHub</a>.<!--A screen shot of the FM solution
+	       <a href="https://github.com/dukesnuz/Git-DukesNuz/blob/2144fe5eeba91a40ed5c5c969922cda2c6676c29/views/blog.html">GitHub</a>.<!--A screen shot of the FM solution
 	        can be found here.-->
 	      </p>
 		</div>
