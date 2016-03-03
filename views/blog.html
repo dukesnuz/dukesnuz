@@ -277,7 +277,9 @@ if(mysqli_num_rows($r) >0)
 							echo '<div class="say">'.$row['teaser'].'</div>';
 							echo '<div class="align_center">'.$row['html'].'</div>';
 							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="tags">catagory:&nbsp;'.$row['catagory'].'</div>';
 							echo '<div class="tags">tags:&nbsp;'.$row['tags'].'</div>';
+							         
 							
 							echo '</section>';
 							
@@ -288,6 +290,7 @@ if(mysqli_num_rows($r) >0)
 							echo '<div class="say">'.$row['teaser'].'</div>';
 							echo '<div class="align_center">'.$row['html'].'</div>';
 							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="tags">catagory:&nbsp;'.$row['catagory'].'</div>';
 							echo '<div class="tags">tags:&nbsp;'.$row['tags'].'</div>';
 							
 							echo '</section>';
@@ -299,6 +302,7 @@ if(mysqli_num_rows($r) >0)
 							echo '<div class="say">'.$row['teaser'].'</div>';
 							echo '<div class="align_center"><a href="http://'.$row['html'].'" target="blank">Read More</a></div>';
 							echo '<div class="say">'.$row['say'].'</div>';
+							echo '<div class="tags">catagory:&nbsp;'.$row['catagory'].'</div>';
 							echo '<div class="tags"> tags:&nbsp;'.$row['tags'].'</div>';
 							
 							echo '</section>';
@@ -325,6 +329,7 @@ if(mysqli_num_rows($r) >0)
 							        //echo '<p style="text-align:center"><img src="'.$row['img_url'].'" alt="'.$row['alt'].'" style="width:300px;height:228px;"></p>';
 							      }
                             echo '<div class="say">'.$row['say'].'</div>';
+                            echo '<div class="tags">catagory:&nbsp;'.$row['catagory'].'</div>';
 							echo '<div class="tags"> tags:&nbsp;'.$row['tags'].'</div>';
 						
 							echo '</section>';
@@ -383,13 +388,15 @@ if(mysqli_num_rows($r) >0)
            		     	if($row_pic['gallery_select'] ==="GalleryTwo")
 							{
 				    			 echo '<div style="text-align:center">
-				    			 	<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:228px;height:300px;"></a></div>';
+				    			 	<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style=\"width:228px;height:300px;\""></a>
+				    			 	</div>';
 							}else{
 							 	 echo '<div style="text-align:center">
-							 	 	<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:300px;height:228px;"></a></div>';
-							}
+							 	 	<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style=\"width:300px;height:228px;\""></a>
+							 	 	</div>';
+							}                            
         ?>
-        
+       
         <!-----------------END random picture------------------------>
 
 </section>
@@ -407,7 +414,7 @@ if(mysqli_num_rows($r) >0)
 			 pattern for this web page.  
 	       I using PHP for the controller, HTML for the view and for the modal mySQL.  I also developed a Filemaker solution. The FM solution
 	       stores the blog data.  I use the execute SQL script to upload, edit and delete all blog post data.  The code is on
-	       <a href="https://github.com/dukesnuz/Git-DukesNuz/blob/2144fe5eeba91a40ed5c5c969922cda2c6676c29/views/blog.html">GitHub</a>.<!--A screen shot of the FM solution
+	       <a href="https://github.com/dukesnuz/Git-DukesNuz/blob/10a0f87fcfc95b74dd8d9085560ef14d844ef157/views/blog.html">GitHub</a>.<!--A screen shot of the FM solution
 	        can be found here.-->
 	      </p>
 		</div>
