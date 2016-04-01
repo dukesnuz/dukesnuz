@@ -33,6 +33,10 @@ h1{
 	color: #ffffff;
 }
 
+header h2, header h3{
+    color: #ffffff;
+}
+
 
 header, footer{
 	 background-color:#504B4B;
