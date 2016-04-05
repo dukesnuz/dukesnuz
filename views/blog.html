@@ -82,7 +82,7 @@ p{
  	font-style:italic;
  	padding: 1px;
  	text-align: left;
- 	width:300px;
+ 	width:600px;
  	margin:10px 0px;
  	text-indent: 25px;
  	}
@@ -279,8 +279,8 @@ if(mysqli_num_rows($r) >0)
 							echo '<div class="say">'.$row['say'].'</div>';
 							echo '<div class="tags">catagory:&nbsp;'.$row['catagory'].'</div>';
 							echo '<div class="tags">tags:&nbsp;'.$row['tags'].'</div>';
-							         
-							
+							echo '<div class="tags">long url:&nbsp;<a href="'.URL.'/blog/blog_long_url.php?description='.$row['url_file'].'">'.$row['url_file'].'</a></div>';
+							             
 							echo '</section>';
 							
 					    	}elseif($row['html_type'] ==="HTML_code")
@@ -292,7 +292,8 @@ if(mysqli_num_rows($r) >0)
 							echo '<div class="say">'.$row['say'].'</div>';
 							echo '<div class="tags">catagory:&nbsp;'.$row['catagory'].'</div>';
 							echo '<div class="tags">tags:&nbsp;'.$row['tags'].'</div>';
-							
+				            echo '<div class="tags">long url:&nbsp;<a href="'.URL.'/blog/blog_long_url.php?description='.$row['url_file'].'">'.$row['url_file'].'</a></div>';
+                        
 							echo '</section>';
 							
 						   }elseif($row['html_type'] === "URL_link")
@@ -304,7 +305,8 @@ if(mysqli_num_rows($r) >0)
 							echo '<div class="say">'.$row['say'].'</div>';
 							echo '<div class="tags">catagory:&nbsp;'.$row['catagory'].'</div>';
 							echo '<div class="tags"> tags:&nbsp;'.$row['tags'].'</div>';
-							
+							echo '<div class="tags">long url:&nbsp;<a href="'.URL.'/blog/blog_long_url.php?description='.$row['url_file'].'">'.$row['url_file'].'</a></div>';
+                        
 							echo '</section>';
 							
 						    }elseif($row['html_type'] === "IMG_link")
@@ -331,7 +333,8 @@ if(mysqli_num_rows($r) >0)
                             echo '<div class="say">'.$row['say'].'</div>';
                             echo '<div class="tags">catagory:&nbsp;'.$row['catagory'].'</div>';
 							echo '<div class="tags"> tags:&nbsp;'.$row['tags'].'</div>';
-						
+						    echo '<div class="tags">long url:&nbsp;<a href="'.URL.'/blog/blog_long_url.php?description='.$row['url_file'].'">'.$row['url_file'].'</a></div>';
+                        
 							echo '</section>';
 							
 						   }else{
