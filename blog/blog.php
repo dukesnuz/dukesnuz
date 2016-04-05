@@ -20,7 +20,8 @@ if(!empty($_GET['catagory']))
 	{
 		$catagory = $_GET['catagory'];
 		
-		$q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat  FROM blog AS b 
+		$q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat,b.url_file  
+		        FROM blog AS b 
             	LEFT JOIN Artgallery AS a on b.artgallery_id = a.artgallery_id 
 				where b.status = 'true'
 				AND
@@ -31,7 +32,8 @@ if(!empty($_GET['catagory']))
 	}else{
 		$catagory = "";
 		
-	    $q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat FROM blog AS b 
+	    $q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat,b.url_file
+	            FROM blog AS b 
             	LEFT JOIN Artgallery AS a on b.artgallery_id = a.artgallery_id 
 				where b.status = 'true'
 				ORDER BY date_created DESC
