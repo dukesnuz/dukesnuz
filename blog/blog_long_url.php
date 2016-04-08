@@ -32,23 +32,24 @@ if(!empty($_GET['catagory']))
                 b.url_cat = '$catagory'
                 ORDER BY date_created DESC
                 LIMIT $display_count ";
-    }elseif(!empty($_GET['description']))
+    }elseif(!empty($_GET['post']))
     {
-        $description = $_GET['description'];
+        $url_long = $_GET['post'];
         
-        $q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_file
+        $q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat,b.url_file 
                 FROM blog AS b 
                 LEFT JOIN Artgallery AS a on b.artgallery_id = a.artgallery_id 
                 where b.status = 'true'
                 AND
-                b.url_file = '$description'
+                b.url_file = '$url_long'
                 ORDER BY date_created DESC
                 LIMIT $display_count ";
                 
     }else{
         $catagory = "";
         
-        $q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat FROM blog AS b 
+        $q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat,b.url_file 
+                FROM blog AS b 
                 LEFT JOIN Artgallery AS a on b.artgallery_id = a.artgallery_id 
                 where b.status = 'true'
                 ORDER BY date_created DESC
@@ -72,6 +73,6 @@ if(!empty($_GET['catagory']))
 /**************************END grab random picture*******************************************/  
 
 include('../views/blog.html');
- 
+
 include('../views/footer.inc.html');
                 
