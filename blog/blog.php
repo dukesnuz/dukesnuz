@@ -1,8 +1,15 @@
 <!--blog.php also uses blog.inc.html-->
 
 <?php
-$title = "Duke's Blog";
+
+if(!empty($_GET['catagory'])){
+        $title ="Blog Catagory&nbsp". $_GET['catagory'];
+        $catagory = $_GET['catagory'];
+    }else{
+        $title = "Duke's Blog";
+    }
 include('../views/header.inc.html');
+
 require(MYSQL);
 
 //Grab all the catagories 
@@ -18,7 +25,7 @@ require(MYSQL);
 //////////////////////END Grab catagpries
 if(!empty($_GET['catagory']))
 	{
-		$catagory = $_GET['catagory'];
+		//$catagory = $_GET['catagory'];
 		
 		$q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat,b.url_file  
 		        FROM blog AS b 
@@ -27,7 +34,7 @@ if(!empty($_GET['catagory']))
 				AND
 				b.url_cat = '$catagory'
 				ORDER BY date_created DESC
-				LIMIT 15";
+				LIMIT 100";
 
 	}else{
 		$catagory = "";
@@ -37,7 +44,7 @@ if(!empty($_GET['catagory']))
             	LEFT JOIN Artgallery AS a on b.artgallery_id = a.artgallery_id 
 				where b.status = 'true'
 				ORDER BY date_created DESC
-				LIMIT 15";
+				LIMIT 100";
 
 	}
      $r = mysqli_query($dbc, $q);

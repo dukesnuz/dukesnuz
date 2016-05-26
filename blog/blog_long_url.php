@@ -2,8 +2,14 @@
 //this page displays blog posts with information about the post in the url
 //I want tosee if search engines will crawl pages more with a description in the url
 //also uses page views/blog.html
-$title = "Duke's Blog";
+if(!empty($_GET['post'])){
+        $title ="Blog Post&nbsp". $_GET['post'];
+        $url_long = $_GET['post'];
+    }else{
+        $title = "Duke's Blog";
+    }
 include('../views/header.inc.html');
+
 require(MYSQL);
 
 //set number of records to display
@@ -34,7 +40,7 @@ if(!empty($_GET['catagory']))
                 LIMIT $display_count ";
     }elseif(!empty($_GET['post']))
     {
-        $url_long = $_GET['post'];
+        //$url_long = $_GET['post'];
         
         $q = "SELECT a.img_url, a.alt ,a.gallery_select,b.html_type,b.catagory,b.title,b.say,b.teaser,b.html,b.tags,b.url_cat,b.url_file 
                 FROM blog AS b 
