@@ -1,166 +1,252 @@
 <style>
-	 dt{
-	 	background-color:rgba(139,128,128,.1);
-	 	
-	 	font-weight: bold;
-	 	font-size: 1.25em;
-	 	border: 1px solid black;
-	 	border-bottom: none;
-	 	width:100%;
-	 }
-	dd{
-		background-color:#ffffff;
-		margin-top: 5px;
-		margin-bottom: 50px;
-		margin-left:10%;
-		padding: 2px;
-		display: block;
-		width:80%;
-		font-size: .85em;
-		border: 1px solid black;
-	 	border-top: none;
-	}
-	.content header, aside{
-		background-color: #ffffff;
-		border-radius: 0 50%;
-		padding:5%;
-	}
-	.content h1, .content h2, .content p{
-		text-align: center;
-	}
-	
-	aside{
-		margin-top:30%;
-		text-align: center;
-	}
-	aside a{
-		
-		font-size: 2em;
-		font-weight: bold;
-		border-radius:90%;
-		padding: 10%;
-	}
+    dt {
+        background-color: rgba(139,128,128,.1);
+        font-weight: bold;
+        font-size: 1.25em;
+        border: 1px solid black;
+        border-bottom: none;
+        width: 100%;
+    }
+    dd {
+        background-color: #ffffff;
+        margin-top: 5px;
+        margin-bottom: 50px;
+        margin-left: 10%;
+        padding: 2px;
+        display: block;
+        width: 80%;
+        font-size: .85em;
+        border: 1px solid black;
+        border-top: none;
+    }
+    .content header, aside {
+        background-color: #ffffff;
+        border-radius: 0 50%;
+        padding: 5%;
+    }
+    .content h1, .content h2, .content p {
+        text-align: center;
+    }
+
+    aside {
+        margin-top: 30%;
+        text-align: center;
+    }
+    aside a {
+
+        font-size: 2em;
+        font-weight: bold;
+        border-radius: 90%;
+        padding: 10%;
+    }
 </style>
 <section>
-       
-      <div class="content" >
-      	<header>
-      	     <h1>Self Study Courses</h1>
-      	     <h2>Self Study Coding Courses I have Participated In</h2>
-      	</header>
-      	<p>
-      		This page is an index of all the self study courses I have participated in for the purpose of learning to code.  
-      		 The below list consists of courses in the subjects of HTML, CSS, Javascript, jQuery, PHP and MySQL,
-      		 The title of each is linked to the homepage for each course. I coded each home page myself. 
-       </p>
-      		
-      	<p>If you would like to purchase any of the books I have used click the link next to BOOK. You will be taken to my store where you may 
-      		purchase any of the books at Amazon.
-      		You can also visit my <a href="/shop<?php echo MODWRITE;?>" target="blank">store</a> to view other books I like. 
-      		If you click a book link on my store and purchase the book I will recieve a small commission. 
-      	</p>
-        
-        
-     <dl>  
-     	 
-     	    
-     	    <dt><a href="https://www.codecademy.com/dukenuz" target="blank">Codecademy</a></dt>
-           	<dd>My Codecademy Badges
-           </dd>
-            
-     	    <p>The below were offered by <a href="http://www.bostonphp.org" target="blank">Boston PHP</a></p>
-     	    
-     	    <p>View my <a href="http://www.meetup.com/bostonphp/members/67794352/" target="blank">Profile</a> at Boston PHP.</p>
-     	    
-     	    <dt><a href="<?php echo URL;?>/self-study-courses/html5_brunch_6/html5-brunch-season-6.html" target="blank">HTML5 Brunch, Season 6</a></dt>
-           	<dd>Bootstrap is the subject for this self study course.<br />
-           	Book: <a href="/shop<?php echo MODWRITE;?>" target="blank"> Sams Teach Yourself Bootstrap in 24 Hours by Jennifer Kyrnin</a>
-            </dd>
-     	    
-     	    
-     	    <dt><a href="<?php echo URL;?>/self-study-courses/jquery_jam_6/jquery-jam-season-6.html" target="blank">jQuery jAM, Season 6</a></dt>
-           	<dd>Javascript is the subject for this self study course.<br />
-           	Book: <a href="/shop<?php echo MODWRITE;?>" target="blank"> Eloquent Javascript Second Edition by Marijn Haverbeke</a>
-            </dd>
-            
-            
-     	    <dt><a href="http://www.meetup.com/bostonphp/events/222711169/" target="blank">Git Lunch, Season 1</a></dt>
-           	<dd>The subject of this book is about learning how to use the coding repository GIT.<br />
-           	Book: <a href="/shop<?php echo MODWRITE;?>" target="blank"> Learn Git in a Month of Lunches By Rick Umali</a>
-            </dd>
-            
-     
-           <dt><a href="<?php echo URL;?>/d/html5_brunch_5/index.html" target="blank">HTML5 Brunch, Season 5</a></dt>
-           	<dd>The subject of this book is HTML5 and CSS3. I moderated this self study as the Senior Percolator.<br />
-           	Book: <a href="/shop<?php echo MODWRITE;?>" target="blank"> HTML and CSS in 24 Hours, Sams Teach Yourself (Updated for HTML5 and CSS3) (9th Edition) (Sams Teach Yourself in 24 Hours) By Julie C Meloni</a>
-            </dd>
-            
-           <dt><a href="<?php echo URL;?>/d/200_days_of_code/index.php" target="blank">200 Days of Code</a></dt>
-            <dd>This book concentrated on advanced PHP and object oriented programming.<br />
-             Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">PHP Advanced and Object-Oriented Programming: Visual QuickPro Guide (3rd Edition) By Larry Ullman</a>
-            </dd>
-            
-           <dt><a href="<?php echo URL;?>/d/html5_brunch_4/index.html" target="blank">HTML5 Brunch, Season 4</a></dt>
-            <dd>I learned about bootstrap in this book.<br />
-             Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">Step By Step Bootstrap 3: A Quick Guide to Responsive Web Development Using Bootstrap 3 By Riwanto Megosinarso</a>
-             </dd>
-								
-			<dt><a href="<?php echo URL;?>/d/phppercolate_7/index.html" target="blank">PHP Percolate, Season 7</a></dt>
-			 <dd>The material in this course was about building e-commerce sites. Paypal and stripe were studied. I assissted in moderating this as
-			 	the assistant Percolator.<br />
-             Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">Effortless E-Commerce with PHP and MySQL (2nd Edition) (Voices That Matter)By Larry Ullman</a>
-             </dd>
-	       						
-	       	<dt><a href="<?php echo URL;?>/d/HTML5_Brunch_3/index.html" target="blank">HTML5 Brunch, Season 3</a></dt>
-		   	 <dd>Responsive web design was explained in this course.<br />
-		   	 Book: <a href="/shop<?php echo MODWRITE;?>" target="blank"> Implementing Responsive Design: Building sites for an anywhere, everywhere web (Voices That Matter) By Tim Kadlec</a>
-		   	 </dd>  			
-		   					
-		   	<dt><a href="<?php echo URL;?>/d/jqueryjam4/index.php" target="blank">jQuery jAM, Season 4</a></dt>
-		   	  <dd>This was a course on using javascript and jQuery.<br />
-		   	   Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">jQuery and JavaScript in 24 Hours, Sams Teach Yourself By Brad Dayley</a>
-		   	  </dd>
-		   				
-		   	<dt><a href="<?php echo URL;?>/d/phppercolate6/home.php" target="blank">PHP Percolate, Season 6</a></dt>
-		   	 <dd>PHP and MySql where the subjects of this course.<br />
-		   	  Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">PHP and MySQL for Dynamic Web Sites: Visual QuickPro Guide (4th Edition) By Larry Ullman</a>
-		   	 </dd>
-		   						
-		   	<dt><a href="<?php echo URL;?>/d/html_5_brunch/home.php" target="blank">HTML5 Brunch, Season 2</a></dt>
-		   	 <dd>HTML5 was the subject in this book.<br />
-		   	 Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">HTML5 Digital Classroom, (Book and Video Training) By Jeremy Osborn, AGI Creative Team</a>
-		   	 </dd>
-		   	 
-		   	<dt><a href="<?php echo URL;?>/d/jqueryjam3/index.php" target="blank">jQuery jAM, Season 3</a></dt>
-			 <dd>jQuery and Javascript were learned in this course.<br />
-			 	Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">JavaScript & jQuery: The Missing Manual (Missing Manuals)By David Sawyer McFarland</a>
-			 </dd>			
-			  	
-			 <p>The below are self studies that are independent from Boston PHP.</p>	
-			 
-			<dt><a href="<?php echo URL;?>/d/css3coffeebreak/home.php" target="blank">CSS 3 Coffee Break</a></dt>	
-			  <dd>CSS3 was the subject of this self study.<br />
-		   	 Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">HTML5 Digital Classroom, (Book and Video Training) By Jeremy Osborn, AGI Creative Team</a>
-		   	 </dd>			
-     	
-     		<dt><a href="<?php echo URL;?>/d/web_290/index.html" target="blank">Web_290</a></dt>
-     		  <dd>PHP was the subject. Ok, this is the only one I did not complete. Seemed to basic for my current knowledge.
-     		  	Also, I was involved with helpng moderate PHP
-     		  	Percolate Season 7. This was much more important to me.</dd>
-     	</dl>
 
-             <dt><a href="http://smarterer.com/dukesnuz" target="blank">View my Smarterer Scores</a></dt>
-			   <dd style="text-align:center"><img src="/d/images/smaterer.jpg" width="138" height="32" alt="View David Petringa DukesNuz on Smarterer."></dd>
+    <div class="content" >
+        <header>
+            <h1>Study Courses Taken</h1>
 
-	
-             <p><a href="/contact<?php echo MODWRITE;?>" target="blank">Say Hello to Me</a></p>
-  
-    <aside>
-       <a href="/shop<?php echo MODWRITE;?>" target="blank">Check out my store</a>
-   </aside> 
-   
-  
- 
-      </div>
-  </section>
-    
+        </header>
+        <p>
+            This page is an index of all the study courses I have participated in for the purpose of learning to code.
+            The below list consists of courses in the subjects of HTML, CSS, Javascript, jQuery, PHP and MySQL,
+            The title of each is linked to the homepage for each course. I coded each home page myself.
+        </p>
+
+        <p>
+            If you would like to purchase any of the books I have used click the link next to BOOK. You will be taken to my store where you may
+            purchase any of the books at Amazon.
+            You can also visit my <a href="/shop<?php echo MODWRITE;?>" target="blank">store</a> to view other books I like.
+            If you click a book link on my store and purchase the book I will recieve a small commission.
+        </p>
+
+        <h2>Harvard Extension School</h2>
+
+        <dl>
+            <dt>
+                <a href="<?php echo URL;?>/harvard/introduction-to-web-programming-using-javascript/index.html" target="blank">Introduction to Web Programming Using JavaScript CSCI E-3 Fall 2016</a>
+            </dt>
+            <dd>
+                This was a course in JavaScript.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">Modern JavaScript Develop and Design by: Larry Ullman</a>
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>
+                <a href="<?php echo URL;?>/harvard/fundamentals-of-web-development/index.html" target="blank">Fundamentals of Website Development CSCI S-12 Summer 2016</a>
+            </dt>
+            <dd>
+                This was a course in Front End Web Development. The technologies learned were HTML, CSS and JavaScript.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">Learning Web Design by: Jennifer Niederst Robbins</a>
+            </dd>
+        </dl>
+
+        <h2>Self Study Coding Courses I have Participated In</h2>
+
+        <dl>
+            <dt>
+                <a href="https://www.codecademy.com/dukenuz" target="blank">Codecademy</a>
+            </dt>
+            <dd>
+                My Codecademy <a href="https://www.codecademy.com/users/dukenuz/achievements">Badges</a>
+            </dd>
+
+            <p>
+                The below were offered by <a href="http://www.bostonphp.org" target="blank">Boston PHP</a>
+            </p>
+
+            <p>
+                View my <a href="http://www.meetup.com/bostonphp/members/67794352/" target="blank">Profile</a> at Boston PHP.
+            </p>
+
+            <dt>
+                <a href="<?php echo URL;?>/self-study-courses/html5_brunch_6/html5-brunch-season-6.html" target="blank">HTML5 Brunch, Season 6</a>
+            </dt>
+            <dd>
+                Bootstrap is the subject for this self study course.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank"> Sams Teach Yourself Bootstrap in 24 Hours by Jennifer Kyrnin</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/self-study-courses/jquery_jam_6/jquery-jam-season-6.html" target="blank">jQuery jAM, Season 6</a>
+            </dt>
+            <dd>
+                Javascript is the subject for this self study course.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">Eloquent Javascript Second Edition by Marijn Haverbeke</a>
+            </dd>
+
+            <dt>
+                <a href="http://www.meetup.com/bostonphp/events/222711169/" target="blank">Git Lunch, Season 1</a>
+            </dt>
+            <dd>
+                The subject of this book is about learning how to use the coding repository GIT.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">Learn Git in a Month of Lunches By Rick Umali</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/html5_brunch_5/index.html" target="blank">HTML5 Brunch, Season 5</a>
+            </dt>
+            <dd>
+                The subject of this book is HTML5 and CSS3. I moderated this self study as the Senior Percolator.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">HTML and CSS in 24 Hours, Sams Teach Yourself (Updated for HTML5 and CSS3) (9th Edition) (Sams Teach Yourself in 24 Hours) By Julie C Meloni</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/200_days_of_code/index.php" target="blank">200 Days of Code</a>
+            </dt>
+            <dd>
+                This book concentrated on advanced PHP and object oriented programming.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">PHP Advanced and Object-Oriented Programming: Visual QuickPro Guide (3rd Edition) By Larry Ullman</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/html5_brunch_4/index.html" target="blank">HTML5 Brunch, Season 4</a>
+            </dt>
+            <dd>
+                I learned about bootstrap in this book.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">Step By Step Bootstrap 3: A Quick Guide to Responsive Web Development Using Bootstrap 3 By Riwanto Megosinarso</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/phppercolate_7/index.html" target="blank">PHP Percolate, Season 7</a>
+            </dt>
+            <dd>
+                The material in this course was about building e-commerce sites. Paypal and stripe were studied. I assissted in moderating this as
+                the assistant Percolator.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">Effortless E-Commerce with PHP and MySQL (2nd Edition) (Voices That Matter)By Larry Ullman</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/HTML5_Brunch_3/index.html" target="blank">HTML5 Brunch, Season 3</a>
+            </dt>
+            <dd>
+                Responsive web design was explained in this course.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank"> Implementing Responsive Design: Building sites for an anywhere, everywhere web (Voices That Matter) By Tim Kadlec</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/jqueryjam4/index.php" target="blank">jQuery jAM, Season 4</a>
+            </dt>
+            <dd>
+                This was a course on using javascript and jQuery.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">jQuery and JavaScript in 24 Hours, Sams Teach Yourself By Brad Dayley</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/phppercolate6/home.php" target="blank">PHP Percolate, Season 6</a>
+            </dt>
+            <dd>
+                PHP and MySql where the subjects of this course.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">PHP and MySQL for Dynamic Web Sites: Visual QuickPro Guide (4th Edition) By Larry Ullman</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/html_5_brunch/home.php" target="blank">HTML5 Brunch, Season 2</a>
+            </dt>
+            <dd>
+                HTML5 was the subject in this book.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">HTML5 Digital Classroom, (Book and Video Training) By Jeremy Osborn, AGI Creative Team</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/jqueryjam3/index.php" target="blank">jQuery jAM, Season 3</a>
+            </dt>
+            <dd>
+                jQuery and Javascript were learned in this course.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">JavaScript & jQuery: The Missing Manual (Missing Manuals)By David Sawyer McFarland</a>
+            </dd>
+
+            <p>
+                The below are self studies that are independent from Boston PHP.
+            </p>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/css3coffeebreak/home.php" target="blank">CSS 3 Coffee Break</a>
+            </dt>
+            <dd>
+                CSS3 was the subject of this self study.
+                <br />
+                Book: <a href="/shop<?php echo MODWRITE;?>" target="blank">HTML5 Digital Classroom, (Book and Video Training) By Jeremy Osborn, AGI Creative Team</a>
+            </dd>
+
+            <dt>
+                <a href="<?php echo URL;?>/d/web_290/index.html" target="blank">Web_290</a>
+            </dt>
+            <dd>
+                PHP was the subject. Ok, this is the only one I did not complete. Seemed to basic for my current knowledge.
+                Also, I was involved with helpng moderate PHP
+                Percolate Season 7. This was much more important to me.
+            </dd>
+        </dl>
+
+        <dt>
+            <a href="http://smarterer.com/dukesnuz" target="blank">View my Smarterer Scores</a>
+        </dt>
+        <dd style="text-align:center"><img src="/d/images/smaterer.jpg" width="138" height="32" alt="View David Petringa DukesNuz on Smarterer.">
+        </dd>
+
+        <p>
+            <a href="/contact<?php echo MODWRITE;?>" target="blank">Say Hello to Me</a>
+        </p>
+
+        <aside>
+            <a href="/shop<?php echo MODWRITE;?>" target="blank">Check out my store</a>
+        </aside>
+
+    </div>
+</section>

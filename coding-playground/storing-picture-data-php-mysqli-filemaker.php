@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 	     {
             $cat = $_GET['catagory'];
   
-			$q = "SELECT picture_name, comment, img_url, record_id, gallery_select, alt 
+			$q = "SELECT picture_name, comment, img_url, gallery_select, alt 
        					from Artgallery 
        					where 
        					catagory = '$cat'
