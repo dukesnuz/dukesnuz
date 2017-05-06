@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+            /*
+             This is the visible area of you carousel.
+             Set a width here to define how much items are visible.
+             The width can be either fixed in px or flexible in %.
+             Position must be relative!
+             */
+            .jcarousel {
+                position: relative;
+                overflow: hidden;
+                width: 500px;
+                height: 300px;
+            }
+
+            /*
+             This is the container of the carousel items.
+             You must ensure that the position is relative or absolute and
+             that the width is big enough to contain all items.
+             */
+            .jcarousel ul {
+                width: 20000em;
+                position: relative;
+                /* Optional, required in this case since it's a <ul> element */
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            /*
+             These are the item elements. jCarousel works best, if the items
+             have a fixed width and height (but it's not required).
+             */
+            .jcarousel li {
+                /* Required only for block elements like <li>'s */
+                float: left;
+                width: 500px;
+            }
+		</style>
+		<script
+		src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src = "http://www.dukesnuz.com/jquery_plugins/jquery.jcarousel-core.js"></script>
+		<!--
+		<script src ="https://cdn.jsdelivr.net/jcarousel/0.3.4/jquery.jcarousel.min.js"></script>
+		-->
+		<script>
+			$(document).ready(function() {
+				$(function() {
+					$('.jcarousel').jcarousel({
+						animation : 'fast'
+					});
+					$('.jcarousel-prev').jcarouselControl({
+						target : '-=1'
+					});
+
+					$('.jcarousel-next').jcarouselControl({
+						target : '+=1'
+					});
+				});
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class = "jcarousel">
+			<ul>
+				<li><img src = "http://icons.wunderground.com/webcamramdisk/w/u/WunderYakuza/8/current.jpg?t=1341332890" >
+				</li>
+				<li><img src = "http://icons.wunderground.com/webcamramdisk/i/n/Inafog/1/current.jpg?t=1341332890" >
+				</li>
+				<li><img src = "http://icons.wunderground.com/webcamramdisk/s/e/SerenoDelMar/1/current.jpg?t=1341332890" >
+				</li>
+			</ul>
+		</div>
+		<a class="jcarousel-prev" href="#">Prev</a>
+		<a class="jcarousel-next" href="#">Next</a>
+
+	</body>
+
+</html>

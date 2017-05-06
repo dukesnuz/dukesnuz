@@ -1,0 +1,254 @@
+/*******************************************************************
+ * css_weather.css
+ * styles for weather and webcam
+ * href="https://fonts.googleapis.com/css?family=Orbitron"
+ * last updated 2/10/16
+ */
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Orbitron';
+    letter-spacing: 2px;
+}
+a {
+    text-decoration: none;
+}
+/****Links****/
+a:link {
+    color: #c0c0f1;
+    background-color: inherit;
+    font-weight: bold;
+}
+a:visited {
+    color: #c0c0f1;
+}
+a:hover {
+    color: #c0c0f1;
+    color: #fff;
+}
+a:active {
+    color: #fff;
+}
+
+option:hover {
+    background-color: #c0c0f1;
+    cursor: pointer;
+}
+
+.flex-container {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: flex;
+    width: auto;
+}
+.flex-container h2, section h2 {
+    text-indent: -9999px;
+    position: absolute;
+}
+/*
+ .flex-container_2 {
+ display: -moz-flex;
+ display: -ms-flex;
+ display: -webkit-flex;
+ display: -o-flex;
+ display: flex;
+ width: 33%;
+ }
+ */
+.flex-item-1 {
+    border: 4px double #000;
+    width: 50%;
+    max-width: 350px;
+    min-width: 300px;
+    margin: 10px;
+    margin-top: 0;
+}
+.flex-item-1 p {
+
+}
+.flex-item-2 {
+    width: 20%;
+    max-width: 200px;
+    min-width: 100px;
+    margin: 10px;
+    margin-top: 0;
+}
+div#map img {
+    display: block;
+    margin: auto;
+}
+
+input#locInput {
+    font-size: 2em;
+    width: 90%;
+    max-width: 500px;
+    margin-left: 10px;
+    display: block;
+    border-radius: 5px;
+}
+div#autoOutput {
+    position: absolute;
+    margin-left: 5%;
+    background: #ffffff;
+    font-size: 1.25em;
+    line-height: 150%;
+}
+ul {
+    list-style-type: none;
+}
+#weather p {
+    float: left;
+}
+div#weather img {
+    float: left;
+    display: block;
+}
+#temp {
+    clear: both;
+}
+/****** flex box 1 farthest left column********/
+
+div#location p, div#local_time p, div#weather p, div#forcast_url a {
+    margin-left: 20px;
+    font-size: .75em;
+}
+div#weather p {
+    padding-top: 8px;
+}
+div#weather img {
+    padding-left: 20px;
+}
+
+div#temp ul {
+    padding-left: 20px;
+    font-size: .75em;
+}
+div#map {
+    margin-top: 10px;
+}
+
+div#forcast_url a {
+    display: block;
+}
+/***END***/
+
+/****flex-item-2 2nd column****/
+div#camDescription p {
+    font-size: .85em;
+    line-height: 150%;
+}
+/*
+ This is the visible area of you carousel.
+ Set a width here to define how much items are visible.
+ The width can be either fixed in px or flexible in %.
+ Position must be relative!
+ */
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 500px;
+    margin: 10px;
+    margin-top: 0;
+    border: 4px double #000;
+}
+
+/*
+ This is the container of the carousel items.
+ You must ensure that the position is relative or absolute and
+ that the width is big enough to contain all items.
+ */
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    /* Optional, required in this case since it's a <ul> element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+    margin-right: 10px;
+}
+
+/*
+ These are the item elements. jCarousel works best, if the items
+ have a fixed width and height (but it's not required).
+ */
+.jcarousel li {
+    /* Required only for block elements like <li>'s */
+    float: left;
+    width: 600px;
+}
+.jcarousel-pagination {
+    height: auto;
+    max-height: 300px;
+    background-color: #FFF8DC;
+    overflow: scroll;
+}
+.jcarousel-pagination ul {
+    letter-spacing: 5px;
+}
+section.search {
+    margin-top: 10%;
+    margin-left: 20%;
+    position: absolute;
+}
+
+.start {
+    background-color: #fff;
+    color: #000;
+}
+/***header***/
+header h1 {
+    letter-spacing: 10px;
+}
+header h1 a:link, header h1 a:visited {
+    color: #800080;
+}
+header h2 {
+    font-size: .85em;
+    margin-bottom: 1px;
+}
+header small {
+    font-style: italic;
+}
+
+/***END***/
+
+/***footer***/
+header, footer {
+    color: #fff;
+}
+header {
+    padding: 10px;
+}
+footer {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: flex;
+    width: auto;
+}
+footer .flex-item-3 {
+    padding: 15px;
+    border: 4px double #000;
+    width: 570px;
+    margin: 10px;
+    margin-top: 0;
+}
+footer img {
+    width: 200px;
+}
+div#tos {
+    font-size: .70em;
+}
+.pageInfo {
+    padding-left: 20px;
+    font-size: .9em;
+    line-height: 150%;
+}
+/***END***/
+
