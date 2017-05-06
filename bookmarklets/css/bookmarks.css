@@ -1,0 +1,27 @@
+p {
+    color: #056482;
+    font-size: 1em;
+}
+a, h1, h2 {
+    color: #800000;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+    margin-bottom: 5px;
+    background-color: #cccEEE;
+    width: 500px;
+    padding: 3px;
+    color: #031267;
+}
+button {
+    background-color: #056482;
+    font-weight: bold;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+}
+footer {
+    margin: 100px 35px;
+}
