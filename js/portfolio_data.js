@@ -15,11 +15,32 @@ var imageDescriptions = {
 		"link" : 'http://dukesnuz.com/weather/get-current-weather-webcams'
 	},
 
+	capeMediation : {
+		"title" : "Cape Mediation",
+		"description" : "This is one of the two websites our team created at 48 in 48. I volunteered for 48 hours to create two websites.",
+		"comment" : "This site came in third place.",
+		"link" : 'https://capemediation.org/'
+	},
+
+	theBFund : {
+		"title" : "THe B Fund",
+		"description" : "This is one of the two websites our team created at 48 in 48. I volunteered for 48 hours to create two websites.",
+		"comment" : "We created 2 websites in 48 hours.",
+		"link" : 'https://thebfund.org/'
+	},
+
 	theDom : {
 		"title" : "The Dom Tree",
 		"description" : "This is a detailed explantion of the DOM(Document Object Model).",
 		"comment" : "This was an extra credit assignment for the Harvard Extension class, Introduction to Web Programming Using JavaScript.",
 		"link" : 'http://www.dukesnuz.com/harvard/introduction-to-web-programming-using-javascript/extraCreditAssignments/extraCreditAssignmentTwo/the_dom.html'
+	},
+
+	ajaxTransport : {
+		"title" : "Ajax Transport",
+		"description" : "This is my company website I am working on.",
+		"comment" : "On this site I am using HTML, CSS, JavaScript, PHP and MySql. I am still building out the site. This is why the colors are not the same on all pages.",
+		"link" : 'http://www.ajaxtransport.com/'
 	},
 
 	theCentralDispatch : {

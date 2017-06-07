@@ -41,9 +41,6 @@ $title = "Portfolio | David Petringa";
 		<script type="text/javascript" src = "../js/portfolio_data.js"></script>
 		<script type="text/javascript" src = "../js/portfolio.js"></script>
 		<script type="text/javascript" src = "../js/submit_contact_form.js"></script>
-		<!--https://www.shareaholic.com/-->
-		<script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='400967ed75f7182470f02715e3848d72' data-cfasync='false' async='async'></script>
-
 	</head>
 
 	<body>
@@ -69,24 +66,24 @@ $title = "Portfolio | David Petringa";
 							Boston, Ma
 						</p>
 						<p>
-							Skills include &#126; HTML, CSS, JavaScript, jQuery, PHP, MySQL, Filemaker
+							Skills include &#126; HTML, CSS, JavaScript, jQuery, Ajax, Api Integration, PHP, MySQL, Filemaker
 						</p>
 						<p>
 							<!--I am using CSS set to diplay none. Reason for this line. I want see if when posting to social media,
 							this image will display instead of my wonderful portrait img.-->
 							<!--
 							<img src = "https://cdn.instructables.com/ORIG/FNY/QE4E/I5J55BV3/FNYQE4EI5J55BV3.png" alt="Keep Calm and Try Coding" class = "hide"/>
-						   -->
+							-->
 						</p>
 						<p>
 							Education: Harvard Extension School
 							<br>
-							Fundamentals of Website Developemnt
+							Website Developemnt
 						</p>
 						<p>
 							Education: Harvard Extension School
 							<br>
-							Introduction to Web Programing Using JavaScript
+							Web Programing Using JavaScript
 						</p>
 						<p>
 							Self-taught &#126; Bootstrap, Filemaker, PHP, MySQL, Github
@@ -139,9 +136,17 @@ $title = "Portfolio | David Petringa";
 								<img src = "../images/weather_webcams.png" id = "weatherWebcams" alt="Current Weather and Webcams">
 							</li>
 							<li>
+								<img src = "../images/capemediation.png" id = "capeMediation" alt = "Cape Mediation">
+							</li>
+							<li>
+								<img src = "../images/thebfund.png" id = "theBFund" alt = "The B Fund">
+							</li>
+							<li>
 								<img src = "../images/the_dom.png" id = "theDom" alt = "The Dom Document Object Model">
 							</li>
-
+							<li>
+								<img src = "../images/ajaxtransport.png" id = "ajaxTransport" alt = "Ajax Transport Home Page">
+							</li>
 							<li>
 								<img src = "../images/thecentraldispatch.png" id = "theCentralDispatch" alt = "Transportation Links at The Central Dispatch">
 							</li>
@@ -303,22 +308,6 @@ $title = "Portfolio | David Petringa";
 				</div>
 			</footer>
 		</main>
-
-		<!--Start of Tawk.to Script-->
-		<script type="text/javascript">
-			var Tawk_API = Tawk_API || {},
-			    Tawk_LoadStart = new Date();
-			(function() {
-				var s1 = document.createElement("script"),
-				    s0 = document.getElementsByTagName("script")[0];
-				s1.async = true;
-				s1.src = 'https://embed.tawk.to/561278e100d3af75029e428b/default';
-				s1.charset = 'UTF-8';
-				s1.setAttribute('crossorigin', '*');
-				s0.parentNode.insertBefore(s1, s0);
-			})();
-		</script>
-		<!--End of Tawk.to Script-->
 
 		<!-- Start of StatCounter Code for Default Guide-->
 		<script type="text/javascript">
