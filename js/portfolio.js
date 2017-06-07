@@ -26,7 +26,7 @@ var createHeader = function(nameId) {
 			createSlogan();
 		}
 
-	}, 500);
+	}, 100);
 };
 
 /************************************************************************
@@ -73,7 +73,7 @@ function createSlogan() {
 			clearInterval(speed);
 		}
 
-	}, 500);
+	}, 100);
 }
 
 /***********************************
@@ -101,7 +101,7 @@ var showDescription = function(imageDescriptions) {
 
 		var link = imageDescriptions.link;
 		$('descLink').textContent = "";
-		createLink("descLink", link, "View");
+		createLink("descLink", link, "View Website");
 
 	} // END if(imageDescriptions){
 };
