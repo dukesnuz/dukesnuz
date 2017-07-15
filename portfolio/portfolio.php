@@ -38,7 +38,7 @@ $title = "Portfolio | David Petringa";
 		<!-- using my library file -->
 		<script type="text/javascript" src = "../js_libs/dukes.javascript.js"></script>
 
-		<script type="text/javascript" src = "../js/portfolio_data.js"></script>
+		<script type="text/javascript" src = "../js/portfolio_data.js?x=99"></script>
 		<script type="text/javascript" src = "../js/portfolio.js"></script>
 		<script type="text/javascript" src = "../js/submit_contact_form.js"></script>
 	</head>
@@ -133,49 +133,52 @@ $title = "Portfolio | David Petringa";
 					<div class = "imageMenu">
 						<ul>
 							<li>
-								<img src = "../images/weather_webcams.png" id = "weatherWebcams" alt="Current Weather and Webcams">
+								<a href="" target="blank"><img src = "http://www.ajaxtransport.com/images/ajaxdrones_screen_shot_300x132.png" id = "ajaxDrones" alt="Ajax Drones - A blog about drones"></a>
 							</li>
 							<li>
-								<img src = "../images/capemediation.png" id = "capeMediation" alt = "Cape Mediation">
+								<a href="" target="blank"><img src = "http://www.ajaxtransport.com/images/popsfoodcreations_screen_300x132.png" id = "popsFoodCreations" alt="Pops Food Creation - A food truck in Meridith, NH"></a>
 							</li>
 							<li>
-								<img src = "../images/thebfund.png" id = "theBFund" alt = "The B Fund">
+								<a href="" target="blank"><img src = "../images/capemediation.png" id = "capeMediation" alt = "Cape Mediation"></a>
 							</li>
 							<li>
-								<img src = "../images/the_dom.png" id = "theDom" alt = "The Dom Document Object Model">
+								<a href="" target="blank"><img src = "../images/thebfund.png" id = "theBFund" alt = "The B Fund"></a>
 							</li>
 							<li>
-								<img src = "../images/ajaxtransport.png" id = "ajaxTransport" alt = "Ajax Transport Home Page">
+								<a href="" target="blank"><img src = "../images/the_dom_page_image.png" id = "theDom" alt = "The Dom Document Object Model"></a>
 							</li>
 							<li>
-								<img src = "../images/thecentraldispatch.png" id = "theCentralDispatch" alt = "Transportation Links at The Central Dispatch">
+								<a href="" target="blank"><img src = "../images/ajaxtransport.png" id = "ajaxTransport" alt = "Ajax Transport Home Page"></a>
 							</li>
 							<li>
-								<img src = "../images/loadedandrolling.png" id = "loadedAndRolling" alt = "Loaded and Rolling">
+								<a href="" target="blank"><img src = "../images/thecentraldispatch.png" id = "theCentralDispatch" alt = "Transportation Links at The Central Dispatch"></a>
 							</li>
 							<li>
-								<img src = "../images/mortgage_calculator.png" id = "mortgageCalculator" alt = "Mortgage Calculator Using JavaScript">
+								<a href="" target="blank"><img src = "../images/loadedandrolling.png" id = "loadedAndRolling" alt = "Loaded and Rolling"></a>
 							</li>
 							<li>
-								<img src = "../images/get_the_blob.png" id = "getTheBlob" alt = "Get The Blob Game Using JavaScript and api">
+								<a href="" target="blank"><img src = "../images/mortgage_calculator.png" id = "mortgageCalculator" alt = "Mortgage Calculator Using JavaScript"></a>
 							</li>
 							<li>
-								<img src = "../images/bookmarklets.png" id = "bookmarklets" alt = "Bookmarklets Created with JavaScript, PHP and MySQL">
+								<a href="" target="blank"><img src = "../images/get_the_blob.png" id = "getTheBlob" alt = "Get The Blob Game Using JavaScript and api"></a>
 							</li>
 							<li>
-								<img src = "../images/web_develop_home.png" id = "webDevHome" alt = "Home Page for Fundamentals of Web Developement Using JavaScript at Harvard Extension School">
+								<a href="" target="blank"><img src = "../images/bookmarklets.png" id = "bookmarklets" alt = "Bookmarklets Created with JavaScript, PHP and MySQL"></a>
 							</li>
 							<li>
-								<img src = "../images/davidpetringa_dot_com.png" id = "davidPetringa" alt = "Blog Using PHP and MySQL">
+								<a href="" target="blank"><img src = "../images/web_develop_home.png" id = "webDevHome" alt = "Home Page for Fundamentals of Web Developement Using JavaScript at Harvard Extension School"></a>
 							</li>
 							<li>
-								<img src = "../images/intro_using%20javascript_home.png" id = "introWebProgHome" alt = "Home Page For Introduction to Web Programming at Harvard Extension School">
+								<a href="" target="blank"><img src = "../images/davidpetringa_dot_com.png" id = "davidPetringa" alt = "Blog Using PHP and MySQL"></a>
 							</li>
 							<li>
-								<img src = "../images/html_brunch_5.png" id = "htmlBrunch5Home" alt = "Home Page For HTML5 Brunch Season 5">
+								<a href="" target="blank"><img src = "../images/intro_using%20javascript_home.png" id = "introWebProgHome" alt = "Home Page For Introduction to Web Programming at Harvard Extension School"></a>
 							</li>
 							<li>
-								<img src = "../d/artgallery/images/filemaker_using_mysql.jpg" id = "filemakermysqlpictures" alt = "Filemaker using Execute SQL Script">
+								<a href="" target="blank"><img src = "../images/html_brunch_5.png" id = "htmlBrunch5Home" alt = "Home Page For HTML5 Brunch Season 5"></a>
+							</li>
+							<li>
+								<a href="" target="blank"><img src = "../d/artgallery/images/filemaker_using_mysql.jpg" id = "filemakermysqlpictures" alt = "Filemaker using Execute SQL Script"></a>
 							</li>
 						</ul>
 
@@ -183,13 +186,14 @@ $title = "Portfolio | David Petringa";
 					<div class = "imageDescription">
 						<ul>
 							<li>
-								My Portfolio
+								My Portfolio of my current work.
 							</li>
 							<li>
-								Select and image on the left.
+								As my knowledge and experience has increased, I feel my work has tremendously improved. Scroll through my
+								projects.
 							</li>
 							<li>
-								As my knowledge and experience has increased, I feel my work has tremendously improved.
+								I hope you enjoy viewing them as much as I have enjoyed coding them.
 							</li>
 							<li  id = 'descLink'>
 								<a href = "http://www.dukesnuz.com">Home</a>
