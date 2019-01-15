@@ -1,8 +1,10 @@
+2.gitignore
 /images
 .ftpquota
 .metadata/
 .project
 Git-DukesNuz end using 120518/
+about.php
 ajax/error_log
 ajax/includes/config.inc.php
 blog/error_log
@@ -38,3 +40,5 @@ unused files/
 views/games.inc.html
 weather/index.html
 weather/js_weather/object_back.js
+400.shtml
+401.html
