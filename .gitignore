@@ -1,9 +1,9 @@
 2.gitignore
-/images
 .ftpquota
 .metadata/
 .project
 /Git-DukesNuz end using 120518
+/images
 ajax/error_log
 ajax/includes/config.inc.php
 blog/error_log
