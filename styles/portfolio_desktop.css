@@ -1,0 +1,114 @@
+/************************************************
+ * portfolio_desktop.css
+ * desktop styles
+ *
+ * used with portfolio.html file
+ * created february 2017
+ */
+
+@media only screen and (min-width: 768px) {
+  
+    h1, h2, h3 {
+        margin-left: 4%;
+    }
+    h1#name {
+        font-size: 5em;
+    }
+    #slogan {
+        font-size: 1em;
+    }
+    .flex-container {
+        display: flex;
+        flex: 1;
+        padding: 50px 0 50px 10%;
+    }
+    .flex-container p {
+        max-width: 410px;
+        min-width: 325px;
+    }
+    .aboutMe div:nth-child(1), .objective div:nth-child(1), .work div:nth-child(1) {
+        width: 40%;
+        min-width: 350px;
+    }
+    .aboutMe div:nth-child(2), .objective div:nth-child(2) {
+        margin: 0 30px;
+        margin-left: 130px;
+    }
+    img {
+        width: 300px;
+        border: 2px solid #2F65BF;
+    }
+    .aboutMe div:nth-child(2) img {
+        border-radius: 0 25% 25% 0;
+        width: 200px;
+        height: 200px;
+    }
+    .imageMenu {
+        height: 500px;
+        overflow: scroll;
+        width: 325px;
+        min-width: 325px;
+    }
+    /*****imageDescription styles*****/
+    .imageDescription {
+        padding-left: 10px;
+        min-height: 500px;
+        width: 45%;
+        border-left: 1px dashed;
+        border-color: rgba(8, 59,146, .5);
+        margin-left: 130px;
+        max-height: 500px;
+        font-size: 1.15em;
+    }
+    .imageDescription ul {
+        max-width: 410px;
+        min-width: 325px;
+    }
+    .imageDescription li:first-child {
+        font-weight: bold;
+        font-size: 1.25em;
+        margin: 20px 0;
+    }
+    .imageDescription li {
+        margin-bottom: 30px;
+    }
+
+    /*****form styles******/
+    div#contactForm {
+        width: 80%;
+    }
+    input {
+        font-size: 1.5em;
+    }
+    .error {
+        font-size: 1em;
+    }
+
+    /***END***/
+
+    footer {
+        font-size: .89em;
+        padding-bottom: 5%;
+    }
+    footer li:nth-child(1) {
+        margin-top: 0px;
+    }
+    footer div:nth-child(2) {
+        margin: 0 4%;
+    }
+    footer li {
+        padding-left: 0;
+    }
+
+    /*********LiNKS***********/
+    #descLink a {
+        padding: 2px;
+    }
+
+    footer a:link {
+        padding: 2px;
+        color: #fff;
+        margin-bottom: 0px;
+        width: inherit;
+    }
+}/****END @media only screen and (min-width: 768px)***/

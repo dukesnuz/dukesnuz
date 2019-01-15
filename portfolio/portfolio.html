@@ -1,0 +1,315 @@
+<!--
+* David'd online portfolio
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="David Petringa Online Portfolio as a Front | Back end web developer. Skills coding with HTML, CSS, JavaScript, jQuery, PHP, MySQL, Filemaker.">
+		<meta name="keywords" content="David Petringa, HTML, CSS, JavaScript, jQuery, PHP, MySQL, Filemaker, Logistics, Transportation, Freight Rates, Trucking, Freight Broker">
+		<meta name="author" content="David Petringa February 2017">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<title>Portfolio | David Petringa</title>
+
+		<link rel = "stylesheet" href = "../css_libs/dukes_normalize.css"/>
+		<link rel="stylesheet" href="../styles/portfolio_mobile.css"/>
+		<link rel="stylesheet" href="../styles/portfolio_desktop.css"/>
+		<!--
+		<link rel="stylesheet" href="../styles/portfolio_desktop.css"/>
+		-->
+		<link rel = "shortcut icon" type="image/x-icon" href="../d/images/favicon.ico">
+
+		<!-- using my library file -->
+		<script type="text/javascript" src = "../js_libs/dukes.javascript.js"></script>
+
+		<script type="text/javascript" src = "../js/portfolio_data.js"></script>
+		<script type="text/javascript" src = "../js/portfolio.js"></script>
+		<script type="text/javascript" src = "../js/submit_contact_form.js"></script>
+
+	</head>
+
+	<body>
+		<main>
+			<header class = "banner">
+				<!--NOTE: I am leaving the headings empty. If I add &nbsp; the left margin is pushed right
+				and does not line up with other headings below it. I could have dynamically created
+				the h1 and h2 tags and then added the id. I am leaving as is since it validates with
+				only a warning.-->
+				<h1 id = "name"></h1>
+				<div id = "slogan">
+					<h2></h2>
+				</div>
+			</header>
+
+			<section>
+				<header>
+					<h3>About Me</h3>
+				</header>
+				<div class = "flex-container aboutMe">
+					<div>
+						<p>
+							Boston, Ma
+						</p>
+						<p>
+							Skills include &#126; HTML, CSS, JavaScript, jQuery, PHP, MySQL, Filemaker
+						</p>
+						<p>
+							<img src = "https://cdn.instructables.com/ORIG/FNY/QE4E/I5J55BV3/FNYQE4EI5J55BV3.png" alt="Keep Calm and Try Coding" class = "hide"/>
+						</p>
+						<p>
+							Education: Harvard Extension School
+							<br>
+							Fundamentals of Website Developemnt
+						</p>
+						<p>
+							Education: Harvard Extension School
+							<br>
+							Introduction to Web Programing Using JavaScript
+						</p>
+						<p>
+							Self-taught &#126; Bootstrap, Filemaker, PHP, MySQL, Github
+						</p>
+						<p>
+							Northeatern University &#126; BS Economics
+						</p>
+						<p>
+							<a href="#contactForm">Details available upon request.</a>
+						</p>
+					</div>
+					<div>
+
+						<img src = '../images/harvard_id_picture_5.jpg' alt = 'me' width= "150" height = "150">
+
+					</div>
+
+				</div>
+			</section >
+
+			<section>
+				<header>
+					<h3>&nbsp;Objective</h3>
+				</header>
+				<div  class = "flex-container objective">
+
+					<div>
+						<p>
+							Front End Web Developer
+						</p>
+					</div>
+
+					<div>
+						<p>
+							Back End Web Developer
+						</p>
+					</div>
+
+				</div>
+			</section >
+
+			<section>
+				<header>
+					<h3>&nbsp;My Works of Art</h3>
+				</header>
+				<div  class = "flex-container work">
+					<div class = "imageMenu">
+						<ul>
+							<li>
+								<img src = "../images/weather_webcams.png" id = "weatherWebcams" alt="Current Weather and Webcams">
+							</li>
+							<li>
+								<img src = "../images/the_dom_original.png" id = "theDom" alt = "The Dom Document Object Model">
+							</li>
+
+							<li>
+								<img src = "../images/thecentraldispatch.png" id = "theCentralDispatch" alt = "Transportation Links at The Central Dispatch">
+							</li>
+							<li>
+								<img src = "../images/loadedandrolling.png" id = "loadedAndRolling" alt = "Loaded and Rolling">
+							</li>
+							<li>
+								<img src = "../images/mortgage_calculator.png" id = "mortgageCalculator" alt = "Mortgage Calculator Using JavaScript">
+							</li>
+							<li>
+								<img src = "../images/get_the_blob.png" id = "getTheBlob" alt = "Get The Blob Game Using JavaScript and api">
+							</li>
+							<li>
+								<img src = "../images/bookmarklets.png" id = "bookmarklets" alt = "Bookmarklets Created with JavaScript, PHP and MySQL">
+							</li>
+							<li>
+								<img src = "../images/web_develop_home.png" id = "webDevHome" alt = "Home Page for Fundamentals of Web Developement Using JavaScript at Harvard Extension School">
+							</li>
+							<li>
+								<img src = "../images/davidpetringa_dot_com.png" id = "davidPetringa" alt = "Blog Using PHP and MySQL">
+							</li>
+							<li>
+								<img src = "../images/intro_using%20javascript_home.png" id = "introWebProgHome" alt = "Home Page For Introduction to Web Programming at Harvard Extension School">
+							</li>
+						</ul>
+
+					</div>
+					<div class = "imageDescription">
+						<ul>
+							<li>
+								My Portfolio
+							</li>
+							<li>
+								Select and image on the left.
+							</li>
+							<li>
+								As my knowledge and experience has increased, I feel my work has tremendously improved.
+							</li>
+							<li  id = 'descLink'>
+								<a href = "http://www.dukesnuz.com">Home</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section >
+
+			<section>
+				<header>
+					<h3>&nbsp;Contact</h3>
+				</header>
+				<div id = "contactForm">
+					<form action = "../ajax/ajax_contact.php" method = "POST" id  = "contact">
+						<fieldset>
+							<legend>
+								Let's be friends
+							</legend>
+							<p>
+								<label for = "firstName">First Name</label>
+								<input type = "text" name = "firstName" id = "firstName" placeholder = "Your First Name">
+							</p>
+							<div id = "fnError" class = "error">
+								&nbsp;
+							</div>
+
+							<p>
+								<label for = "lastName">Last Name</label>
+								<input type = "text" name = "lastName" id = "lastName" placeholder = "Your Last Name">
+							</p>
+							<div id = "lnError" class = "error">
+								&nbsp;
+							</div>
+
+							<p>
+								<label for = "email">Email</label>
+								<input type = "email" name = "email" id = "email" placeholder="Your Email">
+							</p>
+							<div id = "eError" class = "error">
+								&nbsp;
+							</div>
+
+							<p>
+								<label for = "message">Message </label>
+								<textarea name = "message" id = "message" cols = "3" rows = "10" placeholder="Your Wonderful Message"></textarea>
+							</p>
+							<div id = "mError" class = "error">
+								&nbsp;
+							</div>
+
+							<p>
+								<button type="submit" name = "button" id = "button" value = "message">
+									Submit
+								</button>
+							</p>
+						</fieldset>
+					</form>
+				</div>
+				<div id = "formResponse">
+					&nbsp;
+				</div>
+			</section>
+			<footer>
+
+				<div  class = "flex-container">
+					<div>
+						<ul>
+							<li>
+								Coded February 2017
+							</li>
+							<li>
+								<a href = "http://dukesnuz.com/">Home</a>
+							</li>
+							<li>
+								<a href = "http://dukesnuz.com/about/dukesnuz/david/petringa/">About</a>
+							</li>
+							<li>
+								<a href = "http://dukesnuz.com/blog/">Blog</a>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<ul>
+							<li>
+								Let' s Be Social
+							</li>
+							<li>
+								<a href = "https://www.linkedin.com/in/davidpetringa/">Let's Connect on Linkedin</a>
+							</li>
+							<li>
+								<a href = "https://twitter.com/Dukesnuz/">Let's Connect on twitter</a>
+							</li>
+							<li>
+								<a href = "https://github.com/dukesnuz/">Let's Connect on GitHub</a>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<ul>
+							<li>
+								Coded Files Used
+							</li>
+							<li  id = "codedPages1"></li>
+							<li  id = "codedPages2"></li>
+							<li  id = "codedPages3"></li>
+							<li  id = "codedPages4"></li>
+							<li  id = "codedPages5"></li>
+							<li  id = "codedPages6"></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</main>
+
+		<!--Start of Tawk.to Script-->
+		<script type="text/javascript">
+			var Tawk_API = Tawk_API || {},
+			    Tawk_LoadStart = new Date();
+			(function() {
+				var s1 = document.createElement("script"),
+				    s0 = document.getElementsByTagName("script")[0];
+				s1.async = true;
+				s1.src = 'https://embed.tawk.to/561278e100d3af75029e428b/default';
+				s1.charset = 'UTF-8';
+				s1.setAttribute('crossorigin', '*');
+				s0.parentNode.insertBefore(s1, s0);
+			})();
+		</script>
+		<!--End of Tawk.to Script-->
+
+		<!-- Start of StatCounter Code for Default Guide-->
+		<script type="text/javascript">
+			var sc_project = 6080262;
+			var sc_invisible = 1;
+			var sc_security = "ed805b7b";
+			var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+			document.write("<sc" + "ript type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></" + "script>");
+		</script>
+		<noscript>
+			<div class="statcounter">
+				<a title="shopify site
+				analytics" href="http://statcounter.com/shopify/"
+				target="_blank"><img class="statcounter"
+				src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+				alt="shopify site analytics"></a>
+			</div>
+		</noscript>
+		<!--End of StatCounter Code for Default Guide -->
+	</body>
+
+</html>

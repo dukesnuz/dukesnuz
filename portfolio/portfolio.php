@@ -66,19 +66,18 @@ $title = "Portfolio | David Petringa";
 							Boston, Ma
 						</p>
 						<p>
-							Skills include &#126; HTML, CSS, JavaScript, jQuery, Ajax, Api Integration, PHP, MySQL, Filemaker
+							Skills include &#126; HTML, CSS, JavaScript, jQuery, Ajax, Api Integration, PHP, MySQL, Filemaker, Angular 2, Laravel
 						</p>
 						<p>
 							<!--I am using CSS set to diplay none. Reason for this line. I want see if when posting to social media,
 							this image will display instead of my wonderful portrait img.-->
-							<!--
 							<img src = "https://cdn.instructables.com/ORIG/FNY/QE4E/I5J55BV3/FNYQE4EI5J55BV3.png" alt="Keep Calm and Try Coding" class = "hide"/>
-							-->
+
 						</p>
 						<p>
 							Education: Harvard Extension School
 							<br>
-							Website Developemnt
+							Dynamic Web Applications
 						</p>
 						<p>
 							Education: Harvard Extension School
@@ -86,7 +85,12 @@ $title = "Portfolio | David Petringa";
 							Web Programing Using JavaScript
 						</p>
 						<p>
-							Self-taught &#126; Bootstrap, Filemaker, PHP, MySQL, Github
+							Education: Harvard Extension School
+							<br>
+							Website Developemnt
+						</p>
+						<p>
+							Self-taught &#126; Bootstrap, Filemaker, PHP, MySQL, Github, Angular 2
 						</p>
 						<p>
 							Northeatern University &#126; BS Economics
@@ -132,6 +136,12 @@ $title = "Portfolio | David Petringa";
 				<div  class = "flex-container work">
 					<div class = "imageMenu">
 						<ul>
+							<li>
+								<a href="" target="blank"><img src = "../images/p4.png" id = "p4" alt="Project 4 HES Class Dynamic Web Application"></a>
+							</li>
+							<li>
+								<a href="" target="blank"><img src = "../images/davidpetringa_net.png" id = "davidPetringa_net" alt="David Petringa's Angular web App"></a>
+							</li>
 							<li>
 								<a href="" target="blank"><img src = "http://www.ajaxtransport.com/images/ajaxdrones_screen_shot_300x132.png" id = "ajaxDrones" alt="Ajax Drones - A blog about drones"></a>
 							</li>

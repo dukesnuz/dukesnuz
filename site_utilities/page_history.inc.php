@@ -7,7 +7,8 @@
 	//$my_ip = "::1";//for dev
 /*********************************************/	
 /******Set ip address to filter out in page count******/
-    $my_ip = "76.107.223.9";
+   // old ip 76.107.223.9
+    $my_ip = "73.5.43.112";
 	//$my_ip = "0";
 /*******filter browsers********/
 	$browser_filter = "other";

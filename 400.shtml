@@ -1,13 +1,85 @@
-<h1>IF you reached this page, please let us know:</h1>
+<!DOCTYPE >
+
+<html>
+<head>
+
+
+<style>
+body{
+	background-color: #140808;
+}
+.error{
+		border: 4px solid #ffffff;
+		padding:10%;
+		text-align: center;
+		background-color:#504B4B;
+		margin:5%;
+		color:#ffffff;
+	}
+a{
+	color:#ffffff;
+
+}
+	
+</style>
+</head>
+
+<body>
+
+<div class="error">
+<h1>OOppss! Something has gone haywire.  We apologize.</h1>
+<h2>IF you reached this page, please let us know.</h2>
+<h3>Check that the URL you entered is correct.</h3>
+<h4>Return to <a href="./index.php">Home page</a></h4>
 <ol>
 	<li> The page you just came from.</li>
 	<li> The page(url) you are now on.</li>
 
-<li> <a href="http://dukesnuz.com/d/contactusform.php" target="blank">Contact Us Here</a></li>
+<li><a href="./contact.php">Contact Us Here</a></li>
 
-<li> Thank you for your help.</li>
+<li>Thank you for your help.</li>
 
 </ol>
 
 
-<!--#echo var="HTTP_REFERER" -->
+
+</div>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/561278e100d3af75029e428b/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+		
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify site
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="shopify site analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body>
+</html>

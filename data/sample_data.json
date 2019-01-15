@@ -1,0 +1,15 @@
+
+"companies": {
+	{
+	"dot": "1",
+	"company_name": "Abc Company",
+	"address": "1 Main St",
+	"city": "Anytown",
+	"state": "Ma",
+	"telephone":"123-555-1212",
+	"fax": "123-555-1212",
+	"email":"example.example.com",
+	"performance_rating": "A",
+	"pay_history": "A",
+	}
+}

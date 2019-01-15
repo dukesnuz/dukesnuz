@@ -8,6 +8,19 @@
  */
 
 var imageDescriptions = {
+	p4: {
+        "title": "Final Project For Dynamic Web Applications",
+        "description": "Final project for Dynamic Web Applications class at Harvard Extension School.",
+        "comment": "This web app is developed using the Laravel framework.",
+        "link": "http://p4.dukesnuz.com"
+    },
+	
+	davidPetringa_net: {
+        "title": "My First Angular Web App",
+        "description": "This is my first attempt at creating an Angular Web Application. I'am new to Angular 2 and as a result this app uses some simple features. As my skills increase, I will be adding more to this website.",
+        "comment": "Once you get past the learning curve, Angular 2 is very cool.",
+        "link": "http://www.davidpetringa.net/"
+    },
 
     ajaxDrones: {
         "title": "Ajax Drones",

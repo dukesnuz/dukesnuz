@@ -7,18 +7,14 @@ body{
 
 h1{
 	font-size: 2em;
-	 
-	
 }
 
 h2{
 	font-size: 2em;
-	
 }
 
 h3{
 	font-size: 1.75em;
-	
 }
 p{
 	font-size:1.2em;
@@ -30,8 +26,6 @@ p{
     z-index:-9999;
     margin-top:-40px;
     width:100%;
-     
-   
 }
 
 #title h1{
@@ -43,14 +37,9 @@ p{
 	display: none;
 }
 
-
-
-
-
 #header_2{ 
 	  padding: 1% 5%;
 }
-
 
 .left_side{
 	position: relative;
@@ -59,7 +48,6 @@ p{
 	width:100%;
 	
 }
-
 
 .right_side{
 	position: relative;
@@ -76,14 +64,11 @@ p{
 	width:100%;
 	margin-left:auto;
 	margin-right:auto;
-	
-	
 }
  
 .content p, .content_wide p{
  	padding:3% 10%;
  }
- 
  
 .content h1, .content h3, .content_wide h1, .content_wide h3{
 	text-align: center;
@@ -339,8 +324,7 @@ input,textarea{
 		
 	}
 /**********************************END flickr page mobile first*********************************************/
-
-                                /*********************************desktop view*********************************/
+/*********************************desktop view*********************************/
 /********Large devices********/
 @media only screen and (min-width:801px){
 
@@ -380,19 +364,14 @@ input,textarea{
 	display: inline;
 	font-style: bold;
 	padding-left:1%;
-	
 }
-
-
-
 
 .left_side{
 	margin-top:3%;
 	padding:3%;
 	float: left;
 	width:43.5%;
-	border-right:1px solid black;	
-	
+	border-right:1px solid black;		
 }
 
 .right_side{
@@ -400,8 +379,6 @@ input,textarea{
     padding:3%;
 	float: left;
 	width:43.5%;
-	
-	 
 }
 
 .content{
@@ -427,8 +404,6 @@ input,textarea{
 aside{
 	margin:0px;
 	padding:3%;
-	
-
 }
 
 

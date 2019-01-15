@@ -3,11 +3,15 @@
 //echo 1;
 require('../includes/config.inc.php');
 //echo 2;
-if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['message']) &&
+ if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['message']) &&
    filter_var ($_POST['email'],FILTER_VALIDATE_EMAIL) )
-  //if(2>4)
+ //if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	
+	//echo $_POST['first_name'];
+	//echo $_POST['last_name'];
+	//echo $_POST['email'];
+	//echo $_POST['message'];
 	
 	require (MYSQL);
 	
@@ -38,6 +42,8 @@ if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['em
 					$body .=$_POST['message']."\n";
 					$body .="Your email:\n";
 					$body .=$_POST['email']."\n\r";
+					$body .="While you are waiting would you like to play a game?\n\r";
+					$body .="www.dukesnuz.com/games\n\r";
 					$body .="Regards,\nDavid Petringa\n";
 					$body .="http://www.dukesnuz.com\n\r";
 					$body .="Email End";

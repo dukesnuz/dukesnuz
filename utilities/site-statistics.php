@@ -10,7 +10,8 @@ $title = "Site Statistics";
 
 
 /******Set ip address to filter out in page count******/
-      $my_ip = "76.107.223.9";
+     // old ip 76.107.223.9
+      $my_ip = "73.5.43.112";
 	//$my_ip = "0";
 /*******filter browsers********/
 	$browser_filter = "other";
@@ -28,7 +29,7 @@ require(MYSQL);
 	        HAVING COUNT(*) > 0
 	        ORDER BY catagory ASC";
 		   */
-	$q = "SELECT page_time, page_title, page, url_complete,browser, count(*) AS hits FROM page_history
+	$q = "SELECT max(page_time) AS page_time, page_title, page, url_complete,browser, count(*) AS hits FROM page_history
 	        WHERE ip != '$my_ip'
 	        AND 
 	        browser != '$browser_filter'

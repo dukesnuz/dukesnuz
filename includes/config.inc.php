@@ -3,9 +3,9 @@
     //echo 'config';
     // are we live
     //use below for devlopement
-    //if(!defined('LIVE')) DEFINE('LIVE', false);
+    if(!defined('LIVE')) DEFINE('LIVE', false);
 	//use below for live
-	if(!defined('LIVE')) DEFINE('LIVE', true);
+	//if(!defined('LIVE')) DEFINE('LIVE', true);
 	
 	//errors emailed here
 	DEFINE('CONTACT_EMAIL', 'hello@dukesnuz.com');
@@ -19,7 +19,9 @@
     define('MYSQL1','./include_2/mysqli_connect.php');
     define('MYSQL','../include_2/mysqli_connect.php');
 	
-	
+	//below used for page_history.inc.php
+	define('MYSQLH1','./include_2/mysqli_connect_history.php');
+    define('MYSQLH','../include_2/mysqli_connect_history.php');
     //below for admin folder
     //define('MYSQL_ADMIN', '../../includes_2/mysql.inc.php');
 
@@ -63,7 +65,7 @@
 			}else{
 				//developement print error
 				//send error in an email
-				error_log ($message, 1, CONTACT_EMAIL, 'From:DukesNuz');
+				error_log ($message, 1, CONTACT_EMAIL, "From:".CONTACT_EMAIL);
 				
 				//only print error in browser, if error isnt a notice
 				if($e_number != E_NOTICE)
@@ -78,45 +80,5 @@
 set_error_handler('my_error_handler');
 
 
-//chapter 9 below functions
-//returns price
-function get_just_price($regular, $sales)
-	{
-		if ((0 < $sales) && ($sales < $regular))
-			{
-				return number_format($sales/100, 2 );
-			}else{
-				return number_format($regular/100, 2);
-			}
-	}
-
-//parse sku
-
-function parse_sku($sku)
-	{
-		//grab first character
-		$type_abbr = substr($sku, 0,1);
-		
-		//grab remaining character
-		$pid = substr($sku, 1);
-		
-		//validate the type
-		if($type_abbr === 'C')
-			{
-				$type = 'coffee';
-			}elseif($type_abbr === 'G')
-			{
-				$type = 'goodies';
-			}else{
-				$type = NULL;
-			}
-			
-	   //validate product id
-	   $pid = (filter_var($pid, FILTER_VALIDATE_INT, array('min_range' => 1))) ? $pid: NULL;
-	   
-	   //return the values
-	   return array($type, $pid);
-	}//end of parse_sku() function
 
 
-	

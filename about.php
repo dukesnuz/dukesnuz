@@ -1,5 +1,5 @@
 <?php
-/***************************This is the home page for dukesnuz******************************/
+/***************************This is the about page for dukesnuz******************************/
 /******I have split the site pages up into sections*****************************************/
 /*******Header, main section, footer*******************************************************/
 

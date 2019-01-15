@@ -299,7 +299,6 @@ function callCarousel(webcams) {
 
 	});
 }
-
 //});
 /***********************************************************************************************************
  * function is called from display function. This function grabs the webcam locations for the selected
@@ -348,6 +347,7 @@ var getWebcams = function(country) {
  */
 function displayWebcams(webcams) {
 	"use strict";
+
 	callCarousel(webcams);
 	var $ = jQuery;
 	$('#list').text('');

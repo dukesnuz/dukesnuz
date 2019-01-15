@@ -25,7 +25,7 @@ require(MYSQL1);
 /************END grab most query most viewed pages*******************************************/		
 
 /**************************Grab a random picture*********************************************/
-	 $qp = "SELECT picture_name, comment, img_url, record_id, gallery_select, alt 
+	 $qp = "SELECT picture_name, comment, img_url, gallery_select, alt 
        					FROM Artgallery
        					where 
        					Active = 'Active' 
@@ -35,6 +35,16 @@ require(MYSQL1);
 	       $rp = mysqli_query($dbc,$qp);
 		   
 /**************************END grab random picture*******************************************/			
+
+/**************************************select most recent blog posts*************************/
+ $q = "SELECT title, url_cat FROM blog 
+				where status = 'true'
+				ORDER BY date_created DESC
+				LIMIT 5";
+
+     $b = mysqli_query($dbc, $q);
+
+/*************************************END select recent blog posts***************************/
 		   
 include('./views/home.inc.html');
 
