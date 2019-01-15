@@ -32,13 +32,15 @@ nuz.php
 portfolio/portfolio.html
 sandbox.html
 shop.php
+styles/main.css
 styles/portfolio.css
 styles/portfolio_desktop.css
 styles/portfolio_mobile.css
 t.png
 unused files/
-views/games.inc.html
+/views
 weather/index.html
 weather/js_weather/object_back.js
+weather/js_weather/js_weather.js
 400.shtml
 401.html
