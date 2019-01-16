@@ -19,7 +19,7 @@ require(MYSQL1);
 	        WHERE ip != '$my_ip'
 	        AND 
 	        browser != '$browser_filter'
-	        GROUP by page  ORDER BY hits DESC LIMIT 5
+	        GROUP by page  ORDER BY hits DESC LIMIT 10
 	           ";
 					$r = mysqli_query($dbc, $q);
 /************END grab most query most viewed pages*******************************************/		
@@ -40,7 +40,7 @@ require(MYSQL1);
  $q = "SELECT title, url_cat FROM blog 
 				where status = 'true'
 				ORDER BY date_created DESC
-				LIMIT 5";
+				LIMIT 25";
 
      $b = mysqli_query($dbc, $q);
 
