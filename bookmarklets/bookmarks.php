@@ -37,7 +37,7 @@
 				The main goal is to demonstrate bookmarklets and AJAX.
 			</li>
 			<li>
-				Bookmarklets are simply javascript placed into a url to do something. 
+				Bookmarklets are simply javascript placed into a url to do something.
 				Bookmarklets do someting only in the webpage in which the javascript is added into the url.
 				The javascript in the url is prefaced with <strong>javascript:</strong>.
 			</li>
@@ -84,5 +84,11 @@
 				Student: David Petringa
 			</p>
 		</footer>
+
+		<?php
+		$title = "Extra Credit Assignment Two";
+		include ('../includes/config.inc.php');
+		include ('../site_utilities/footer_hidden.inc.php');
+		?>
 	</body>
 </html>
