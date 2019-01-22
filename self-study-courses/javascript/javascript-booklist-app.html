@@ -8,8 +8,18 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>MyBookList App</title>
-    <meta name="description" content="" />
+    <title>MyBookList App | David Petringa</title>
+    --------
+    <meta
+      name="description"
+      content="A tutorial I took by Traversy Media called JavaScript BookList App | No Frameworks"
+    />
+    <meta
+      name="keywords"
+      content="Vanilla, JavaScript, HTML, CSS, Web, Development, Coding, Tutorial"
+    />
+    <meta name="author" content="David Petringa, Coded January 2019" />
+    --------
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -20,43 +30,76 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.css" />
   </head>
   <body>
-    <div class="container mt-4">
-      <h1 class="display-4 text-center">
-        <i class="fas fa-book-open text-primary"></i> My<span
-          class="text-primary"
-          >Book</span
-        >List
-      </h1>
-      <form id="book-form">
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" id="title" class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="author">Author</label>
-          <input type="text" id="author" class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="isbn">Isbn</label>
-          <input type="text" id="isbn" class="form-control" />
-        </div>
-        <input
-          type="submit"
-          value="Add Book"
-          class="btn btn-primary btn-block"
-        />
-      </form>
-      <table class="table table-striped mt-5">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>ISBN#</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody id="book-list"></tbody>
-      </table>
+    <div class="container mt-5">
+      <header>
+        <h1 class="display-4 text-center">
+          <i class="fas fa-book-open text-primary"></i> My<span
+            class="text-primary"
+            >Book</span
+          >List
+        </h1>
+      </header>
+      <section class="mt-5 mb-5">
+        <form id="book-form">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="isbn">Isbn</label>
+            <input type="text" id="isbn" class="form-control" />
+          </div>
+          <input
+            type="submit"
+            value="Add Book"
+            class="btn btn-primary btn-block"
+          />
+        </form>
+        <table class="table table-striped mt-5">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ISBN#</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="book-list"></tbody>
+        </table>
+      </section>
+      <footer class="mt-5 mb-5">
+        <ul class="list-unstyled">
+          <li>
+            An AWESOME Vanilla JavaScript tutorial called
+            <a href="https://www.youtube.com/watch?v=JaMCxVWtW58" target="blank"
+              >JavaScript BookList App | No Frameworks</a
+            >
+          </li>
+          <li>
+            Instructor:
+            <a href="http://www.traversymedia.com" target="blank"
+              >Traversy Media</a
+            >
+          </li>
+          <li>
+            Student:
+            <a href="http://www.dukesnuz.com" target="blank">David Petringa</a>
+          </li>
+          <li>
+            Code on
+            <a
+              href="https://github.com/dukesnuz/DukesNuz/tree/master/self-study-courses/javascript"
+              target="blank"
+              >Github</a
+            >
+          </li>
+          <li>I completed this tutorial - January 2019</li>
+        </ul>
+      </footer>
     </div>
     <!--END <div class="container mt-4">-->
     <!--[if lt IE 7]>
@@ -66,6 +109,53 @@
       </p>
     <![endif]-->
 
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function() {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/561278e100d3af75029e428b/default";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+      var sc_project = 6080262;
+      var sc_invisible = 1;
+      var sc_security = "ed805b7b";
+      var scJsHost =
+        "https:" == document.location.protocol
+          ? "https://secure."
+          : "http://www.";
+      document.write(
+        "<sc" +
+          "ript type='text/javascript' src='" +
+          scJsHost +
+          "statcounter.com/counter/counter.js'></" +
+          "script>"
+      );
+    </script>
+    <noscript
+      ><div class="statcounter">
+        <a
+          title="shopify site
+      analytics"
+          href="http://statcounter.com/shopify/"
+          target="_blank"
+          ><img
+            class="statcounter"
+            src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+            alt="shopify site analytics"
+        /></a></div
+    ></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
     <script src="./js/javascript-booklist-app.js" async defer></script>
   </body>
 </html>
