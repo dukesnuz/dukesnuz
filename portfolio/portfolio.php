@@ -77,20 +77,23 @@ $title = "Portfolio | David Petringa";
 						<p>
 							Education: Harvard Extension School
 							<br>
-							Dynamic Web Applications
+							Dynamic Web Applications - Learned The Laravel Framework
 						</p>
 						<p>
 							Education: Harvard Extension School
 							<br>
-							Web Programing Using JavaScript
+							Web Programing Using JavaScript - Learned JavaScript
 						</p>
 						<p>
 							Education: Harvard Extension School
 							<br>
-							Website Developemnt
+							Website Developemnt - Learned HTML and CSS
 						</p>
 						<p>
-							Self-taught &#126; Bootstrap, Filemaker, PHP, MySQL, Github, Angular 2
+							Self-taught &#126; Bootstrap, Filemaker, PHP, MySQL, Github, Angular, Vuejs
+						</p>
+						<p>
+							A complete list of <a href="http://dukesnuz.com/self-study-courses/courses-menu/dukesnuz-david-petringa/" style="display: inline;">Courses</a>
 						</p>
 						<p>
 							Northeatern University &#126; BS Economics
