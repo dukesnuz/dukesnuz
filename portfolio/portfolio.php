@@ -66,7 +66,7 @@ $title = "Portfolio | David Petringa";
 							Boston, Ma
 						</p>
 						<p>
-							Skills include &#126; HTML, CSS, JavaScript, jQuery, Ajax, Api Integration, PHP, MySQL, Filemaker, Angular 2, Laravel
+							Stack &#126; HTML, CSS, JavaScript, Angular, Vuejs, jQuery, Ajax, Api Integration, PHP, Laravel, MySQL, Filemaker
 						</p>
 						<p>
 							<!--I am using CSS set to diplay none. Reason for this line. I want see if when posting to social media,
