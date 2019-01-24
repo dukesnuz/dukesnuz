@@ -19,14 +19,14 @@ var imageDescriptions = {
         "title": "My First Angular Web App",
         "description": "This is my first attempt at creating an Angular Web Application. I'am new to Angular 2 and as a result this app uses some simple features. As my skills increase, I will be adding more to this website.",
         "comment": "Once you get past the learning curve, Angular 2 is very cool.",
-        "link": "http://www.davidpetringa.net/"
+        "link": "http://dukesnuz.com/coding-playground/angular/my-first-angular-app-ll/"
     },
 
     ajaxDrones: {
-        "title": "Ajax Drones",
+        "title": "Drones",
         "description": "Wordpress was used to develop this site. I like word press except for the fact that wordpress takes a lot of the fun out of coding from scratch.",
         "comment": "I like drones. I use this site to post cool information on drones.",
-        "link": "http://ajaxdrones.com/"
+        "link": "http://drones.dukesnuz.com/"
     },
 
     popsFoodCreations: {
@@ -114,10 +114,10 @@ var imageDescriptions = {
     },
 
     davidPetringa: {
-        "title": "David Petringa",
+        "title": "David's Blog",
         "description": "Demonstrating using PHP and MySQL",
         "comment": "PHP is used to dynamically create the pages. All the blog posts are stored in a MySQL table. Yes I know the colors are dark.",
-        "link": "http://www.davidpetringa.com"
+        "link": "http://blog.dukesnuz.com/"
     },
 
     introWebProgHome: {
