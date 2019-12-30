@@ -82,7 +82,7 @@ var imageDescriptions = {
         "title": "Loaded and Rolling",
         "description": "This demonstrates HTML and CSS and JavaScript. I added to the backend using PHP to make calls to a MySQL table I created.",
         "comment": "This was my final project for Fundamentals of Website Development at Harvard Extension.",
-        "link": "http://www.loadedandrolling.co"
+        "link": "http://loadedandrolling.loadedandrolling.com"
     },
 
     mortgageCalculator: {
