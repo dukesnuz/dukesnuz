@@ -1,190 +1,156 @@
 <!-- Start video hero -->
 <div class="video-hero">
-    <div class="video-bg demo-video">
-        <video autoplay muted loop poster="images/busy-new-york-intersection.jpg">
-            <source src="/video/busy-new-york-intersection.mp4" type="video/mp4">
-            <source src="/video/busy-new-york-intersection.webm" type="video/webm">
-            <source src="/video/busy-new-york-intersection.ogv" type="video/ogg">
-        </video>
-    </div>
-    <div class="video-overlay"></div>
-    <div class="page-width">
-        <div class="video-hero--content">
-            <h1>DukesNuz</h1>
-            <h2>My playground on the web.</h2>
-        </div>
-    </div>
+	<div class="video-bg demo-video">
+		<video autoplay muted loop poster="images/busy-new-york-intersection.jpg">
+			<source src="/video/busy-new-york-intersection.mp4" type="video/mp4">
+			<source src="/video/busy-new-york-intersection.webm" type="video/webm">
+			<source src="/video/busy-new-york-intersection.ogv" type="video/ogg">
+		</video>
+	</div>
+	<div class="video-overlay"></div>
+	<div class="page-width">
+		<div class="video-hero--content">
+			<h1>DukesNuz</h1>
+			<h2>My playground on the web.</h2>
+		</div>
+	</div>
 </div>
 
 </section>
 
 <section>
-    <header id="header_2">
-        <h3 style="text-align: center">Coding Hobbyist | Continually in Development</h3>
-    </header>
+	<header id="header_2">
+		<h3 style="text-align: center">Coding Hobbyist | Continually in Development</h3>
+	</header>
 
-    <div class="left_side">
-        <div style="margin-left:5%;margin-bottom:5%;">
-            <!--Start quote of the day-->
+	<div class="left_side">
+		<div style="margin-left:5%;margin-bottom:5%;">
 
-            <!--JavaScript code for single Quote of the Day, http://www.tqpage.com/-->
-            <p>
-                <script language="javascript" src="http://www.quotationspage.com/data/1qotd.js"></script>
-                <!--http://www.quotationspage.com/useourquotes.php-->
-            </p>
-            <!--End JavaScript Quotations code-->
+		</div>
+		<!--autofocus
+		/contact/dukesnuz/david/petringa/
+		index.php
+		-->
+		<!----Start random picture--------->
+		<h3 style="margin-left:5%">Search My Pictures</h3>
+		<?php
+		if(mysqli_num_rows($rp) >0)
+		$row_pic = mysqli_fetch_array($rp, MYSQLI_ASSOC);
+		if($row_pic['gallery_select'] ==="GalleryTwo")
+		{
+		echo '
+		<div style="text-align:center">
+			<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:228px;height:300px;"></a>
+		</div>';
+		}else{
+		echo '
+		<div style="text-align:center">
+			<a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:300px;height:228px;"></a>
+		</div>';
+		}
+		?>
 
-            <p>
-                <script type="text/javascript" src="http://www.brainyquote.com/link/quotebr.js"></script>
-                <small><i><a href="http://www.brainyquote.com/quotes_of_the_day.html" target="_blank">more Quotes</a></i></small>
-            </P>
+		<!-----------------END random picture------------------------>
+		<h3 style="margin-left:5%">Sign My Guest Book</h3>
 
-            <!--END Quote of the day-->
-        </div>
-        <!--autofocus
-        /contact/dukesnuz/david/petringa/
-        index.php
-        -->
-        <!----Start random picture--------->
-        <h3 style="margin-left:5%">A Random Picture</h3>
-        <?php
-        if(mysqli_num_rows($rp) >0)
-        $row_pic = mysqli_fetch_array($rp, MYSQLI_ASSOC);
-        if($row_pic['gallery_select'] ==="GalleryTwo")
-        {
-        echo '
-        <div style="text-align:center">
-            <a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:228px;height:300px;"></a>
-        </div>';
-        }else{
-        echo '
-        <div style="text-align:center">
-            <a href="/coding/playground/storing-picture-data-php-mysqli-filemaker'.MODWRITE.'" title="'.$row_pic['picture_name'].' | View More Pictures"><img src="'.$row_pic['img_url'].'" alt="'.$row_pic['alt'].'" style="width:300px;height:228px;"></a>
-        </div>';
-        }
-        ?>
+		<div id="gb_error" style="color:red;font-weight: bold"></div>
 
-        <!-----------------END random picture------------------------>
-        <h3 style="margin-left:5%">Sign My Guest Book</h3>
+		<form name="guest_book" method="post" action="/dukesnuz/david/petringa/" id="guest_book">
+			<fieldset>
+				<legend>
+					Your Name and Email Address
+				</legend>
+				<p>
+					<label class="question" for="first_name">What is your last name?</label>
+					<input type="text" id="first_name" name="first_name" placeholder="Enter your first name." size="50" value="" required  />
+				</p>
+				<p>
+					<label class="question" for="last_name">What is your first name?</label>
+					<input type="text" id="last_name" name="last_name" placeholder="Enter your last name." size="50" value="" required />
+				</p>
 
-        <div id="gb_error" style="color:red;font-weight: bold"></div>
+				<p>
+					<label class="question" for="email">What is your email address?</label>
+					<input type="email" id="email" name="email" placeholder="Your email address." size="50" value="" required />
+				</p>
+			</fieldset>
 
-        <form name="guest_book" method="post" action="/dukesnuz/david/petringa/" id="guest_book">
-            <fieldset>
-                <legend>
-                    Your Name and Email Address
-                </legend>
-                <p>
-                    <label class="question" for="first_name">What is your last name?</label>
-                    <input type="text" id="first_name" name="first_name" placeholder="Enter your first name." size="50" value="" required  />
-                </p>
-                <p>
-                    <label class="question" for="last_name">What is your first name?</label>
-                    <input type="text" id="last_name" name="last_name" placeholder="Enter your last name." size="50" value="" required />
-                </p>
+			<fieldset>
+				<legend>
+					Leave an amazing comment
+				</legend>
+				<p>
+					<label class="question" for="message">Your valued Comment</label>
+					<textarea id="message" name="message" rows="7" cols="50" placeholder="Leave an amazing comment." required></textarea>
+				</p>
+			</fieldset>
 
-                <p>
-                    <label class="question" for="email">What is your email address?</label>
-                    <input type="email" id="email" name="email" placeholder="Your email address." size="50" value="" required />
-                </p>
-            </fieldset>
+			<div id="buttons">
+				<input type="submit" value="Submit" id="submit" />
+				or
+				<input type="reset" value="Erase and start over" />
+			</div>
 
-            <fieldset>
-                <legend>
-                    Leave an amazing comment
-                </legend>
-                <p>
-                    <label class="question" for="message">Your valued Comment</label>
-                    <textarea id="message" name="message" rows="7" cols="50" placeholder="Leave an amazing comment." required></textarea>
-                </p>
-            </fieldset>
+		</form>
 
-            <div id="buttons">
-                <input type="submit" value="Submit" id="submit" />
-                or
-                <input type="reset" value="Erase and start over" />
-            </div>
+		<h3 style="margin-top:10%;margin-left:5%">Amazing Comments</h3>
 
-        </form>
+		<div id='ajaxDiv'>
+			Amazing Comments at DukesNuz
+		</div>
+	</div>
 
-        <h3 style="margin-top:10%;margin-left:5%">Amazing Comments</h3>
+	<div class="right_side">
+		<!--websites coded-->
 
-        <div id='ajaxDiv'>
-            Amazing Comments at DukesNuz
-        </div>
-    </div>
+		<h3 style="margin-top:20px;"><a href="http://david.dukesnuz.com">The New Blog</a></h3>
+		<p>
+			So I coded a blog website. I  write about website development and computer technology. I coded the blog
+			using Laravel and Vuejs. No blog templates were used. There is also a section where I post my favorite
+			websites. There is an emphasis on website development and computer technology.
+		</p>
+		  <h3><a href="http://david.dukesnuz.com">Check it out !</a></h3>
 
-    <div class="right_side">
-        <!--websites coded-->
-        <h3 style="margin-top:20px;"><a href="http://www.davidpetringa.com">David's other place on the web.</a></h3>
-        
-        <h3 style="margin-top:20px;"><a href="http://david.dukesnuz.com">My Favorite Websites Made With Laravel</a></h3>
-        
-        <h3 style="margin-top:20px;"><a href="/portfolio/">My Portfolio</a></h3>
+		<h3 style="margin-top:20px;">Recent Blog Posts</h3>
+		<p>(From the old blog)</p>
+		<?php
+		if(mysqli_num_rows($b) >0)
+		{
+		echo "
+		<ul style='list-style: none;'>
+			";
+			while($row = mysqli_fetch_array($b, MYSQLI_ASSOC))
+			{
+			echo  "
+			<li>
+				<a href='/catagory/blog/".$row['url_cat']."/'>".$row['title']."&nbsp;&nbsp;Read More&nbsp;&#10144;</a>
+			</li>";
+			}
+			echo '
+		</ul>';
+		}
+		?>
 
-        <!--courses taken-->
-        <h3 style="margin-top:20px;">Coding Courses Taken</h3>
+		<h3 style="margin-top:20px;">Most Viewed Pages</h3>
+		<?php
+		if(mysqli_num_rows($r) >0)
+		{
+		echo "
+		<ul style='list-style: none;'>
+			";
+			while($row = mysqli_fetch_array($r, MYSQLI_ASSOC))
+			{
+			echo  "
+			<li>
+				<a href=".$row['url_complete'].">".$row['page_title']."</a>
+			</li>";
+			}
+			echo '
+		</ul>';
+		}
+		?>
 
-        <p>
-            <a href="/self-study-courses/courses-menu<?php echo MODWRITE2;?>">HTML, CSS, javaScript, jQuery, Angular, Vuejs, PHP, Laravel, MySQL</a>
-        </p>
-
-        <!--add twitter timeline-->
-        <!--
-        <a class="twitter-timeline"  href="https://twitter.com/Dukesnuz" data-widget-id="655881430338174976">Tweets by @Dukesnuz</a>
-        <script>
-            ! function(d, s, id) {
-                var js,
-                    fjs = d.getElementsByTagName(s)[0],
-                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + "://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, "script", "twitter-wjs");
-        </script>
-        -->
-        <h3 style="margin-top:20px;">Recent Blog Posts</h3>
-        <?php
-        if(mysqli_num_rows($b) >0)
-        {
-        echo "
-        <ul style='list-style: none;'>
-            ";
-            while($row = mysqli_fetch_array($b, MYSQLI_ASSOC))
-            {
-            echo  "
-            <li>
-                <a href='/catagory/blog/".$row['url_cat']."/'>".$row['title']."&nbsp;&nbsp;Read More&nbsp;&#10144;</a>
-            </li>";
-            }
-            echo '
-        </ul>';
-        }
-        ?>
-
-        <h3 style="margin-top:20px;">Most Viewed Pages</h3>
-        <?php
-        if(mysqli_num_rows($r) >0)
-        {
-        echo "
-        <ul style='list-style: none;'>
-            ";
-            while($row = mysqli_fetch_array($r, MYSQLI_ASSOC))
-            {
-            echo  "
-            <li>
-                <a href=".$row['url_complete'].">".$row['page_title']."</a>
-            </li>";
-            }
-            echo '
-        </ul>';
-        }
-        ?>
-
-    </div>
+	</div>
 
 </section>
 
