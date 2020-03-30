@@ -19,16 +19,16 @@
     define('MYSQL1','./include_2/mysqli_connect.php');
     define('MYSQL','../include_2/mysqli_connect.php');
 
-	//below used for page_history.inc.php
-	define('MYSQLH1','./include_2/mysqli_connect_history.php');
+	  //below used for page_history.inc.php
+  	define('MYSQLH1','./include_2/mysqli_connect_history.php');
     define('MYSQLH','../include_2/mysqli_connect_history.php');
     //below for admin folder
     //define('MYSQL_ADMIN', '../../includes_2/mysql.inc.php');
 
     //define url link when using MOD_WRITE
     define('MODWRITE', '/dukesnuz/david/petringa/');
-	define('MODWRITE2', '/dukesnuz-david-petringa/');
-	// ="/dukesnuz/david/petringa/";
+  	define('MODWRITE2', '/dukesnuz-david-petringa/');
+    // ="/dukesnuz/david/petringa/";
 
 	//For LIVE or Dev
 	if(LIVE)
@@ -65,7 +65,7 @@
 			}else{
 				//developement print error
 				//send error in an email
-				error_log ($message, 1, CONTACT_EMAIL, "From:".CONTACT_EMAIL);
+				//error_log ($message, 1, CONTACT_EMAIL, "From:".CONTACT_EMAIL);
 
 				//only print error in browser, if error isnt a notice
 				if($e_number != E_NOTICE)
@@ -77,4 +77,7 @@
 			return true; //So that PHP does nt try to handle the error, too.
 	} //End of my_error_handler() definition
 //Use my error handler
-set_error_handler('my_error_handler');
+//turn off email errors if live
+if(!LIVE){
+    set_error_handler('my_error_handler');
+}
