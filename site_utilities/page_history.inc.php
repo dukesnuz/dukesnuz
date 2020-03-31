@@ -277,7 +277,7 @@ echo '<br>'.$user_agent;
 									$body = "Error on '.SITE_NAME.'\n";
 									$body .="Page: $page_title Line 243 history query\n";
 									$body .="END email";
-								//	mail(CONTACT_EMAIL,'Error'.SITE_NAME.'', $body, 'From:'.CONTACT_EMAIL.'');
+								//mail(CONTACT_EMAIL,'Error'.SITE_NAME.'', $body, 'From:'.CONTACT_EMAIL.'');
 								}
 
 
