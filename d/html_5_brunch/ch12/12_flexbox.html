@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lesson 12 Digital Classroom HTML5 Flexbox layouts</title>
+<link href="reset.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="modernizr-1.7.js"></script>
+<link href="basefinal.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+
+#introduction-content {
+		width: 600px;
+        height: 150px;
+        border: 1px solid  #821738;
+		display:-webkit-box;
+		-webkit-box-orient:horizontal;
+		display: -moz-box;
+		-moz-box-orient:horizontal;
+	
+}
+
+#introduction-content p {
+        background-color:#CCC;
+
+}
+#introduction-content>p:nth-child(3){
+		-moz-box-flex:1;
+		-webkit-box-flex:1;
+		 }
+#introduction-content>p:nth-child(2){
+		-moz-box-flex:2;
+		-webkit-box-flex:2
+		 }
+
+.centered {
+	
+	width: 450px;
+        height: 300px;
+        border: 1px solid #555;
+        background : #CFC;
+		display: -moz-box;
+		-moz-box-orient;
+		-moz-box-pack: center;
+		/*-moz-box-align: stretch;*/
+		-moz-box-align: center;
+		display: -webkit-box;
+		-webkit-box-orient;
+		-webkit-box-pack: center;
+		/*-webkit-box-align: stretch;*/
+		-webkit-box-align: center;
+	
+}
+</style>
+
+
+
+</head>
+
+<body>
+
+<div id="introduction-content">
+            	<p>SmoothieWorld</p>
+            	<p>Smoothies</p>
+                <p>are great</p>
+</div>
+<p>
+<div class="centered">
+     <img src="images/smoothie_logo.png" />
+    </div>
+    
+    
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body>
+</html>

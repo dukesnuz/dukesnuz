@@ -1,0 +1,212 @@
+/******************************************************************************************************
+ * CSCI E - 3 -Introduction to Web Programming Using JavaScript  - Final Project - Fall 2016
+ * Teaching Fellow = JaZahn Clevenger
+ * Student = David Petringa
+ * Thank you for checking my work. I hope you enjoy.
+ * csci_3_final_prject.css
+ * last updated 12/1111111111115555555555555555/16
+ */
+
+body {
+	background-color: #008080;
+	font-size: 1em;
+	font-family: Arial, Helvetica, 'sans-serif';
+	font-family: 'comic sans ms';
+	margin: 0;
+	padding: 0;
+}
+header {
+	color: #FFFF00;
+	background-color: #000080;
+	padding-left: 10px;
+}
+#main {
+	float: left;
+	background-color: #FFA07A;
+	width: 600px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#main p {
+	color: #ffffff;
+	margin: 0;
+	margin-bottom: 4px;
+}
+#side {
+	width: 25%;
+	float: left;
+	background-color: #FFA07A;
+	margin-left: 20px;
+}
+#rtSide {
+	width: 25%;
+	float: left;
+	background-color: #36E805;
+	color: #ffffff;
+}
+#rtSide a {
+	color: #ffffff;
+}
+#rtSide ul {
+	padding: 5px
+}
+#menu {
+	float: left;
+	width: 65px;
+	/*margin-top: -21px;*/
+}
+#menu p, #score p {
+	color: #000080;
+	background-color: #36E805;
+	padding: 2px;
+}
+.menu {
+	display: none;
+	background-color: #36E805;
+	font-weight: bold;
+	text-align: left;
+	padding: 10px;
+	border-radius: 5%;
+	font-size: .85em;
+	color: #000080;
+}
+#score {
+	background-color: #36E805;
+	font-weight: bold;
+	color: #000080;
+	float: right;
+}
+#favoritePlaces, #signupForm, #favoriteColor {
+	background-color: #2F4F4F;
+	padding: 5px;
+	display: none;
+	float: left;
+	width: 90%;
+	padding: 5%;
+}
+#signupForm h4 {
+	clear: both;
+}
+div#signupFormMessage {
+	margin-top: 75px;
+}
+select#color {
+	float: right;
+	width: 100px;
+}
+footer {
+	clear: both;
+	background-color: #000080;
+	padding: 5px;
+	color: #FFFFFF;
+	width: 100%;
+	margin-top: 695px;
+}
+footer ul {
+	width: 100%;
+}
+footer li {
+	text-align: left;
+}
+#cityDetails {
+	background-color: #00CED1;
+	padding-left: 35px;
+}
+#selectState {
+	float: left;
+	margin-bottom: 3px;
+	padding: 5px 0;
+	background-color: #36E805;
+	font-weight: bold;
+}
+#selectCity {
+	float: right;
+	display: none;
+	margin-bottom: 7px;
+	padding: 5px 0;
+	background-color: #36E805;
+	font-weight: bold;
+}
+.clearfix:after {
+	clear: both;
+}
+
+#map {
+	background-repeat: no-repeat;
+	background-color: #00CED1;
+	margin-bottom: 138px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+#game {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+ul {
+	width: 275px;
+}
+li {
+	list-style: none;
+	margin-bottom: 2px;
+	text-align: right;
+	color: #FFA07A;
+}
+
+.errorForm {
+	color: #ffffff;
+	display: inline-block;
+	font-size: .85em;
+}
+.close {
+	background-color: #36E805;
+	margin-top: 20px;
+}
+.mapquest {
+	border-radius: 10%;
+	width: 210px;
+	background-color: #FFA07A;
+	display: block;
+	padding-top: 5px;
+}
+footer a {
+	color: #FFA07A;
+}
+
+#output p {
+	margin: 12px;
+	line-height: 110%;
+}
+#output {
+	clear: both;
+}
+
+#spin {
+	font-size: 25px;
+	padding: 0;
+}
+.show {
+	/*****not using these styles. styles are in JS****/
+	/*transition-duration: 15s;*
+	 transform: rotate(360deg);
+	 -webkit-transition-duration: 5s;
+	 -webkit-transform: rotate(360deg);
+	 -moz-transition-duration: 5s;
+	 -moz-transform: rotate(360deg);
+	 -o-transition-duration: 5s;
+	 -o-transform: rotate(360deg);
+	 */
+}
+
+/******for header title animation*******/
+#titleMessage {
+	display: none;
+	cursor: pointer;
+	margin-left: 280px;
+	margin-top: -15px;
+	font-size: .5em;
+}
+

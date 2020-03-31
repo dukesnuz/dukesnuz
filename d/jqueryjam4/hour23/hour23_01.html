@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>hour23_01</title>
+		<meta name="description" content="">
+		<meta name="author" content="David">
+
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<!--<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" media="all" href="../includes/styles/styles.css" type="text/css"/>-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!--jquery mobile-->
+    <script type="text/javascript" src="../hour17/js/js/jquery.min.js"></script>
+     <script type="text/javascript" src="js/initmobile.js"></script>
+     <script type="text/javascript" src="../../hour17/js/js/jquery.mobile-custom.min.js"></script>
+     <!--<script type="text/javascript" src="js/hour23_01.js"</script>-->
+     <link rel="stylesheet" href="../hour17/js/js/css/jquery.mobile-custom.min.css" />
+    <!-- <link rel="stylesheet"   href="css/hour23_01.css" />-->
+	
+  </head>
+   	<script>
+$(document).ready(function() {
+  checkForMobile();
+  $("p").on("click", function(){ $("#number").append($(this).html()); });
+  $("span").on("click", function(){
+    if ($(this).html() === "="){
+      $("#number").html(eval($("#number").html()));
+    } else {$("#number").html(""); };
+  });
+});
+    </script>
+	
+        
+  <style>
+p, span { 
+	 margin:2px;
+	  border-radius:15px; 
+	 background-color:#888888;
+	  color:white;}
+p, span { 
+	font:bold 30px/50px arial;
+	 text-align:center;
+	  border:3px ridge blue;}
+#number { 
+	background-color:black; 
+	min-height:50px; 
+	text-align:right; 
+	padding-right:5px; }
+span { 
+	background-color:#555555; 
+	display:block; }
+#logic span { 
+	background-color:#B10000; }
+#logic p { 
+	background-color:#0066AA;  }
+
+  </style>   
+  </head>
+
+	<body>
+	<header>
+				<h1>hour23_01</h1>
+				   <h2>Adding A Grid layout to A Mobile Page</h2>
+			</header>
+			<nav>
+	
+			</nav>
+
+				<div class="columnWrapper">
+             
+             <article class="mainwide">
+		
+			 <p></p>
+			
+            <div id="border"><div id="frame">
+            	<div data-role="page" id="pageOne">
+            		<div data-role="header"><h1>Grid Page</h1></div>
+            		<div data-role="content">
+            			<div class="ui-grid-solo">
+            				<div class="ui-block-a"><p id="number"></p></div>
+            			</div>
+            			<div class="ui-grid-b">
+            			
+            			<div class="ui-block-a"><p>1</p></div>
+            			<div class="ui-block-b"><p>2</p></div>	
+            			<div class="ui-block-c"><p>3</p></div>	
+            			<div class="ui-block-a"><p>4</p></div>	
+            			<div class="ui-block-b"><p>5</p></div>	
+            			<div class="ui-block-c"><p>6</p></div>	
+            			<div class="ui-block-a"><p>7</p></div>	
+            			<div class="ui-block-b"><p>8</p></div>	
+            			<div class="ui-block-c"><p>9</p></div>		
+            				
+            			<div class="ui-block-a"><span>C</span></div>
+            			<div class="ui-block-b"><p>0</p></div>
+            			<div class="ui-block-c"><span>CE</span></div>
+            			</div>
+            			
+            			<div class="ui-grid-d" id="logic">
+            				<div class="ui-block-a"><p>+</p></div>
+            				<div class="ui-block-b"><p>-</p></div>
+            				<div class="ui-block-c"><p>*</p></div>
+            				<div class="ui-block-d"><p>/</p></div>
+            				<div class="ui-block-e"><p>=</p></div>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+		  
+         
+         
+     
+    
+    
+            </article>
+      
+			</div>
+
+			<footer>
+				<p>
+					
+				</p>
+			</footer>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+	</body>
+</html>
+

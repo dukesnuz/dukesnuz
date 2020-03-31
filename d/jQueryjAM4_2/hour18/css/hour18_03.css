@@ -1,0 +1,40 @@
+span{
+	display:inline-block;
+	width:130px;
+	border: 1px ridge;
+	text-align:center;
+	background-image: -moz-linear-gradient(center top, B1B1B1, #FFFFFF);
+	cursor:pointer;
+}
+div span{
+	width:120px;
+	margin-left:10px;
+}
+#showMenu{
+	position:fixed;
+	left: 130px;
+	top:8px;
+}
+#showMwnu2{
+	position:fixed;
+	left:130px;
+	top:30px;
+}
+
+
+
+
+/*
+
+article{
+	height:500px;
+	background-color:#7FFF00;
+}
+p{
+	color:#D8BFD8;
+	font-size: .875em;
+	font-style: italic;
+	padding: 10px;
+	background-color:#2F4F4F;
+}
+*/

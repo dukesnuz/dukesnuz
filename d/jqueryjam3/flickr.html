@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flickr Feed</title>
+<link href="_css/site.css" rel="stylesheet">
+<style>
+.image {
+	float: left;
+	padding: 10px;
+	border: solid 1px #F60;
+	margin: 0 30px 30px 0;
+}
+.image:hover {
+	border-color: #FF0;
+	border-width: thin;
+	background-color: #63F;	
+}
+h1{
+	background-color:#0F0;
+	color:#03F;
+	text-align:center;
+}
+<!-- below for tool tip--->
+.trigger {
+	cursor : help;
+	border-bottom: 1px dashed white;	
+}
+.trigger:hover {
+	color: rgb(255,0,0);
+}
+
+.tooltip {
+	width: 25%;
+	padding: 5px;
+	background-color: #6F6;
+	border: 4px solid #C99;
+	border-radius : 5px;
+	
+}
+
+.tooltip h2 {
+	color:#FF0;
+	
+}
+.tooltip p {
+	color: black !important;	
+}
+</style>
+<script src="_js/jquery-1.7.2.min.js"></script>
+
+<script>
+$(document).ready(function() {
+	var URL ="http://api.flickr.com/services/feeds/photos_public.gne";
+	var ID= "25053835@N03";
+	var jsonFormat= "&format=json&jsoncallback=?";
+	var ajaxURL= URL + "?id=" + ID + jsonFormat;
+	$.getJSON(ajaxURL,function(data){
+		//$('h1').text(data.title);	
+		$('h1').append(data.title);	
+		$.each(data.items,function(i,photo){
+			var photoHTML ='<span class="image">';
+			photoHTML += '<a href="' + photo.link +'">';
+			photoHTML += '<img src= "' + photo.media.m.replace('_m','_s') +'"></a>';
+			$('#photos').append(photoHTML);
+			
+		}); //end each
+	}); // end get JSON;
+}); // end ready
+</script>
+
+
+<!-- below for tooltop--->
+<script>
+$(document).ready(function(e) { 
+	$('.tooltip').hide();
+	$('.trigger').mouseover(function(){
+	var ttLeft,
+		//ttRight,
+		ttTop,
+	ttTop,
+		$this=$(this),
+		$tip = $($this.attr('data-tooltip')),
+		triggerPos = $this.offset(),
+		triggerH = $this.outerHeight(),
+		triggerW = $this.outerWidth(),
+		tipW = $tip.outerWidth(),
+		tipH = $tip.outerHeight(),
+		screenW = $(window).width(),
+		scrollTop = $(document).scrollTop();
+	if(triggerPos.top - tipH - scrollTop >0){
+		ttTop = triggerPos.top - tipH - 10;
+	}else{
+		ttTop = triggerPos.top + triggerH +10;
+	}
+	var overFlowRight = (triggerPos.left + tipW) - screenW;
+	if(overFlowRight >0){
+		ttLeft = triggerPos.left - overFlowRight -10;
+	}else{
+		ttLeft= triggerPos.left;
+	}
+	$tip.css({
+			 left : ttLeft,
+			 top : ttTop,
+			 position: 'absolute'
+			 }).fadeIn(400);
+}); //end mouseover
+$('.trigger').mouseout(function(){
+		$('.tooltip').fadeOut(400);				
+	}); //end mouseout
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<p class="logo">JavaScript <i>&</i> jQuery <i class="mm">The<br>Missing<br>Manual</i></p>
+	</div>
+	<div class="content">
+       
+		<div class="main">
+             
+             <span class="trigger" data-tooltip="#tip1"><h1>Flickr Images:&nbsp;</h1></span>
+			
+            
+		<div id="photos"></div>
+        <br class="clearLeft">
+		</div>
+        
+        
+        </div>
+
+	<div class="footer">
+    
+		<p>JavaScript &amp; jQuery: The Missing Manual, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+	</div>
+</div>
+
+
+
+<!--start tool tip -->
+<div class="tooltip" id="tip1">
+	<h2>Chapter 13</h2>
+    <p>Used .append() function...chp 13..p419.</p>
+</div>
+
+<!--- end tool tip --->
+
+
+
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6080262; 
+var sc_invisible=0; 
+var sc_security="ed805b7b"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="godaddy web statistics"
+href="http://statcounter.com/godaddy_website_tonight/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/0/"
+alt="godaddy web statistics" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+/*
+Theme Name:   My Bootstrap Blog Theme
+Theme URI:    http://example.com/my-bootstrap-theme
+Author:       David Petringa
+Author URI:   http://www.eatbeansfreegas.com
+Description:  This is a theme based off the Bootstrap Blog 
+              template: 
+              http://getbootstrap.com/examples/blog/.  
+Version:      1.0
+License:      Attribution-ShareAlike 3.0 Unported
+License URI:  http://creativecommons.org/licenses/by-sa/3.0/
+Tags:         blue, light, two columns, responsive, bootstrap
+*/
+
+@import url('bootstrap/css/bootstrap.css');
+
+.blog-footer{
+	padding: 40px 0;
+	color: #999;
+	text-align: center;
+	background-color: #f9f9f9;
+	border-top: 1px solid #e5e5e5;
+}

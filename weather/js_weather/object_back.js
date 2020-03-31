@@ -36,8 +36,6 @@ termsofService:"http://www.wunderground.com/weather/api/d/terms.html"
  "conditions": 1
  }
  }*/
-(function() { 
-	console.log("returned");
 var returned = {
 	"current_observation" : {
 		"image" : {
@@ -125,5 +123,3 @@ var returned = {
 		"nowcast" : ""
 	}
 };
-return returned;
-})();

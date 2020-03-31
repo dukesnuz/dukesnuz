@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>David Petringa | jQuery jAM, Season 6</title>
+		<meta name="description" content="Completed exercises by David Petringa for Eloquent Javascript. A book used for jQuery jAM, Season 6 a virtual self study class at Boston PHP. ">
+		<meta name="author" content="David Petringa,dukesnuz,javascript,html,css,php,learn to code">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	
+
+		<link rel="stylesheet" type="text/css" href="../../../styles/styles.css" >
+		<link rel='stylesheet' href="../../../styles/nav.css">
+		
+		<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+		<link rel="shortcut icon" href="../../images/favicon.ico">
+		<link rel="apple-touch-icon" href="../../images/favicon.ico">
+        
+        <!-- need for ex 19.1 -->
+		<link rel="stylesheet" href="paint.css">
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="../../../js/_js.js"></script>
+		
+		<!-- need for ex 19.1 -->
+		<script src="19_paint.js"></script>
+		
+		
+<!--ex 19.1-->
+<script>
+function rectangleFrom(a,b){
+	return{left: Math.min(a.x, b.x),
+		   top: Math.min(a.y, b.y),
+		   width: Math.abs(a.x - b.x),
+		   height: Math.abs(a.y - b.y)};
+}
+
+ tools.Rectangle = function(event, cx) {
+    var relativeStart = relativePos(event, cx.canvas);
+    var pageStart = {x: event.pageX, y: event.pageY};
+	
+    var trackingNode = document.createElement("div");
+    trackingNode.style.position = "absolute";
+    trackingNode.style.background = cx.fillStyle;
+    document.body.appendChild(trackingNode);
+	
+    trackDrag(function(event) {
+      var rect = rectangleFrom(pageStart,
+                               {x: event.pageX, y: event.pageY});
+      trackingNode.style.left = rect.left + "px";
+      trackingNode.style.top = rect.top + "px";
+      trackingNode.style.width = rect.width + "px";
+      trackingNode.style.height = rect.height + "px";
+    }, function(event) {
+      var rect = rectangleFrom(relativeStart,
+                               relativePos(event, cx.canvas));
+      cx.fillRect(rect.left, rect.top, rect.width, rect.height);
+      document.body.removeChild(trackingNode);
+    });
+  };
+</script>
+<!--ex 19.2-->
+<script>
+function colorAt(cx, x, y){
+	var pixel = cx.getImageData(x, y, 1,1).data;
+	return "rgb(" + pixel[0] + ", " + pixel[1] + ", " + pixel[2] + ")";
+}	
+
+tools["Pick color"] = function(event, cx){
+	var pos = relativePos(event, cx.canvas);
+	try{
+		var color = colorAt(cx, pos.x, pos.y);
+	} catch(e){
+		if(e instanceof SecurityError){
+			alert("Unable to access your picture's pixel data");
+			return;
+		}else{
+			throw e;
+		}
+	}
+	cx.fillStyle = color;
+	cx.strokeStyle = color;
+};
+</script>
+<!--ex 19.3-->
+<script>
+//call a given function for all horiszontal and vertical neighbors
+//of the given point
+function forAllNeighbors(point, fn){
+	fn({x: point.x, y: point.y +1});
+	fn({x: point.x, y: point.y -1});
+	fn({x: point.x + 1, y: point.y});
+	fn({x: point.x - 1, y: point.y});
+}
+
+//given two positions, return true when they hold the same color
+function isSameColor(data, pos1, pos2) {
+	var offset1 = (pos1.x + pos1.y * data.width) * 4;
+    var offset2 = (pos2.x + pos2.y * data.width) * 4;
+    for (var i = 0; i < 4; i++) {
+      if (data.data[offset1 + i] != data.data[offset2 + i])
+       return false;
+    }
+    return true;
+  }
+
+tools["Flood fill"] = function(event, cx){
+	var startPos = relativePos(event, cx.canvas);
+	
+	var data = cx.getImageData(0,0,cx.canvas.width, cx.canvas.height);
+//An array with one place for each pixel in the image
+var alreadyFilled = new Array(data.width * data.height);
+
+//This is a list of same-colored pixel coordinates that we have not handled yet
+var workList = [startPos];
+while (workList.length){
+	var pos = workList.pop();
+	var offset = pos.x + data.width * pos.y;
+	if(alreadyFilled[offset]) continue;
+	
+	cx.fillRect(pos.x, pos.y, 1 ,1);
+	alreadyFilled[offset] = true;
+	
+	forAllNeighbors(pos, function(neighbor){
+		if(neighbor.x >= 0 && neighbor.x < data.width &&
+		   neighbor.y >= 0 && neighbor.y < data.height &&
+		   isSameColor(data, startPos, neighbor))
+		   workList.push(neighbor);
+	});
+}
+};
+</script>
+
+</head>
+<body>
+			
+	 <header>
+		<h1>jQuery jAM, Season 6</h1>
+	</header>
+			
+	<section>
+	<!--class="content" style=width:75%;-->
+        	<header>	
+               	   <h2 style="text-align: center;padding:2px;">Exercise 19.1 | A Paint Program</h2>
+               	   <h2 style="text-align: center;padding:2px;">Exercise 19.2 | Color Picker</h2>
+               	   <h2 style="text-align: center;padding:2px;">Exercise 19.3 | Flood Fill</h2>
+                   <h3 style="background-color: #8B8080;padding:2px;">A Very High Tech Sophisticated Paint Program</h3>
+     		  </header>
+     		  
+
+
+
+		<script>createPaint(document.body);</script>
+
+
+
+ </section>
+          
+          
+          
+<footer>
+		</nav>	
+			<div id="menu-wrap">
+				<ul id="menu">
+					<li><a href="../jquery-jam-season-6.html" target="blank">jQuery jAM</a></li>
+					<li><a href="../../../index.php" target="blank">Home</a></li>
+					<li><a href="../../../contact.php" target="blank">Contact</a></li>
+					<li><a href="../../../about.php" target="blank">About</a></li>
+					<li><a href="../../../blog/blog.php" target="blank">Blog</a></li>
+				</ul>
+			</div>
+		</nav>
+					
+	<div style="text-align:center;">
+		<p>Completed exercises by David Petringa</p>
+		<p>For <a href="http://www.meetup.com/bostonphp/events/222679706/">Boston PHP Virtual Self Study</a></p>
+		<p>Eloquent Javascript by: Marijin Haverbeke</p>
+		<a rel="nofollow" href="http://www.amazon.com/gp/product/1593275846/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1593275846&linkCode=as2&tag=dukesnuz-20&linkId=J3SPNLT6YJPBK454"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1593275846&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=dukesnuz-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=dukesnuz-20&l=as2&o=1&a=1593275846" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+   		<p>Started January 17, 2016</p>
+	</div>
+</footer>
+	
+
+	 
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify site
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="shopify site analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->	
+	
+	
+	</body>
+</html>

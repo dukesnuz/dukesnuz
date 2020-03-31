@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<!--
+		Write a form that creates records of some type = contact list/address book, movie list, product catalog,
+		On submit, the item is added to a JSON object and added to the HTML display in the page.
+		The JSON object is written to localstorage
+		Upon page load, the JSON is read and the display is re-created.
+		-->
+		<title>CSCI E-3 | Unit 2B</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/cscie3.css">
+	</head>
+	<body>
+		<!-- This is a sample HTML form. you can use it as it is, change its lables from Name, Address, and Email
+		to something different, or discard it completely and build your own.  As it is, this form
+		is sufficient to complete this project, so don't feel you have to build your own if you
+		don't want to.  -->
+		<h1>Unit Project 2B</h1>
+		<h2>CSCI E - 3 | Introduction to Web Programming Using JavaScript</h2>
+		<h3>Using local storage to store a list of books to read.</h3>
+		<form>
+			<fieldset>
+				<legend>
+					Books I Plan to Read
+				</legend>
+				<p>
+					<label for="title">Title</label>
+					<input type="text" id="title" placeholder="Title">
+				</p>
+				<p>
+					<label for="author">Author</label>
+					<input type="text" id="author" placeholder="Author">
+				</p>
+				<p>
+					<label for="subject">Subject</label>
+					<input type="text" id="subject" placeholder="Subject">
+				</p>
+				<p>
+					<label for="url">Url</label>
+					<input type="text" id="url" placeholder="Web address">
+				</p>
+				<p>
+					<button id="doit" class="button">
+						Save
+					</button>
+					<button id="clear" class= "button">
+						Clear Storage
+					</button>
+				</p>
+			</fieldset>
+		</form>
+		<!-- This is a sample HTML list output area. You can use it as it is, change its lables from Name, Address, and Email
+		to something different, or discard it completely and build your own.  As it is, this section
+		is sufficient to complete this project, so don't feel you have to build your own if you
+		don't want to! -->
+		<h2>My Stored Books for Future Reading</h2>
+		<div id="message"></div>
+
+		<div id = "output"></div>
+
+		<footer>
+			<ul>
+				<li>
+					David Pertringa
+				</li>
+				<li>
+					Fall 2016
+				</li>
+			</ul>
+		</footer>
+
+		<script type="text/javascript" src="js/hw2b_v3.js"></script>
+				<!--stat counter code-->
+		<!-- Start of StatCounter Code for Default Guide -->
+		<script type="text/javascript">
+			var sc_project = 5944140;
+			var sc_invisible = 1;
+			var sc_security = "0e575229";
+			var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+			document.write("<sc" + "ript type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></" + "script>");
+		</script>
+		<noscript>
+			<div class="statcounter">
+				<a title="free web stats"
+				href="http://statcounter.com/" target="_blank"><img
+				class="statcounter"
+				src="//c.statcounter.com/5944140/0/0e575229/1/" alt="free
+				web stats"></a>
+			</div>
+		</noscript>
+		<!-- End of StatCounter Code for Default Guide -->
+	</body>
+</html>

@@ -1,0 +1,25 @@
+img{
+	width:60px;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+div{
+	margin-top:15px;
+	border: 1px dotted;
+	width:400px;
+	font-size:35px;
+}
+span{
+	background-image: -moz-linear-gradient(center top, #B1B1B1, #FFFFFF);
+	border:3px ridge white;
+	box-shadow: 5px 5px 5px #888888;
+	padding: 3px;
+	cursor:pointer;
+}
+#title{
+	font-size: .75em;
+	color:gray;
+	background-color:#800080;
+	width:500px;
+	margin-bottom:10px;
+}

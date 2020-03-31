@@ -1,0 +1,12 @@
+/** just added some basic styles**/
+body {
+	background-color: #000000;
+}
+#my_images {
+	margin: 10px 30px;
+}
+img {
+	border: 2px solid #ffffff;
+	padding: 4px;
+}
+

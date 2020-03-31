@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+		<title>Welcome</title>
+
+	</head>
+	
+	<body>
+	
+		<div class="container">
+		<br/><br/>
+			<!--<p>This is a paragraph with <a href="#" id="tooltipLink" data-toggle="tooltip" title="This is your tooltip!">a hyperlink</a> to illustrate the usage of Tooltip.</p>-->
+		    <p>This is a tool tip I created.<a href="#" id="tooltipLink" data-toggle="tooltip" title="Greetings !">Check it out!</a></p>
+		    <p><img src="images/goose.jpg" id="toolTipImage" data-toggle="tooltip" title="Quack !Quack!"></p>
+		    <p>To display another tool tip click the goose.</p>
+		    
+		    <p id="myHint" data-toggle="tooltip" title="What does a goose say?"</p>
+		    
+		    <div><button id="btnHint" class="btn btn-primary">Show Hint</button></div>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+		
+		
+<script>
+	$(document).ready(function()
+	{
+		$('#tooltipLink').tooltip();
+		
+		$('#toolTipImage').tooltip({placement:'right' , trigger:'click',html:'true'});
+	  
+	    $("#btnHint").click(function(){
+	    	$('#myHint').tooltip("toggle");
+	    });
+	    
+	    
+	    
+	});
+</script>
+	<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+	</body>
+</html>

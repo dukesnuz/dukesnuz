@@ -60,7 +60,7 @@ if(isset($_POST['address']))
 					
 					$body = "Congradulations!\n";
 					$body .="Thank you for signing up to DukesNuz.\n";
-					$body .="I periodically email information that is of interest to me.\n";
+					$body .="I periodically post to my blog page and email information that is of interest to me.\n";
 					$body .="I hope you enjoy my emails and also find the information useful.\n";
 					$body .="Your email:\n";
 					$body .=$e."\n\r";

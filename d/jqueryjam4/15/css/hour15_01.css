@@ -1,0 +1,63 @@
+div{
+ margin:0px;
+ display:inline-block; 
+ float:left;
+ text-align:center;
+ }
+ p{
+ margin:2px;
+  }
+ #banner{
+   border-radius: 15px 15px 0px 0px;
+   background-image: -mox-linear-gradient(center top, #0000FF, #88BBFF);
+   color:white;
+   height:30px;
+   width:550px;
+   font-size:20px;
+    }
+ #leftNav{
+   width:150px;
+   height:400px;
+   border:3px groove #000088;
+    }
+ .navItem:hover{
+   border:1px sold;
+   background-color:#00FF00;
+   cursor:pointer;
+   }
+ #content{
+   border:1px solid blue;
+    }
+ #article{
+   width:372px;
+   height:350px;
+   padding:10px;
+   overflow-y:scroll; 
+   }
+#title{
+  font-weight:bold; 
+  font-size:20px;
+  display:block;
+  margin:5px;
+  background-color:#0000AA;
+  color:white;
+  border-radius:5px;
+  }
+#bt{
+ text-align:right; 
+ font:bold italic 16px arial black;
+ float:left;
+ margin-bottom: 20px;
+ }
+#date{
+ text-align:right;
+ font:italic 12px arial black;
+ float:right;
+  }
+#article p{
+  margin-top:20px;
+  background-color:#DDDDDD;
+  border-radius:5px;
+  clear:both; 
+  padding:5px;
+  }

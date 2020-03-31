@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+		<title>Welcome</title>
+
+	</head>
+	
+	<body>
+	
+		<div class="container">
+		
+			<h1>Popover</h1>
+		
+			<p>This is a paragraph with a 
+				<a href="#" id="popoverLink" data-toggle="popover" title="My Popover"
+				 data-content="Greetings. Welcome to my popover.
+				 <div class='pull-left'>
+				 <img src='images/goose.jpg' class='img-reponsive img-thumbnail'>
+				 <div>Some text here.
+				 	<ul>
+				 		<li>A list</li>
+				 	</ul>
+				 </div>
+				 ">Popover</a>. As you can see a popover consists of two parts: the title and the content.</p> 
+	              </div>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script>
+		
+		$(document).ready(function(){
+			$('#popoverLink').popover({placement:'bottom', trigger:'hover', html:'true'});
+		})
+		</script>
+	<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+	</body>
+</html>

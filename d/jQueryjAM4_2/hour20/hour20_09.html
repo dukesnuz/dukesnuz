@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>hour20_09</title>
+		<meta name="description" content="">
+		<meta name="author" content="David">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" media="all" href="../includes/styles/styles.css" type="text/css"/>
+		
+		 <script src="../includes/js/jquery-1.11.0.min.js"></script>
+		 <script type="text/javascript" src="js/hour20_01.js"></script>
+		 <link rel="stylesheet" type="text/css" href="css/hour20_01.css">
+	    
+  <!--used for jQuery UI-->
+    <script type="text/javascript" src="../hour17/js/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../hour17/js/js/css/jquery-ui-1.10.3.min.css">
+    
+    <!--my custom styles-->
+	<link rel="stylesheet" type="text/css" href="../hour17/js/js/my_css/dot-luv/jquery-ui-1.10.4.custom.css">	
+  <script>
+ 
+    $(document).ready(function(){
+      $( "#spin1" ).spinner({step: 0.005, numberFormat: "n3"});
+      $( "#spin2" ).spinner({step: 5, numberFormat: "C", culture:"en"});
+      $( "#spin3" ).spinner({step: .1, numberFormat: "C", culture:"eu-ES"});
+    });
+    </script>
+    <style>
+   label{
+   	display:inline-block;
+   	width:100px;
+   }
+    </style>   
+	</head>
+
+	<body>
+	<header>
+				<h1>hour20_09</h1>
+				   <h2>Adding a Value Spinner Element</h2>
+			</header>
+			<nav>
+	
+			</nav>
+
+				<div class="columnWrapper">
+             
+             <article class="mainwide">
+			 <a href="hour20_10.html" class="press">hour20_10</a>
+			 <h3><a href="hour20_09.html" class="press">Refresh Page</a></h3>
+			 <p>Not sure why the Globalize culture not working</p>
+			 
+   <p>
+      <label for="spin1">Value:</label><input id="spin1" name="value" /><br>
+      <label for="spin2">US Currency:</label><input id="spin2" name="value" /><br>
+      <label for="spin3">EU Currency:</label><input id="spin3" name="value" /><br>
+    </p>
+			 
+            </article>
+      
+			</div>
+
+			<footer>
+				
+			</footer>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+	</body>
+</html>
+

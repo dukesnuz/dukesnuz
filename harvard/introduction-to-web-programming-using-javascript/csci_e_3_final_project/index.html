@@ -1,0 +1,254 @@
+<!--
+* CSCI E - 3 -Introduction to Web Programming Using JavaScript  - Final Project - Fall 2016
+* Teaching Fellow = JaZahn Clevenger
+* Student = David Petringa
+* Thank you for checking my work. I hope you enjoy.
+* index.html
+* last updated 12/1111111111114444444444444444/16
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>CSCI E - 3 Final Project</title>
+		<link rel="stylesheet" href="./css/csci_3_final_project.css"/>
+
+		<script type="text/javascript" src = "./js/csci_e_3_final_project_library.js?='+Math.random();+'"></script>
+		<script type="text/javascript" src = "./js/csci_e_3_final_project_data.js?='+Math.random();+'"></script>
+		<script type="text/javascript" src = "./js/csci_e_3_final_project.js?='+Math.random();+'"></script>
+		<script type="text/javascript" src = "./js/csci_e_3_final_project_welcome.js?='+Math.random();+'"></script>
+
+	</head>
+
+	<body>
+		<header>
+			<div id = "title">
+				<h1>Geographical Map <span id = "titleMessage">Push Me Along</span></h1>
+			</div>
+		</header>
+
+		<section id = "side" class = "hidden">
+			<header>
+				<h4>Choose Your Spot</h4>
+			</header>
+
+			<select id = "selectState">
+
+			</select>
+
+			<select id = "selectCity"></select>
+
+			<div id = "cityDetails"></div>
+
+			<div id = "signupFormMessage"></div>
+
+			<form action = "signup.php" method = "POST" name = "signupForm" id = "signupForm">
+				<ul>
+					<li>
+						<label for = "name">Name
+							<input type = "text" name = "name" id = "name" pattern = "^[A-z]{2,15}$" placeholder = "Your Name">
+						</label><span id = "errorName" class = "errorForm">Please enter your name.</span>
+					</li>
+
+					<li>
+						<label for = "email">Email
+							<input type = "email" name = "email" id = "email" pattern = "^[\w.-]+@[\w.-]+\.[A-z]{2,6}$" placeholder = "Your Email">
+						</label><span id = "errorEmail"  class = "errorForm">Please enter your email.</span>
+					</li>
+
+					<li>
+						<label for = "zip">Zip
+							<input type = "text" name = "zip" id = "zip" pattern = "^[0-9]{5}$" placeholder = "Your Zipcode">
+						</label><span id = "errorZip" class = "errorForm">Please enter your zipcode.</span>
+					</li>
+
+					<li>
+						<button type = "submit" name = "submit">
+							Join Us
+						</button>
+					</li>
+					<li>
+						<button id = "suClose"  class = "close" type = "button">
+							Close
+						</button>
+					</li>
+				</ul>
+			</form>
+
+			<!--seeing if formValidation works with other forms-->
+
+			<form action ="favoritecolor.php" method = "POST" name = "form2" id = "favoriteColor">
+				<ul>
+					<li>
+						<label for = "color">Color <!--
+							<input type = "text" name = "favoriteColor" id = "color" pattern = "^[A-z]{3,10}$" placeholder = "Your Favorite Color">
+							--> <!--this is a last minute thought. originally only had above input field. Did not to delete it just yet, so simply left it commented out.-->
+							<select name = "favoriteColor" id = "color">
+								<option>-</option>
+								<option value = "#000000">Black</option>
+								<option value = "#0000ff">Blue</option>
+								<option value = "#00ff00">Green</option>
+								<option value = "#ff6600">Orange</option>
+								<option value = "#ff0000">Red</option>
+								<option value = "#008080">Teal</option>
+								<option value = "#ffffff">White</option>
+								<option value = "#ffff00">Yellow</option>
+							</select> </label><span id = "errorFavoriteColor" class = "errorForm">Please select your favorite color.</span>
+					</li>
+					<li>
+						<button type = "submit" name = "submit">
+							Tell Us
+						</button>
+					</li>
+					<li>
+						<button id = "fcClose"  class = "close" type = "button">
+							Close
+						</button>
+					</li>
+				</ul>
+			</form>
+			<div class ="clearfix"></div>
+		</section>
+
+		<section id ="main">
+			<header class = "hidden">
+				<h4 class = "hidden">To zoom, use the mouse wheel or use left shift key to zoom out and right shift key to zoom in.</h4>
+			</header>
+
+			<nav id = "menu" class = "hidden">
+				<p>
+					&#x21D3;menu&#x21D3;
+				</p>
+				<ul>
+					<li class = "menu" id = "mFavoritePlaces">
+						Favorite Places & Temp. Location to display links to pages
+					</li>
+					<li class = "menu" id = "mSignup">
+						Let's be friends. Sign up to our newsletter.
+					</li>
+					<li class = "menu" id = "mFavoriteColor">
+						Tell Us Your Favorite Color
+					</li>
+				</ul>
+			</nav>
+
+			<div id = "output">
+				<div id="spin">
+					<p>
+						JaZahn,
+					</p>
+					<p>
+						Thank you for serving as our TF. I also wanted to thank Larry and all the other TFs.
+						It was a great pleasure taking this course. I gained a tremendous amout of knowledge
+						and enjoyed a huge amount of fun.
+					</p>
+					<p>
+						Regards,
+					</p>
+					<p>
+						David Petringa
+					</p>
+
+					<p>
+						UPDATE <a href="http://www.dukesnuz.com/games/get-the-blob" target = "blank">New Version I - Complete with Blobs</a>
+					</p>
+				</div>
+			</div>
+
+			<canvas  id = "map" width = "600" height = "500" class = "hidden"></canvas>
+
+		</section>
+
+		<section id = "rtSide" class = "hidden">
+			<header>
+				<h4>Favorite Places</h4>
+			</header>
+
+			<div id ="favoritePlaces">
+				<p>
+					Future plans for this section. Add function to store favorite places in local storage.
+					Print favorite places here along with option button to display location on map.
+					Or if a game is created store high scores in local storage and display here.
+				</p>
+
+				<button id = "fpClose"  class = "close" type = "button">
+					Close
+				</button>
+
+				<h4>Temp Spot - Links to pages here</h4>
+				<ul>
+					<li>
+						<a href="http://www.dukesnuz.com/games/get-the-blob" target = "blank">New Version I - Complete with Blobs</a>
+					</li>
+					<li>
+						<a href="http://www.dukesnuz.com/harvard/introduction-to-web-programming-using-javascript/csci_e_3_final_project/index.html" target = "blank">Home Live Site</a>
+					</li>
+					<li>
+						<a href="index.html" target = "blank">Home</a>
+					</li>
+					<li>
+						<a href="js/csci_e_3_final_project_data.js" target = "blank">csci_e_3_final_project_data.js</a>
+					</li>
+					<li>
+						<a href="js/csci_e_3_final_project.js" target = "blank">csci_e_3_final_project.js</a>
+					</li>
+					<li>
+						<a href="js/csci_e_3_final_project_welcome.js" target = "blank">csci_e_3_final_project_welcome.js</a>
+					</li>
+					<li>
+						<a href="js/csci_e_3_final_project_library.js" target = "blank">csci_e_3_final_project_library.js</a>
+					</li>
+					<li>
+						<a href="css/csci_3_final_project.css" target = "blank">csci_3_final_project.css</a>
+					</li>
+					<li>
+						<a href="php/csci_3_final_project_retrieve_data.php" target = "blank">php/csci_3_final_project_retrieve_data.php</a>
+					</li>
+				</ul>
+
+			</div>
+
+			<h4 class = "hidden">Checking if my library function works</h4>
+			<div id = "dirTable"></div>
+		</section>
+
+		<footer class = "hidden">
+			<ul>
+				<li>
+					Class: HES CSCI - 3 Introduction to Web Programming Using JavaScript Fall 2016
+				</li>
+				<li>
+					Assignment: Final Project
+				</li>
+				<li>
+					Student: David Petringa
+				</li>
+				<li>
+					Data used is from <a href="http://api.sba.gov/doc/geodata.html">US Small Bussiness Administration</a>
+				</li>
+				<li>
+					Map courtesy of: <span class = "mapquest"><a href="https://www.mapquest.com/"><img src="https://developer.mapquest.com/documentation/img/logos/logo-black-md.png" alt = "Mapquest Logo"/></a></span>
+				</li>
+			</ul>
+		</footer>
+		<!-- Start of StatCounter Code for Default Guide -->
+		<script type="text/javascript">
+			var sc_project = 6080262;
+			var sc_invisible = 1;
+			var sc_security = "ed805b7b";
+			var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+			document.write("<sc" + "ript type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></" + "script>");
+		</script>
+		<noscript>
+			<div class="statcounter">
+				<a title="shopify site
+				analytics" href="http://statcounter.com/shopify/"
+				target="_blank"><img class="statcounter"
+				src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+				alt="shopify site analytics"></a>
+			</div>
+		</noscript>
+		<!-- End of StatCounter Code for Default Guide -->
+	</body>
+
+</html>

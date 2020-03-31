@@ -1,0 +1,19 @@
+<!-- add_page.html - script 9.16-->
+
+<section class="threeColumns">
+	<article>
+		<p>Some stuff can be added here concerning instructions.</p>
+	</article>
+	
+	<article class="twoThirds">
+		<h1>Add a New Page of Content</h1>
+		
+		<?php if ($form->isSubmitted() && $form->validate())
+			{
+				echo '<p>The page has been added!</p>';
+			}
+	?>
+	
+	<?php echo $form; ?>
+	</article>
+</section>

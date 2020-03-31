@@ -1,0 +1,18 @@
+body {
+	background-color: rgba(0,0,0, .1);
+}
+p {
+	line-height: 250%;
+}
+
+aside {
+	width: 20%;
+	border: thin solid green;
+	margin: 5px;
+	padding: 5px;
+	float: right;
+}
+
+aside {
+	clear: right;
+}

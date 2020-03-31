@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Introducing Events</title>
+<link href="_css/site.css" rel="stylesheet">
+<script src="_js/jquery-1.6.3.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('html').dblclick(function(){
+	alert('outch');
+	});//end double click	
+	$('a').mouseover(function(){
+	var message = "<p>You moused over a link.</p>";
+	$('.main').append(message);
+	}); //end mouseover
+	$('#button').click(function(){
+		$(this).val("stop that!");	
+		$('#button').css('background-color', '#FF0000');
+		$('#button').css('color', '#0F0');
+	}); //end click
+	
+	//start change test color
+	$('#textfield').focus(function(){
+		$(this).val("I am a red field w/15 px txt.");
+		$('#textfield').css('background-color' , '#FF0000');
+		$('#textfield').css('font-size' , '15px');
+		$('#textfield').css('border', '4px solid #FF0');
+		$('#button').css('color', '#FFF');
+		$('#button').val("Go Red Sox");
+		
+		});// end focus
+	//end change text color
+}); //end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+<div class="header">
+	<p class="logo">JavaScript <i>&</i> jQuery <i class="mm">The<br>Missing<br>Manual</i></p>
+</div>
+<div class="content">
+	<div class="main">
+<h1>Introducing Events</h1>
+<p><a href="#">A Link</a></p>
+<form action="#" method="get">
+<fieldset><legend>A Form-Click the BUTTON-then Click inside the field</legend><p>
+  <input name="button" type="button" id="button" value="A Button">
+</p>
+<p><input name="textfield" type="text" id="textfield"></p></fieldset>
+</form>
+</div>
+<div class="footer">
+<p>JavaScript &amp; jQuery: The Missing Manual, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+</div>
+</div>
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6080262; 
+var sc_invisible=0; 
+var sc_security="ed805b7b"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="godaddy web statistics"
+href="http://statcounter.com/godaddy_website_tonight/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/0/"
+alt="godaddy web statistics" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+
+</body>
+</html>

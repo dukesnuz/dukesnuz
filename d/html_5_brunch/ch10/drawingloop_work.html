@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Drawing Loop</title>
+    <script type="text/javascript">
+	var ctx;
+	var img;
+	//step 4
+	var x=0;
+	var y=40;
+	
+        function setup() {
+            var canvas = document.getElementById('lessonCanvas');
+
+            if (canvas.getContext) {
+               	ctx = canvas.getContext('2d');
+		setInterval('draw();', 36);
+		img = new Image();
+		img.src = 'images/ufo.png';
+	    }
+        }
+
+	function draw()	{
+	    drawBackground();
+		
+            <!--ufo-->
+			//step 5
+	    ctx.drawImage(img, x, y);
+		//step 7
+		x += 3;
+		if(x>300){
+			x =-50;
+			//step 9
+			y =Math.random()*300;
+		}
+	}
+
+	function drawBackground(){
+	    <!-- night sky -->	
+	    var lineGrad = ctx.createLinearGradient(150, 0, 150, 300);
+	    lineGrad.addColorStop(0, 'black');
+	    lineGrad.addColorStop(1, '#5498d1');
+	    ctx.fillStyle = lineGrad;
+	    ctx.fillRect(0, 0, 300, 300);
+
+            <!-- stars -->
+	    ctx.fillStyle = 'white';
+
+            ctx.beginPath();
+            ctx.arc(55, 58, 3, 0, Math.PI*2, false);
+            ctx.fill();
+		
+            ctx.beginPath();
+            ctx.arc(227, 128, 2, 0, Math.PI*2, false);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(214, 50, 1, 0, Math.PI*2, false);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(138, 117, 1, 0, Math.PI*2, false);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(43, 195, 1, 0, Math.PI*2, false);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(294, 15, 2, 0, Math.PI*2, false);
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(185, 223, 1, 0, Math.PI*2, false);
+            ctx.fill();	
+	}
+    </script>
+    
+    
+    <!-- i added below-->
+      
+    <!-- end i added-->
+  </head>
+  <body onLoad="setup(); setup2();">
+    <canvas id="lessonCanvas" width="300" height="300"style="margin:100px;"></canvas>
+    
+ <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+      
+  </body>
+</html>

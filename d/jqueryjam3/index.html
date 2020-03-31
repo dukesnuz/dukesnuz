@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="refresh" content="1;url=http://dukesnuz.com/d/jqueryjam3/index.php" /> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--start meta -->
+<meta name="description" content="Completed Exercises from the book: JavaScript & jQuery-the missing manual
+by: David Sawyer McFarland  " />
+
+<meta name="keywords" content="javascript. jQuery, JavaScript & jQuery-the missing manual
+by: David Sawyer McFarland, completed exercises, javascript examples, jquery examples, javascript drop down list.     " />
+
+
+<meta name="author" content="metatags generator">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="3 days">
+<title>iQuery JAM | Season 3</title>
+<!-- end meta -->
+
+
+<!--end meta -->
+<link href="../styles/stylesheet.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<link href="fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="_js/jquery-1.7.2.min.js"></script>
+<script src="_js/jquery.easing.1.3.js"></script>
+<script src="fancybox/jquery.fancybox-1.3.4.js"></script>
+
+
+ 
+ 
+ 
+
+<script>
+
+<!--start pop up -->
+$(document).ready(function() {
+	$(".popup").fancybox({
+		padding: 4,
+		overlayColor:'#60f',
+		overlayOpacity: .99,
+		transitionIn: 'elastic',
+		transitionOut: 'elastic',
+		easingIn:   'easeInBounce',
+		easingOut: 'easeOutSine'
+		
+	});
+}); // end ready
+</script>
+
+<script>
+$(document).ready(function() {
+$('.code').hide();
+$('.main h2').toggle(
+	function(){
+		$(this).next('.code').fadeIn(300);
+		$(this).addClass('close');
+	},
+	function(){
+		$(this).next('.code').fadeOut(3000);
+		$(this).removeClass('close');
+	}
+	); //end toggle
+
+}); // end ready
+</script>
+<!--end pop up -->
+<!--start drop down -->
+<script type="text/javascript">
+$(document).ready(function(){
+$('.submenu').hide();
+	function showSubmenu(){
+    	$('.submenu').show();
+        } //end show
+    function hideSubmenu(){
+    	$('.submenu').hide();
+     } //end hide
+	 
+     $('#menu').hover(showSubmenu,hideSubmenu);  
+	
+}); //end ready function
+</script>
+<!--end drop down -->
+
+<!--start cookie -->
+<!--start cookie -->
+<script>
+function getCookie(c_name)
+{
+var c_value = document.cookie;
+var c_start = c_value.indexOf(" " + c_name + "=");
+if (c_start == -1)
+{
+c_start = c_value.indexOf(c_name + "=");
+}
+if (c_start == -1)
+{
+c_value = null;
+}
+else
+{
+c_start = c_value.indexOf("=", c_start) + 1;
+var c_end = c_value.indexOf(";", c_start);
+if (c_end == -1)
+{
+c_end = c_value.length;
+}
+c_value = unescape(c_value.substring(c_start,c_end));
+}
+return c_value;
+}
+
+function setCookie(c_name,value,exdays)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate() + exdays);
+var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+document.cookie=c_name + "=" + c_value;
+}
+
+function checkCookie()
+{
+var username=getCookie("username");
+if (username!=null && username!="")
+  {
+    //alert("Welcome again " + username);
+   
+  }
+else
+  {
+  username=prompt("Please enter your name:","");
+  if (username!=null && username!="")
+    {
+    setCookie("username",username,365);
+    }
+  }
+}
+</script>
+     <!--end set cookie -->
+    <!--end set cookie -->
+    
+    
+<style type="text/css">
+h2 {
+	background: url(_images/open.png) no-repeat 0 11px;
+	padding: 10px 0 0 25px;
+	cursor: pointer;
+}
+h2.close {
+	background-image: url(_images/close.png);
+}
+.code {
+	margin-left: 25px;
+}
+
+</style>
+</head>
+
+<!---<body  onload="checkCookie()" class="oneColElsCtr">--->
+
+
+<body  class="oneColElsCtr">
+
+
+
+    <div id="header">
+    <h1> Completed Exercises From the Book: JavaScript & jQuery-the missing manual
+    <BR />
+    by: David Sawyer McFarland</h1>
+ <hr />
+ <!--end header --></div>
+<div id="container">
+  <div id="searchresults">
+    
+  <logout> This page has been moved</logout>
+<a href="http://dukesnuz.com/d/jqueryjam3/index.php"><logout>Click here if you are not automatically redirected in 3 seconds.</logout></a> 
+
+
+
+
+      
+      
+   
+ <ul>  
+ 
+    <h2>Chapter 01: Writing your First javaScript Program</h2>
+    <p> </p>
+    <ul>
+    	 <li><a href="hello.html" >Hello</a></li>
+         <li><a href="hello2.html" >Hello2</a></li>
+         <li><a href="fadein.html" >Fade In</a></li>
+    </ul>
+    
+    
+        <h2>Chapter 02: The Grammer of JavaScript</h2>
+   
+    <ul>
+      	<li><a href="use_variable.html" >Using Variable</a></li>
+        <li><a href="prompt.html" >Prompt</a></li>	
+        <li><a href="arrays.html" >Arrays</a></li>
+    </ul>
+    
+       <h2>Chapter 03: Adding Logic and Control to Your Program</h2>
+   
+    <ul>
+    	<li><a href="conditional.html">Conditional</a></li>
+        <li><a href="print_date.html" >Print Date</a></li>	
+        <li><a href="quiz.html" >Quiz</a></li>
+    </ul>
+    
+       <h2>Chapter 04: Indroducing jQuery</h2>
+   
+    <ul>
+    	<li><a href="pull-quote.html" >Pull Quotes</a></li>
+    </ul>
+    
+           <h2>Chapter 05: Action/Reaction: Making Pages Come Alive with Events</h2>
+   
+    <ul>
+    	 <li><a href="events_intro.html" >Events</a></li>
+        <li><a href="faq.html" >Faq</a></li>
+        <li><a href="dropdownlist.html">DropDownList</a></li>
+    </ul>
+    
+  
+
+
+<h2>Chapter 06: Animations and Effects</h2>
+   
+    <ul>
+    	<li><a href="signup.html" >Signup</a></li>
+    	<li><a href="animate.html" >Animate</a></li>	
+    </ul>
+    
+<h2>Chapter 07: Improving Your Images</h2>
+	<ul>
+		<li><a href="rollover.html">Rollover</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+        <li><a href="fancybox.html">FancyBox</a></li>
+        <li><a href="youtube.html">Youtube</a></li>
+		
+ </ul>   
+      
+  
+ 
+        
+	<!-- end #searchresults --></div>
+<!-- end #container --></div>
+
+		<div id="rightsidecolumn">
+
+<h2></h2>
+ 
+   <div id="menu">
+	Xtra Stuff
+				<div class="submenu">
+      <ul>	
+       <li><a href="http://www.meetup.com/bostonphp/messages/boards/thread/33242542/?thread=33242542">jQuery jAM, Season 3-Master Discussion List</a></li> 
+       <li><a href="http://jqueryjam.com/tutorials.html#.UZ7jLPO9Kc1">jQuery jAM Tutorials</a></li> 
+       <li><a href="http://dukesnuz.com/d/home.php">DukesNuz</a></li> 	
+       <li><a href="">SubItem 5</a></li> 
+       <li><a href="">SubItem 6</a></li> 
+      </ul>
+	</div>
+</div>
+  
+
+
+ 
+	<div class="main">
+ 
+        
+        <h2>The code for drop down:</h2>
+			<div class="code">
+       
+        
+        <p><a href="http://dukesnuz.com/d/jqueryjam3/dropdowncode.html" class="popup iframe"><h5>Code</h5></a></p>
+        
+   
+   			<!--end popupclass --> </div>
+ 
+    <!--end mainclass --> </div>
+    
+
+           <!--end adsright column -->    </div>
+               
+               
+               
+               
+               
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/free-hit-counter/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hour 20-5</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/css/jquery-ui-1.10.3.min.css">
+  </head>
+  <script>
+    $(document).ready(function(){
+       $( "#dialog" ).dialog({ modal: true, 
+         buttons: { Sweet: function() { $( this ).dialog( "close" ); }}});
+    });
+  </script>
+  <style>
+    img { height:60px; float:left; }
+  </style>
+  <body>
+    <div id="dialog" title="Upload Successful"><p>
+        <img src="../images/peak.jpg" />
+        <span class="ui-icon ui-icon-circle-check"></span>
+        Image Uploaded Successfully.
+      </p><p>Currently using <b>76% of your storage space</b>.</p>
+    </div>
+  </body>
+</html>
+
+

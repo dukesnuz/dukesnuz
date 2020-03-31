@@ -1,0 +1,35 @@
+####redirect url####
+Redirect 301 /~cpetring/myfavoritebook https://www.goodreads.com/book/show/18668059-the-obstacle-is-the-way
+ 
+####error redirects####
+
+#bad url
+ErrorDocument 404 /~cpetring/error/error_404.html
+
+
+####Additional error messages####
+
+#subscription info
+ErrorDocument 401 /~cpetring/error/error_401.html
+
+#forbidden
+ErrorDocument 403 /~cpetring/error/error_401.html
+
+####set expiration####
+
+ExpiresActive On
+
+ExpiresByType text/css A604800
+ExpiresByType text/javascript A604800
+ExpiresByType application/javascript A604800
+ExpiresByType image/jpeg A604800
+ExpiresByType image/gif A604800
+ExpiresByType image/png A604800
+
+
+####compress content####
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterBYType DEFLATE application/javascript
+ 

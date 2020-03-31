@@ -1,0 +1,47 @@
+<?php 
+//had to copy and paste this could not find error in option drop down
+ 
+// Only display the header once:
+$header = false; 
+
+//added end of chp 8
+include('./includes/product_functions.inc.php');
+
+
+
+// Loop through the results:
+while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+	
+	// If the header hasn't been shown, create it:
+	if (!$header) {
+
+		echo BOX_BEGIN; 
+
+		echo '<h2>' . $category . '</h2>
+			<div class="img-box">
+			<p><img alt="' . $category . '" src="'.MODWRITE.'/products/' . 
+				$row['image'] . '" />' . 
+				$row['description'] . '</p>
+			<p><small>All listed products are currently available.</small>';
+
+		echo '<form action="'.MODWRITE.'/cart.php" method="get">
+			<input type="hidden" name="action" value="add" /><select name="sku">';
+
+		// The header has now been shown:
+		$header = true;
+
+	} // End of $header IF.
+
+ 
+	// Create each option:   
+	//begining of chp 8
+	 //echo "<option value=\"{$row['sku']}\">{$row['name']}</option>\n";
+	 //crerated end of chp 8
+	 echo '<option value="' .$row['sku'].'">' .$row['name']. get_price( $type, $row['price'],$row['sale_price'] ).'</option>';
+
+
+} // End of WHILE loop. 
+
+echo '</select> <input type="submit" value="Add to Cart" class="button" /></p></form></div>';
+
+echo BOX_END;				

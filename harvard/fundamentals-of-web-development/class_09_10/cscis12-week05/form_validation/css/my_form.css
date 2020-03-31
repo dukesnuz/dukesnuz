@@ -1,0 +1,77 @@
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans:700';
+@import 'https://fonts.googleapis.com/css?family=Handlee';
+body {
+	font-family: 'Droid Sans', sans-serif;
+	color: blue;
+	font-size: 1em;
+	padding: 0;
+	margin: 0;
+}
+h1 {
+	font-size: 1em;
+}
+/********************************************************************/
+input.error {
+	border: 2px solid #ff0000;
+}
+
+label.error {
+background: url('../images/red_error.png') no-repeat;/** I used GIMP to compress this image**/
+	background-color: #e0e0eb;
+	padding-left: 50px;
+	color: #ff0000;
+	margin: 100px;
+	margin-left: 0;
+	font-size: 1.3em;
+}
+/********************************************************************/
+legend {
+	color: #FFA500;
+	font-size: .85em;
+}
+fieldset {
+	border: none;
+}
+form {
+	width: 75%;
+	margin: auto;
+	/*background-color: blue;*/
+}
+label {
+	font-size: 2em;
+	/*background-color: yellow;*/
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	/*background-color: red;*/
+}
+li {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+input[type="text"], input[type="email"], textarea, button {
+	width: 100%;
+	margin: 0;
+	/*background-color: green;*/
+	line-height: 100%;
+	border-radius: 20px;
+	font-family: 'Handlee', cursive;
+	font-size: 1.5em;
+	border: 3px solid #000000;
+	padding: 1%;
+}
+
+input[type="text"], input[type="email"] {
+	height: 1.5em;
+	text-align: center;
+}
+
+button {
+	border-radius: 10px;
+	padding: 1% 0;
+}
+button:hover {
+	background-color: #009933;
+}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{
+	color:#800080;
+	}
+.purple{
+	color:purple;
+	}
+h2{
+	color:#F60;
+	background-color:#FF0;
+    font-style:italic;
+	font-weight:bold;
+	
+	}

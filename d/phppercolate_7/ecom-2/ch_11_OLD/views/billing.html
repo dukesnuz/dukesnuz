@@ -1,0 +1,86 @@
+<div align="center"><img src="./images/checkout_indicator2.png" /></div>
+<br clear="all" />
+
+<?php
+include('./views/checkout_cart.html');
+
+echo BOX_BEGIN;
+echo '<div class="inner">
+	<h2>Your Billing Information</h2>
+	<p>Please enter your billing information below. Then click the button to complete your order. For your security, we
+		will not store your billing information in any way.  We accept Visa, MasterCard, American Express, and Discover.</p>';
+echo'
+<p>To test this page use 5555555555554444 for credit card number.</p>
+<p>Then fill in all the values. Enter an expired cc date to show error.</p>
+';
+
+
+	//added from page 332
+	if(isset($message)) echo "<p class=\"error\">$message</p>";
+	
+		
+  echo '<form action="'.MODWRITE.'/billing.php" method="POST" id="billing_form">';
+  	
+  	include('./includes/form_functions.inc.php');
+  	?>
+  	<!--create credit card number-->
+  	<fieldset>
+  		<div class="field"><label for="cc_number"><strong>Card Number</strong></label>
+  			<br />
+  		<?php create_form_input('cc_number', 'text', $billing_errors, 'POST', array('autocomplete' =>'off')); ?>
+  		</div>
+  		
+  		<!--create expiration date-->
+  		<div class="field"><label for="exp_date"><strong>Expiration Date(Format 00 0000)</strong></label>
+  			<br />
+  		<?php create_form_input('cc_exp_month', 'text', $billing_errors ); ?>
+  		<?php create_form_input('cc_exp_year', 'text', $billing_errors ); ?>
+  		</div>
+  		
+  		<!--card verification value-->
+  		<div class="field"><label for="cc_cvv"><strong>CVV</strong></label>
+  			<br />
+  		<?php create_form_input('cc_cvv', 'text', $billing_errors, 'POST', array('autocomplete' =>'off')); ?>
+  		</div>
+  		
+  		
+  		<!--create first and last name-->
+  		<div class="field"><label for="cc_first_name"><strong>First Name</strong></label>
+  			<br />
+  		<?php create_form_input('cc_first_name', 'text', $billing_errors, $values ); ?>
+  		</div>
+  		
+  		<div class="field"><label for="cc_last_name"><strong>Last Name</strong></label>
+  			<br />
+  		<?php create_form_input('cc_last_name', 'text', $billing_errors, $values ); ?>
+  		</div>
+  		
+  		<!--create address input-->
+  		<div class="field"><label for="cc_address"><strong>Street Address</strong></label>
+  			<br />
+  		<?php create_form_input('cc_address', 'text', $billing_errors, $values ); ?>
+  		</div>
+  		
+  		<div class="field"><label for="cc_city"><strong>City</strong></label>
+  			<br />
+  		<?php create_form_input('cc_city', 'text', $billing_errors, $values ); ?>
+  		</div>
+  		
+  		<div class="field"><label for="cc_state"><strong>State</strong></label>
+  			<br />
+  		<?php create_form_input('cc_state', 'text', $billing_errors, $values ); ?>
+  		</div>
+  		
+  		<div class="field"><label for="cc_zip"><strong>Zip Code</strong></label>
+  			<br />
+  		<?php create_form_input('cc_zip', 'text', $billing_errors, $values ); ?>
+  		</div>
+  		
+  		<!--complete form-->
+  		<br clear="all" />
+  		<div align="center" id="submit_div"><input type="submit" value="Place Order" class="button" /></div>
+  	</fieldset>
+  	</form>
+ <div>By clicking this button, your order will be completed and your credit card will be charged.</div>
+ 
+<?php echo BOX_END; ?>

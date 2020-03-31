@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+/* end reset browser styles */
+@import url(http://fonts.googleapis.com/css?family=Finger+Paint|EB+Garamond|Kavoon);
+html{
+     font-size: 62.5%;
+     
+     }
+/*********************Fonts***************************?
+    font-family:font-family: 'Finger Paint', cursive;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Kavoon', cursive;
+    rgb(70,130,180 )
+ */
+.main{
+	float:left;
+	background-image:-moz-radial-gradient(50% 50%, circle closest-corner, #000080, #C71585);
+	background-image:-webkit-radial-gradient( #000080, #C71585);
+	background-image:-webkit-gradient(radial, 50% 50%, 0 100%,from(#000080), to (#C71585));alignment-adjust:after-edge;
+    
+    background-image:-moz-radial-gradient(50% 50%, circle closest-corner, #000080,  rgb(70,130,180 ));
+	background-image:-webkit-radial-gradient( #000080,  rgb(70,130,180 ));
+	background-image:-webkit-gradient(radial, 50% 50%, 0 100%,from(#000080), to ( rgb(70,130,180 )));alignment-adjust:after-edge;
+    
+    background-image:-moz-radial-gradient(50% 50%, circle closest-corner, rgb(70,130,180 ), #C71585);
+	background-image:-webkit-radial-gradient( rgb(70,130,180 ), #C71585);
+	background-image:-webkit-gradient(radial, 50% 50%, 0 100%,from(rgb(70,130,180 )), to (#C71585));alignment-adjust:after-edge;
+    width:100%;
+    max-width:100%;
+    height:100%
+    max-height:100%;
+    font-size:1em;
+   
+    color:#ffffff;
+    font-weight: bold;
+}
+
+.main ul{
+	width:85%;
+	margin:5%;
+	
+	float:left;
+	
+	border: 5px dashed #ffffff;
+	padding:1% 2%;
+	list-style-type: none;
+	background-color: #483D8B;
+	
+	
+}
+.main li{
+	color:#ffffff;
+    font-weight: bold;
+    font-size:2em;
+    line-height: 2.25em;
+    text-align: center;
+    width:100%;
+
+}
+a{
+	text-decoration: none;
+	text-align:center;
+	border-bottom: 2px dotted blue;
+	border-radius:90% 10% 0 0;
+	margin-right:2px;
+
+}
+.main a{
+	border-radius:1% 1%;
+	margin-right:2px;
+	border:2px solid #ffffff;
+	
+	background-color:rgb(216, 191, 216);
+}
+header{
+	background-color:rgb(216, 191, 216);
+	width:100%;
+    max-width:100%;
+    float:left;
+    height:100%;
+}
+h1,h2,h3{
+	font-family:font-family: 'Finger Paint', cursive;
+	text-align: center;
+	padding: 5px 0px 5px 0px;
+	color: rgb(25,25,112 );
+}
+h1{
+	font-size:2.5em;
+}
+h2{
+	font-size:2em;
+	
+}
+
+h3{
+	font-size:1.75em;
+}
+
+nav{
+	float:left;
+	width:100%;
+    max-width:100%;
+	padding:1% 0 1% 0;
+	background-color:#CD5C5C;
+}
+nav a{
+	font-family: 'Kavoon', cursive;
+	color:rgb(216, 191, 216);
+	font-style:bold;
+	text-align:right;
+	
+	font-size:1.25rem;
+	background-color:rgb(70,130,180 );
+	float:left;
+	padding:5px 5px 0px 0px;
+	width:20%;
+}
+
+.main_ex{
+	margin:5% 10%;
+	height:100%;
+}
+
+footer{
+	margin-top:0px;
+	float:left;
+	background-color: rgb(216, 191, 216);
+	padding:0% 0 0% 0%;
+	width:100%;
+	font-size:1.2em;
+	margin-bottom:5%;
+	padding-top:2%;
+}
+footer p{
+	margin-left:3%;
+	
+	color: rgb(25,25,112 );
+}
+.wrapper{
+	padding:5%;
+}
+form{
+	float:left;
+}
+
+tr, td{
+	border: 2px solid green;
+	background-color:rgb(216, 191, 216);
+	font-weight: bold;
+}

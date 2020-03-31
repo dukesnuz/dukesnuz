@@ -1,0 +1,28 @@
+p, span{
+	margin:2px;
+	border-radius:15px;
+	background-color:#888888;
+	color:white;
+}
+p, span{
+	font:bold 30px/50px arial;
+	text-align:center;
+	border: 3px ridge blue;
+}
+#number{
+	background-color:black;
+	min-height:50px;
+	text-align:right;
+	padding-right:5px;
+}
+span{ 
+	background-color:#555555;
+    display:block;
+}
+#logic span{
+	background-color:#B10000;
+}
+#logic p{
+	background-color: #0066AA;
+}
+

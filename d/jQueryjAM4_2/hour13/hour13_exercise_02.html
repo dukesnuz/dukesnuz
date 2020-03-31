@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>hour13_02</title>
+		<meta name="description" content="">
+		<meta name="author" content="David">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" media="all" href="../includes/styles/styles.css" type="text/css"/>
+		
+		 <script src="../includes/js/jquery-1.11.0.min.js"></script>
+		 <script type="text/javascript" src="js/hour13_exercise_02.js"></script>
+		 <link rel="stylesheet" type="text/css" href="css/hour13_02.css">
+	
+		
+	    <script>
+
+		</script>
+	
+        
+        
+	</head>
+
+	<body>
+	<header>
+				<h1>hour13_xtra_exercise_02</h1>
+				   <h2>Adding Dynamic Flow Control to Forms Show Focus on Month</h2>
+			</header>
+			<nav>
+	
+			</nav>
+
+				<div class="columnWrapper">
+             
+             <article class="mainwide">
+			 <a href="hour13_03.html" class="press">hour13_03</a>
+				 <p>I added label State  label</p>
+			 <div id="box">
+      <p>Check Out</p>
+      <form>
+        <span>Shipping Info</span><br>
+          <div id="billInfo">
+          <input type="text" id="name"/><label>Name</label><br>
+          <input type="text" id="addr" /><label>Address</label><br>
+          <input type="text" id="city" /><label>City</label>
+          <select class="state" id="state"></select><label>State</label>
+          <input type="text"  id="zip"/><label>Zip</label><br>
+        </div>
+        <span>Billing Info</span><br>
+        <div id="billInfo">
+          <input type="checkbox" id="cbSame"/>
+            <label for="cbSame">Same as Shipping</label><br>     
+          <input type="text"  id="nameB"/><label>Name on Card</label><br>        
+          <input type="text"  id="addrB"/><label>Address</label><br>
+          <input type="text"  id="cityB"/><label>City</label>
+          <select class="state"  id="stateB"></select><label>State</label>
+          <input type="text"  id="zipB"/><label>Zip</label><br>
+          <input type="radio" name="ptype" id="visa" />
+            <label for="visa"><img src="../images/visa.png" /></label>
+          <input type="radio" name="ptype" id="mc" />
+            <label for="mc"><img src="../images/mc.png" /></label>
+          <input type="radio" name="ptype" id="amex" />
+            <label for="amex"><img src="../images/amex.png" /></label>
+          <input type="radio" name="ptype" id="ppal" />
+            <label for="ppal"><img src="../images/ppal.png" /></label><br>
+          <div id="ccInfo">        
+            <input type="text"  id="cardNum"/><label>Card Number</label>        
+            <input type="text"  id="csc"/><label>CSC</label><br>
+            <label>Expires</label><select id="expiresY"></select>
+            <select id="expiresM"></select><br>
+          </div>
+          <div id="ppInfo">
+            <input type="text"  id="ppEmail"/><label>PayPal Email</label><br>
+            <input type="text"  id="ppPW"/><label>PayPal Password</label><br>
+          </div>
+        </div>
+        <input type="submit" value="Submit" id="submitB" />
+        <input type="button" value="Reset" id="resetB" />      
+      </form>
+    </div>
+     <!-- 
+	     <div id="box">
+      <p>Check Out</p>
+      <form>
+        <span>Shipping Info</span><br>
+          <div id="billInfo">
+          <input type="text" id="name"/><label>Name</label><br>
+          <input type="text" id="addr" /><label>Address</label><br>
+          <input type="text" id="city" /><label>City</label>
+          <select class="state" id="state"></select><label>State</label>
+          <input type="text"  id="zip"/><label>Zip</label><br>
+        </div>
+        <span>Billing Info</span><br>
+        <div id="shipInfo">
+          <input type="checkbox" id="cbSame"/>
+            <label for="cbSame">Same as Shipping</label><br>     
+          <input type="text"  id="nameB"/><label>Name on Card</label><br>        
+          <input type="text"  id="addrB"/><label>Address</label><br>
+          <input type="text"  id="cityB"/><label>City</label>
+          <select class="state"  id="stateB"></select>
+          <input type="text"  id="zipB"/><label>Zip</label><br>
+          <input type="radio" name="ptype" id="visa" />
+            <label for="visa"><img src="../images/visa.png" /></label>
+          <input type="radio" name="ptype" id="mc" />
+            <label for="mc"><img src="../images/mc.png" /></label>
+          <input type="radio" name="ptype" id="amex" />
+            <label for="amex"><img src="../images/amex.png" /></label>
+          <input type="radio" name="ptype" id="ppal" />
+            <label for="ppal"><img src="../images/ppal.png" /></label><br>
+          <div id="ccInfo">        
+            <input type="text"  id="cardNum"/><label>Card Number</label>        
+            <input type="text"  id="csc"/><label>CSC</label><br>
+            <label>Expires</label><select id="expiresY"></select>
+            <select id="expiresM"></select><br>
+          </div>
+          <div id="ppInfo">
+            <input type="text"  id="ppEmail"/><label>PayPal Email</label><br>
+            <input type="text"  id="ppPW"/><label>PayPal Password</label><br>
+          </div>
+        </div>
+        <input type="submit" value="Submit" id="submitB" />
+        <input type="button" value="Reset" id="resetB" />      
+      </form>
+    </div>
+		-->	
+	
+          </article>
+      
+			</div>
+
+			<footer>
+				<p>
+					
+				</p>
+			</footer>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+	</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Drawing Lines and Circles</title>
+    <script type="text/javascript">
+        function setup() {
+            var canvas = document.getElementById('lessonCanvas');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+				// addedbelow from excercise
+				//step 1
+				ctx.strokeRect(0, 0, 300, 300);
+				ctx.moveTo(20, 20);
+				ctx.lineTo(100, 100);
+				ctx.lineTo(80, 200);
+				ctx.lineTo(200, 80);
+				ctx.lineTo(200, 200);
+				ctx.lineTo(280, 280);
+				ctx.stroke();
+				//step 2
+				ctx.fillStyle = 'rgb(255,0,0)'; //fills in
+				ctx.beginPath();
+				ctx.arc(100, 100,16,0, Math.PI * 2, false);//draws circle
+				ctx.fill(); //colors the path
+				ctx.stroke();
+				//step 8
+				ctx.beginPath();
+				ctx.arc(170, 170, 16, 0, Math.PI, true);
+				ctx.fill();
+				// i added below
+				ctx.moveTo(160, 170);
+				ctx.lineTo(160, 200);
+				ctx.stroke();
+				
+				ctx.moveTo(180, 170);
+				ctx.lineTo(180, 200);
+				ctx.stroke();
+				
+				ctx.moveTo(170, 200);
+				ctx.lineTo(170, 250);
+				ctx.stroke();
+				
+				
+				
+				ctx.beginPath();
+				ctx.arc(170, 195, 16, 0, Math.PI, false);
+				ctx.fill();
+            }
+        }
+    </script>
+  </head>
+  <body onLoad="setup();">
+    <canvas id="lessonCanvas" width="300" height="300" style="margin:100px;"></canvas>
+    
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+  </body>
+</html>

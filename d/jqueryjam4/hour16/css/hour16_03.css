@@ -1,0 +1,27 @@
+div{
+	margin: 0px;
+	display:inline-block;
+	float:left;
+	text-align: center;
+}
+
+#banner{
+	border-radius:15px 15px 0px 0px;
+	background-image: -moz-linear-gradient(center top, #88BBFF, #DDEEFF);
+	color:blue;
+	height:100px;
+	width:850px;
+	font-size:50px;
+}
+#leftNav{
+	width:150px;
+	background-color:#DDDDDD;
+	height: 400px;
+	}
+.navItem{
+	border: 1px dotted;
+	display:block;
+	margin: 3px;
+	width:140px;
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Google Maps</title>
+<link href="_css/site.css" rel="stylesheet">
+<style>
+#map{
+  height: 400px;
+  width: 760px;
+}
+
+
+#map h2 {
+	color: black;
+	text-shadow : none;
+}
+#map p {
+	color: black;	
+}
+</style>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="_js/jquery-1.7.2.min.js"></script>
+<script src="_js/jquery.gomap-1.3.2.min.js"></script>
+<script>
+$(document).ready(function() {
+$('#map').goMap({
+    latitude : 45.53940,
+    longitude : -122.59025,
+    zoom : 16,
+    scaleControl : true,
+    maptype : 'SATELLITE'
+}); // end goMap
+
+
+$.goMap.createMarker({  
+	   latitude : 45.53743,
+	   longitude :  -122.59473,
+	   title : 'hole1',
+	   html : {
+	     content : '<h2>Hole 1</h2><p>Par 4, 346 Yards</p>',
+		 popup : true   
+	   }
+}); // end createMarker
+
+}); // end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<p class="logo">JavaScript <i>&</i> jQuery <i class="mm">The<br>Missing<br>Manual</i></p>
+	</div>
+	<div class="content">
+		<div class="main">
+			<h1>Google Maps</h1>
+		    <div id="map"></div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>JavaScript &amp; jQuery: The Missing Manual, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+	</div>
+</div>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body>
+</html>

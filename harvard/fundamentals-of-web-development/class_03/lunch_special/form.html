@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!-- this is the markup document that should contains a form
+that represents the choices available on the
+Dado Tea Lunch Special paper form -->
+
+<!-- remember to use action="http://cscis12.dce.harvard.edu/echo" for the form element -->
+<html lang= "en" >
+	<head>
+
+		<meta charset="UTF-8" >
+		<title>Dado Tea Order Form</title>
+		<link rel="stylesheet" href="form.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>Lunch Special</h1>
+			<p>
+				Monday - Friday
+			</p>
+			<p>
+				11am - 3pm
+			</p>
+			<p>
+				$7.24
+			</p>
+
+		</header>
+
+		<p>
+			Includes sandwich, snack, and drink
+		</p>
+
+		<form action="http://cscie12.dce.harvard.edu/echo" method="post" >
+			<fieldset>
+				<legend>
+					Order Information
+				</legend>
+				<p>
+					<label for="form_fname">Name</label>
+					<input type="text" id="form_fname" placeholder="Customer's name" maxlength="15" autofocus />
+				</p>
+
+				<p>
+					<label for="form_eatin">
+						<input type="radio" id="form_eatin" name="in_go" value="Eat In" />
+						Here</label>
+				</p>
+				<p>
+					<label for="form_togo">
+						<input type="radio" id="form_togo" name="in_go" value="To Go" />
+						To Go</label>
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>
+					Sandwiches
+				</legend>
+
+				<p>
+					Monday
+				</p>
+				<p>
+					<label for="form_tofu">
+						<input type="radio" id="form_tofu" name="monday" value="Pesto Tofu Salad" />
+						Pesto Tofu Salad</label>
+				</p>
+				<p>
+					<label for="form_chicken">
+						<input type="radio" id="form_chicken" name="monday" value="Chicken Salad" />
+						Chicken Salad</label>
+				</p>
+
+				<p>
+					Tuesday
+				</p>
+
+				<p>
+					<label for="form_greek">
+						<input type="radio" id="form_greek" name="tuesday" value="Greek Salad Wrap" />
+						Greek Salad Wrap</label>
+				</p>
+				<p>
+					<label for="form_tuna">
+						<input type="radio" id="form_tuna" name="tuesday" value="Tuna Salad" />
+						Tune Salad</label>
+				</p>
+
+				<p>
+					Wednesday
+				</p>
+
+				<p>
+					<label for="form_hummus">
+						<input type="radio" id="form_hummus" name="wednesday" value="Hummus" />
+						Hummus</label>
+				</p>
+				<p>
+					<label for="form_turkey">
+						<input type="radio" id="form_turkey" name="wednesday" value="Turkey" />
+						Turkey</label>
+				</p>
+
+				<p>
+					Thursday
+				</p>
+				<p>
+					<label for="form_carrot">
+						<input type="radio" id="form_carrot" name="thursday" value="Carrot Ginger Wrap" />
+						Carrot Ginger Wrap</label>
+				</p>
+				<p>
+					<label for="form_egg_salad">
+						<input type="radio" id="form_egg_salad" name="thursday" value="Egg Salad" />
+						Egg Salad</label>
+				</p>
+
+				<p>
+					Friday
+				</p>
+				<p>
+					<label for="form_veggie">
+						<input type="radio" id="form_veggie" name="friday" value="Veggie" />
+						Veggie</label>
+				</p>
+				<p>
+					<label for="form_tunaf">
+						<input type="radio" id="form_tunaf" name="friday" value="Tuna Salad Friday" />
+						Tuna Salad</label>
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>
+					Sandwich Options
+				</legend>
+
+				<fieldset>
+					<legend>
+						Breads
+					</legend>
+					<p>
+						<label for="form_grain">
+							<input type="radio" id="form_grain" name="bread" value="7 Grain" />
+							7 Grain</label>
+					</p>
+					<p>
+						<label for="form_french">
+							<input type="radio" id="form_french" name="bread" value="French" checked />
+							French</label>
+					</p>
+					<p>
+						<label for="form_wheat">
+							<input type="radio" id="form_wheat" name="bread" value="Wheat Wrap" />
+							Wheat Wrap</label>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>
+						Cheeses (add 50&cent;)
+					</legend>
+					<p>
+						<label for="cheese_no">
+							<input type="radio" id="cheese_no" name="cheese" value="No" checked />
+							No Cheese</label>
+					</p>
+					<p>
+						<label for="form_feta">
+							<input type="radio" id="form_feta" name="cheese" value="Feta" />
+							Feta</label>
+					</p>
+					<p>
+						<label for="form_mozzarella">
+							<input type="radio" id="form_mozzarella" name="cheese" value="Mozzarella" />
+							Fresh Mozzarella</label>
+					</p>
+					<p>
+						<label for="form_swiss">
+							<input type="radio" id="form_swiss" name="cheese" value="Swiss" />
+							Swiss</label>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>
+						Spreads
+					</legend>
+					<p>
+						<label for="form_mayonaise">
+							<input type="checkbox" id="form_mayonaise" name="spread" value="Mayonaise" />
+							Mayonaise</label>
+					</p>
+					<p>
+						<label for="form_honey">
+							<input type="checkbox" id="form_honey" name="spread" value="Honey Mustard" />
+							Honey Mustard</label>
+					</p>
+					<p>
+						<label for="form_pesto">
+							<input type="checkbox" id="form_pesto" name="spread" value="Pesto" />
+							Pesto</label>
+					</p>
+					<p>
+						<label for="form_olive">
+							<input type="checkbox" id="form_olive" name="spread" value="Olive" />
+							Olive</label>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>
+						Fillings
+					</legend>
+					<p>
+						<label for="form_tomato">
+							<input type="checkbox" id="form_tomato" name="filling" value="Tomato" />
+							Tomato</label>
+					</p>
+					<p>
+						<label for="form_mixed">
+							<input type="checkbox" id="form_mixed" name="filling" value="Mixed Greens" />
+							Mixed Greens</label>
+					</p>
+					<p>
+						<label for="form_cucumber">
+							<input type="checkbox" id="form_cucumber" name="filling" value="Cucumber" />
+							Cucumber</label>
+					</p>
+					<p>
+						<label for="form_redonion">
+							<input type="checkbox" id="form_redonion" name="filling" value="Red Onion" />
+							Red Onion</label>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>
+						Snacks and Drinks
+					</legend>
+
+					<p>
+						Snacks
+					</p>
+					<p>
+						<label for="form_apple">
+							<input type="radio" id="form_apple" name="snack" value="Apple"/>
+							Apple</label>
+					</p>
+					<p>
+						<label for="form_banana">
+							<input type="radio" id="form_banana" name="snack" value="Banana" />
+							Banana</label>
+					</p>
+					<p>
+						<label for="form_potatochip">
+							<input type="radio" id="form_potatochip" name="snack" value="Potato Chip" />
+							Potato Chip</label>
+					</p>
+				 
+				 
+					<p>
+						<label for="form_drinks">Drinks</label>
+						<select id="form_drinks" name="drinks" title="Please select a drink.">
+
+							<optgroup label="water">
+								<option value="Tap water">Water</option>
+								<option value="Bottled Water">Bottled Water</option>
+							</optgroup>
+
+							<optgroup label="Black Tea">
+								<option value="Hot black tea Keemum">Hot Black Tea - Keemum</option>
+								<option value="Hot black tea dec keemum">Hot Black Tea - Decaf Keemum</option>
+								<option value="Ice black tea keemum">Iced Black Tea - Keemum</option>
+								<option value="Ice black tea dec keemum">Iced Black Tea - Decaf Keemum</option>
+							</optgroup>
+
+							<optgroup label="Green Tea">
+								<option value="Hot green tea sencha">Hot Green Tea - Sencha</option>
+								<option value="Hot green tea dec">Hot Green Tea - Decaf</option>
+								<option value="Ice green tea sencha">Iced Green Tea - Sencha</option>
+								<option value="Ice green tea dec">Iced Green Tea - Decaf</option>
+							</optgroup>
+
+							<optgroup label="Coffee">
+								<option value="Hot coffee">Hot Coffee</option>
+								<option value="Hot coffee dec">Hot Coffee - Decaf</option>
+								<option value="Iced coffee">Iced Coffee</option>
+								<option value="Iced coffee dec">Iced Coffee - Decaf</option>
+							</optgroup>
+
+						</select>
+					</p>
+
+					<p>
+						<label for="form_regular">
+							<input type="radio" id="form_regular" name="size" value="Regular" />
+							Regular</label>
+					</p>
+					<p>
+						<label for="form_large">
+							<input type="radio" id="form_large" name="size" value="Large" />
+							Large</label>
+					</p>
+
+					<p>
+						<span>Large Drink add .50&cent;</span>
+					</p>
+
+				</fieldset>
+
+			</fieldset>
+			<!--<input type="submit" id="button" name="button" value="Place Order" />-->
+			<button type="submit" id="button" name="button" value="Place Order">
+				Place Order
+			</button>
+		</form>
+
+	</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>hour24_exercise_01</title>
+		<meta name="description" content="">
+		<meta name="author" content="David">
+
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<!--<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" media="all" href="../includes/styles/styles.css" type="text/css"/>-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!--jquery mobile-->
+    <script type="text/javascript" src="../hour17/js/js/jquery.min.js"></script>
+     <script type="text/javascript" src="js/initmobile.js"></script>
+     <script type="text/javascript" src="../hour17/js/js/jquery.mobile-custom.min.js"></script>
+     <!--<script type="text/javascript" src="js/hour23_01.js"</script>-->
+     <link rel="stylesheet" href="../hour17/js/js/css/jquery.mobile-custom.min.css" />
+    <!-- <link rel="stylesheet"   href="css/hour23_01.css" />-->
+	
+  </head>
+   	<script>
+$(document).ready(function() {
+  checkForMobile();
+$("#sizeSlide").on("change", function(){$("img").width(210*$(this).val()/100);});
+//$("#sizeSlide").on("change", function(){$("img").width(210*$(this).val()/100);});
+$("#fadeSlide").on("change", function(){ $("img").css({opacity:$(this).val()});});
+//$("#fadeSlide").on("change", function(){ ${"img").css({opacity:$(this).val()});});
+
+$("#flip").on("change", function(){
+	if($(this).val() =="on"){$("img").show();}else{$("img").hide();}});
+   //if($(this).val() =="on") {$("img").show();}else { $("img").hide(); } });
+
+
+$("#adjustSize").on("change", function(){
+	           $("img").css({height:$(this).val()});
+	           $("#imgFrame").css({height:$(this).val()});
+	           $("img").css({width:$(this).val()});
+	           $("#imgFrame").css({width:$(this).val()});
+	           //$("img").css((margin-top:$(this).val()});
+	           //$("#imgFrame").css({margin:$(this).val()});
+	           });
+	           
+$("#adjustPosition").on("change", function(){
+	          
+	        //   $("img").css((padding:$(this).val()});
+	           $("#imgFrame").css({padding:$(this).val()});
+	           });
+	           	              
+});
+    </script>
+	
+        
+  <style>
+img{
+	width:210px;
+	position: absolute;
+}
+#imgFrame{
+	width:210px;
+	height:137px;
+	border: 1px solid;
+	overflow:hidden;
+	border: 4px ridge white;
+	box-shadow: 5px 5px 5px #888888;
+	position:absolute;
+}
+
+#navMenu{
+	margin-top:150px;
+}
+  </style>   
+  </head>
+
+	<body>
+	<header>
+				<h1>hour24_xtra_exercise_01</h1>
+				   <h2>Using Toggles and Switches Allows User to Manipulate Elements</h2>
+				   <p>I added an Adjust Size button.  Not sure if my Adjust Posiiton was what the authoer has in mind.</p>
+			</header>
+			<nav>
+	
+			</nav>
+
+				<div class="columnWrapper">
+             
+             <article class="mainwide">
+		
+			 <p></p>
+			
+           <div id="border"><div id="frame">
+           	<div data-role="page" id="pageOne">
+           		<div data-role="header"><h1>Buttons</h1></div>
+           		<div data-role="content">
+           			<div id="imgFrame"><img src="../images/peak.jpg" /></div>
+           			<div id="navMenu">
+           			<div data-role="fieldcontain">
+           				<label for="sizeSlide">Zoom</label>
+           				<input type="range" name="sizeSlide" id="sizeSlide"
+           				value="100" min="50" max="200" data-mini="true" />
+           				<label for="fadeSlide">Fader</label>
+           				<input type="range" name="fadeSlide" id="fadeSlide" 
+           				data-highlight="true"
+           				value="1" min="0" max="1" step=".05" data-mini="true" />
+           			</div>
+           			
+           			<div data-role="fieldcontain">
+           				<label for="flip">Image</label>
+           				<select name="flip" id="flip" data-role="slider">
+           					<option value="off">Hide</option>
+           					<option value="on">Show</option>
+           				</select>
+           			</div>
+           			
+           			<div data-role="fieldcontain">
+           				<label for="adjustSize">Adjust Size</label>
+           				<input type="range" name="adjustSize" id="adjustSize"
+           				value="5" min="5" max="400" data="true"/>
+           			</div>
+           			
+           			<div data-role="fieldcontain">
+           				<label for="adjustPosition">Adjust Position</label>
+           				<input type="range" name="adjustPosition" id="adjustPosition"
+           				value="5" min="0" max="400" data="true"/>
+           			</div>
+           			</div><!--end nav menu-->
+           		</div>
+           	</div>
+           </div>
+         
+         
+     
+    
+            </article>
+      
+			</div>
+
+			<footer>
+				<p>
+					
+				</p>
+			</footer>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+	</body>
+</html>
+

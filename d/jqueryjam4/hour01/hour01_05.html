@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8"/>
+ <link rel="stylesheet" media="all" href="../includes/styles/styles.css" type="text/css"/>
+    <script>
+      var xmlhttp = xmlhttp=new XMLHttpRequest();
+      function loadCities(){
+        xmlhttp.open("GET","php/hour01_06.php",false);
+        xmlhttp.send();
+        var cities = JSON.parse( xmlhttp.responseText );
+        var ulElement = document.getElementById("cityList");
+        for (var city in cities){
+          var listItem = ulElement.appendChild(document.createElement("li"));
+          listItem.appendChild(document.createTextNode(cities[city]));
+        }
+      }  		
+    </script>
+    
+		<!--	 <script>
+			     function loadXMLDoc()
+			     {
+			     var xmlhttp;
+			     xmlhttp = new XMLHttpRequest();
+			     xmlhttp.onreadystatechange=function()
+			     {
+			    //worksdocument.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+			    var cities = JSON.parse(xmlhttp.responseText);
+			    for (var city in cities){
+			    myresult.appendChild(document.createTextNode(cities));
+			     }
+			     }
+			     xmlhttp.open("GET", "php/hour01_06.php", true);
+			     xmlhttp.send();
+			     }
+			 </script>-->
+		
+	</head>
+	<body>
+    <!--<body onload="loadCities()">-->
+    <ul id="cityList">
+    </ul>
+          <div id="myresult"></div>
+
+	      <!-- <ul id="myDiv"></ul>-->
+	      <button type="button" onclick="loadCities()">Display Exercise from book</button>
+	   <!--  <button type="button" onclick="loadXMLDoc()">Display My Script</button>-->
+	      
+
+       <br />
+<a href="hour01_07.html" class="press">Hour01_07</a></a>
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+	</body>
+  </html>

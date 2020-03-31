@@ -1,0 +1,17 @@
+p{
+	margin:0; 
+	padding:0;
+}
+span{
+	display:inline-block;
+	color:white;
+	text-align:center;
+}
+
+.snow{
+	background-color:#FFFFFF;
+	border: 6px groove #0000CD;
+	border-radius:10%;
+	cursor: pointer;
+}
+

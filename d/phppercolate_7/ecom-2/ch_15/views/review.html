@@ -1,0 +1,66 @@
+<?php
+//review.html
+//used for showing review form and existing reviews
+
+//below line used to develop this page as below line is on handle_review.php
+//$review_errors = array();
+
+
+
+echo BOX_BEGIN;
+	 if(isset($message)) 
+	 {
+	 	echo "<p>$message</p>";
+	   }     
+	//begin  form
+	
+	echo '<h2>Add a Review</h2>
+	 <p>All fields are required, but your name and email address will never be shown.</p>
+	
+    <form action="'.MODWRITE.'/browse/'.$type.'/'.$category.'/'.$sp_cat.'"  method="post">';
+	//create name and email inputs
+    echo '<div class="field"><label for="name"><strong>Name</strong></label><br />';
+		include('./includes/form_functions.inc.php');
+		create_form_input('name', 'text', $review_errors);
+		echo '</div>
+		
+		<div class="field"><label for="email"><strong>Email</strong></label><br />';
+		create_form_input('email', 'text', $review_errors);
+		echo '</div>
+
+        <div class="field"><label for="review"><strong>Review</strong></label><br />';
+		create_form_input('review', 'textarea', $review_errors);
+		
+		echo '</div>
+			<input type="submit" value="Submit" class="button" />
+	</form>';
+
+     echo BOX_END;
+	
+ 
+ //begin reviews
+	echo BOX_BEGIN;
+	echo '<h2>Reviews</h2>';
+	 if(mysqli_num_rows($r) > 0 )
+	 // if(4>2)
+		{
+			while($row = mysqli_fetch_array($r, MYSQLI_ASSOC))
+				{	 
+					echo '<p>' .htmlspecialchars($row['review']). '</p>';
+					 echo '<hr>';
+				}//END while loop
+		}else{
+			//if no reviews
+			echo '<p>There are currently no reviews for this product.</p>';
+		}
+	echo BOX_END;
+ 
+	
+	
+	
+	
+	
+	
+	
+	
+	

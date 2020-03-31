@@ -1,0 +1,73 @@
+<?php
+// cart.html
+echo BOX_BEGIN;
+?>
+<h2>Your Shopping Cart</h2>
+<p>Please use this from to update your shopping cart. You may change the quantities, move items
+	to your wish list for futures purchasing, or remove items entirely.  The shipping and 
+	handling is based upon the order total.  When you are ready to complete your purchase, please click 
+	Checkout to be taken to a secure page for processing.</p>
+	
+ <!--begin form-->
+ <form action="<?php echo MODWRITE;?>/cart.php" method="POST">
+ 	<table norder="0" cellspacing="8" cellpadding="6">
+ 		<tr>
+ 			<th align="center">Item</th>
+ 			<th align="center">Quantity</th>
+ 			<th align="center">Price</th>
+ 			<th align="center">Subtotal</th>
+ 			<th align="center">Options</th>
+ 		</tr>
+ 		<?php
+ 		//start php block
+ 		$total = 0;
+ 		
+ 		while($row = mysqli_fetch_array($r, MYSQLI_ASSOC))
+ 			{
+ 				$price = get_just_price($row['price'], $row['sale_price']);
+ 				$subtotal = $price * $row['quantity'];
+ 				//print 
+				echo '<tr><td>'.$row['category'].'::'.$row['name'].'</td>
+					      <td align="center"><input type="text" name="quantity['.$row['sku'].']"
+					      	                 value="'.$row['quantity'].'" size="2" class="small"/></td>
+					      	                 
+					     <td align="right">$'.$price.'</td>
+					     <td align="right">$'.number_format($subtotal, 2).'</td>
+					     
+					     <td align="right"><a href="'.MODWRITE.'/wishlist.php?sku='.$row['sku'].'&action=move&qty='.$row['quantity'].'">Move to Wish List</a><br />
+					     	 
+					     	 <a href="'.MODWRITE.'/cart.php?sku='.$row['sku'].'&action=remove">Remove from Cart</a></td>
+					 </tr>';
+					 
+					 //add error message if prod not suff stocked
+					 if($row['stock'] < $row['quantity'])
+					 {
+					 	echo '<tr class="error"><td colspan="5" align="center">There are only
+					 		'.$row['stock'].' left in stock of the '. $row['name'].'.
+					 		Please update the quantity, remove the item entirely, or move it to
+					 		your wish list.</td></tr>
+					 		';
+					 }
+					 
+					 //add subtotal
+					 $total += $subtotal;
+			} //end while loop
+					 
+					 // add total to table
+			echo '<tr>
+					<td colspan="3" align="right"><strong>Total</strong></td>
+					<td align="right">$'.number_format($total, 2).'</td>
+					<td>&nbsp;</td>
+			      </tr>';
+			
+			
+			//complete table create 2 buttons
+			
+			echo '</table>
+			<br />
+			<p align="center"><input type="submit" value="Update Quantities" class="button" />
+			</form></p><br />';
+			echo '<p align="center"><a href="https://'.BASE_URL_2.MODWRITE.'/checkout.php" class="button">Checkout</a></p>';
+	         
+echo BOX_END;
+?>

@@ -1,0 +1,83 @@
+exercise 2.2
+
+<code>
+	<pre>
+var i = 1, result = "";
+
+for(i; i<101; i= i +1)
+    //
+{
+ //check if div by 3,5 or both
+ if(0==(i%5) && 0==(i%3) )
+  {
+    result = "both";
+  }else if(0==(i%3)){
+    result = "three";
+  }else if(0==(i%5)  ){
+    result = "five";
+  }else{
+    result = i;
+  }
+  //grab above results and match to print output
+  switch(result)
+{
+    case("three"):
+    console.log("Fizz");
+    break;
+    
+    case("five"):
+    console.log("Buzz");
+    break;
+    
+    case("both"):
+    console.log("FizzBuzz");
+    break;
+  
+    default:
+    console.log(result);
+    break;
+}
+  
+}
+	</pre>
+</code>
+
+<script>
+var i = 1,result = "";
+
+for(i; i<101; i= i +1)
+    //
+{
+ //check if div by 3,5 or both
+ if(0==(i%5) && 0==(i%3) )
+  {
+    result = "both";
+  }else if(0==(i%3)){
+    result = "three";
+  }else if(0==(i%5)  ){
+    result = "five";
+  }else{
+    result = i;
+  }
+  //grab above results and match to print output
+  switch(result)
+{
+    case("three"):
+    console.log("Fizz");
+    break;
+    
+    case("five"):
+    console.log("Buzz");
+    break;
+    
+  	case("both"):
+    console.log("FizzBuzz");
+  	break;
+  
+    default:
+    console.log(result);
+    break;
+}
+  
+}
+</script>

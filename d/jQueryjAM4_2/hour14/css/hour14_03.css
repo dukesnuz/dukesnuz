@@ -1,0 +1,29 @@
+#treeContainer{
+  width:300px;
+   }
+ .tree{
+   margin-left: 16px;
+   border-top: .5px dotted;
+  }
+.content{
+   margin-left:48px;
+    }
+ .tree span{
+   display:inline-block; 
+   height:24px;
+   width:24px;
+   margin-right:10px;
+   border-radius:8px;
+   vertical-align:middle;
+   background:url("../../images/expand.png") no-repeat scroll left top 0;
+   }
+  .tree span .collapse{
+      background:url("../../images/collapse.png") no-repeat scroll left top 0;
+   }
+  img{ 
+    height:50px;
+    }
+ .tree label{
+  font:italic 30px/20px "Arial Black"
+   }
+   

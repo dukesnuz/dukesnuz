@@ -1,0 +1,89 @@
+<?php 
+session_start(); 
+//admin.header.html
+?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<title><?php
+			//use default if not provided
+			if(isset($page_title))
+				{
+					echo $page_title;
+				}else{
+					echo 'Coffee - Administration';
+				}
+				?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
+		<!-- below added chp 14 p 463 for superfish -->
+		<link href="../css/superfish.css" rel="stylesheet" type="text/css" />
+		<script src="ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" charset="utf-8"></script>
+		<!-- from ecom-1..<script src="ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+		<script src="../js/hoverIntent.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/superfish.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+			$(function(){
+				$('ul.sf-menu').superfish({
+					autoArrows:false,
+					speed: 'fast'
+				});
+			});	
+	    </script>	
+		<style type="text/css" media="screen">
+			#content{
+				background :#FFFFFF;
+				width:100%;
+				padding: 20px 100px 30px 0px;
+			}
+			#header .nav li ul a{
+				color: #ffe7be;
+				text-decoration: none;
+				text-transform: none;
+				font-size: .75em;
+			}
+		</style>
+		<meta name="author" content="David" />
+
+
+
+<!--[if lt IE 7]>
+   <script type="text/javascript" src="/js/ie_png.js"></script>
+   <script type="text/javascript">
+       ie_png.fix('.png, .logo h1, .box .left-top-corner, .box .right-top-corner, .box .left-bot-corner, .box .right-bot-corner, .box .border-left, .box .border-right, .box .border-top, .box .border-bot, .box .inner, .special dd, #contacts-form input, #contacts-form textarea');
+   </script>
+<![endif]-->
+	</head>
+	<body id="page1">
+			<!-- header -->
+		<div id="header">
+			<div class="container">
+				<div class="wrapeer">
+					<div class="logo"><h1><a href="<?php echo MODWRITE; ?>/admin_2/index.php">Coffee</a>
+						<span>Wouldn't you love a cup right now?</span></h1>
+						<h2>Chapter 14</h2>
+					</div>
+				</div>
+				<!-- chp 14 page 462 menu superfish -->
+				<ul class="nav sf-menu">
+				<!--<ul class="nav">-->
+					<!-- Menu -->
+					<li><a href="index.php">Admin Home</a></li>
+					<li><a href="#">Products</a><ul>
+						<li><a href="add_specific_coffees.php">Add Coffee Products</a></li>
+						<li><a href="add_other_products.php">Add Non_Coffee Products</a></li>
+						<li><a href="add_inventory.php">Add Inventory</a></li>
+					</ul></li>
+					<li><a href="create_sales.php">Sales</a></li>
+					<li><a href="view_orders.php">Orders</a></li>
+					<li><a href="#">Customers</a></li>
+					<!-- End Menu -->
+				</ul>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="content">
+			<div class="container">
+				

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>hour22_02</title>
+		<meta name="description" content="">
+		<meta name="author" content="David">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<!--	<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+		<!--<link rel="stylesheet" media="all" href="../includes/styles/styles.css" type="text/css"/>-->
+
+
+    <!--jquery mobile-->
+     <script type="text/javascript" src="js_book/jquery.min.js"></script>
+     <script src="js/hour22_01_initmobile.js"></script>
+     <script type="text/javascript" src="js_book/jquery.mobile-custom.min.js"></script>
+   <!--	<script src="js/hour22_01.js"</script>-->
+     <link rel="stylesheet" href="js_book/css/jquery.mobile-custom.min.css" />
+   <!-- <link rel="stylesheet" type "text/css"  href="css/hour22_01.css" />-->
+   
+   
+    <script>
+  
+$(Document).ready(function(){
+	checkForMobile();
+	$("#random").on("pageshow", function(){
+		var images=["lake", "peak", "sunset2", "falls"];
+		$("#randomImg").attr("src", "../images/"+ images[Math.floor(Math.random()*4)]+".jpg");
+	  // $("#randomImg").attr("src", "../images/" +    images[Math.floor(Math.random()*4)] + ".jpg");
+		return false;
+	});
+});
+/*
+$(document).ready(function() {
+  checkForMobile();
+  $("#random").on("pageshow", function(){
+    var images=["lake","peak","sunset2","falls"];
+    $("#randomImg").attr("src", "../images/" +
+      images[Math.floor(Math.random()*4)] + ".jpg");
+    return false;
+  });
+});
+*/
+    </script>
+	
+    
+  <style>
+
+  </style>   
+	</head>
+
+	<body>
+	<header>
+		<!--		<h1>hour21_01</h1>
+				   <h2>A</h2>
+			</header>
+			<nav>
+	
+			</nav>
+
+				<div class="columnWrapper">
+            -
+             <article class="mainwide">-->
+			
+	
+			 <p>22_03 Adding Dialogs to Mobile Web Pages</p>
+			
+		
+  <div id="border"><div id="frame">
+      <div data-role="page" id="pageOne">
+        <div data-role="header"><h1>Page 1</h1>
+          <a href="#options" data-role="button" class="ui-btn-right"
+             data-rel="dialog" data-icon="gear">Options</a>
+        </div>
+    
+        <div data-role="content">
+          <p>Silver lake</p><img src="../images/lake.jpg" class="full" />
+          </div> 
+       </div>
+    
+      <div data-role="page"  id="pageTwo">
+        <div data-role="header"><h1>Page 2</h1></div>
+        <div data-role="navbar"><ul>
+         <a href="#options" data-role="button" class="ui-btn-right" data-rel="dialog" data-icon="gear">Options</a>
+        </div>
+ 
+        <div data-role="content">
+          <p>Zion NP</p><img src="../images/peak.jpg" class="full"/> 
+          </div>  
+         </div>
+         
+         
+        <div data-role="page" id="options">
+        	<div data-role="header"><h1>Options</h1></div>
+      
+        	<div data-role="content">
+        	<a href="#imageDialog" data-role="button" data-rel="dialog">Switch page</a>
+        	<a href="#random" data-role="button" data-rel="dialog">Random Image</a>
+        	</div>
+      </div>
+      
+      <div data-role="page" id="imageDialog">
+      	<div data-role="header"><h1>Select Page</h1></div>
+      	<div data-role="content">
+      		<a href="#pageOne" data-role="button"><img src="../images/lake.jpg"/>Lake</a>
+      		<a href="#pageTwo" data-role="button"><img src="../images/peak.jpg"/>Peak</a>
+      	</div>
+      </div>
+
+   <div data-role="page" id="random">
+   	<div data-role="header"><h1>Random</h1></div>
+   	<div data-role="content">
+   		<img id="randomImg" class="medium"></img>
+     	</div>
+       </div>
+   	</div>
+   </div>
+    
+    
+    
+    <!--
+            </article>
+      
+			</div>
+
+			<footer>
+				<p>
+					
+				</p>
+			</footer>
+-->
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+	</body>
+</html>
+

@@ -1,0 +1,38 @@
+
+</div>
+<div id="Menu">
+
+<a href="index1.php" title="Home Page">Home</a><br />
+<?php # Script 18.2 - footer.html
+
+//if user logged in show logout  and change passord links
+if(isset($_SESSION['user_id']))
+    {
+	echo '<a href="logout.php" title="Logout">Logout</a><br />
+	      <a href="change_password.php" title="Change Your Password">Change Password</a><br />';
+		  
+		     //if user administrator show other links
+			 //if($_SESSION['user_level'] == 1 )
+			   // {
+				//echo '<a href="view_users.php" title="View ll Users">View USers</a><br />
+				   //   <a href="#">Some Admin Page</a><br />';
+				//}
+	//show links for non logged in users
+	}else{
+	// not logged in
+	echo '<a href="register.php" title="Register For The Site">Register</a><br />
+	      <a href="login.php" title="Login">Login</a><br />
+		  <a href="forgot_password.php" title="Password Retrieval">Retrieve Password</a><br />';
+    }
+	?>
+	<a href="#">Some Page</a><br />
+	<a href="#">Another page</a><br />
+	
+	</div><!--end menu-->
+	<?php include('stats.php'); ?>
+	</body>
+	</html>
+	<?php
+	//Flush buffer
+	ob_end_flush();
+	?>

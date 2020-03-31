@@ -1,0 +1,33 @@
+<?php # Script 18.1 - header.html
+//begin out put buffering and start session
+ob_start();
+session_start();
+
+if(!isset($_page_title))
+  {
+  $page_title= 'User Registration';
+  }
+  ?>
+  
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Sat, 19 Oct 2013 11:50:56 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title><?php echo $page_title; ?></title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+	<style type="text/css" media="screen">@import"includes/layout.css";</style>
+	
+	<body>
+	<div id="Header>
+	   User Registration
+	</div
+	
+	<div id="Content">

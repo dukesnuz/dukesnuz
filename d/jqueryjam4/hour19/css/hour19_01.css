@@ -1,0 +1,18 @@
+p {
+	margin:0px;
+	 }
+div {
+	height:80px; width:100px; position:fixed;
+	 }
+#drag1{
+	top:200px;
+}
+#drag2 {
+	 top:300px;
+	  }
+#drag3 {
+	 top:400px; 
+	 }
+img { 
+	width:100px;
+ }

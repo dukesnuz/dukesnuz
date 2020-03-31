@@ -1,0 +1,305 @@
+<?php
+//connect to config 
+require('../includes_2/config.inc.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Boston PHP | PHP Percolate Season 7</title>
+		<meta name="description" content="Boston PHP Percolate Season 7. Completed exercises by David Petringa. Using the
+		       book Effortless E-Commerce by: Larry Ullman.">
+	
+        <meta name="keywords" content="Boston PHP Percolate 7,Boston PHP self study group, Effortless E-Commerce by: Larry Ullman">
+		<meta name="author" content="David Petringa, September 14, 2014">
+		
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+         <link href="css/reset.css" rel="stylesheet">
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<style>
+body{
+			background-color: #191970;
+		}
+header{
+			border: .1em #FFFFFF dotted;
+			margin-left: .5em;
+		    margin-right: .5em;
+			padding: 0 .25em .25em  .25em;
+		}
+h1, h2, p{
+			font-size: 1.5em;
+			font-style: italic;
+			color: #FAF0E6;
+			margin-top: 1em;
+			margin-bottom: 1em;
+		    margin-left: .66em;
+		   
+		}
+header h2{
+			font-size: .85em;
+			margin-top: .1em;
+			margin-bottom: .1em;
+			margin-left: 1.66em;
+		}
+	
+footer, nav{
+			border: .1em #FFFFFF dotted;
+			margin: .5em;
+		     
+			padding: 0 .25em 0 .25em;
+		}
+nav a{
+			font-size: 1.714em;
+		}
+nav ul{
+	border: none;
+	padding-bottom:.83em;
+	margin-bottom: 1em;
+	margin-left: 0em;
+	margin-right: 0em;
+}
+nav li{
+	width:8em;
+	font-size:.65em;
+	float:left;
+    margin-right:.5em;
+    border-radius: 20% 20% 0 0;
+    text-align: center;
+   
+    
+}
+footer p, nav p{
+			font-size: .875em;
+			margin-top: 0em;
+			margin-bottom:0em;
+			margin-left: .75em;
+		}
+a{
+	   	 
+	      font-size: .875em;
+	      font-style: normal;
+	      color: #B22222;
+	      text-decoration:none;
+		}
+
+
+
+/* base */
+ul{
+			list-style: none;
+			padding: .5em .5em .5em .5em;
+			margin-bottom: 1em;
+			margin-left: .75em;
+			margin-right: .75em;
+			border: 2px solid #ffffff;
+		}
+li{
+		    background-color:#ffffff;
+			margin-bottom: .25em;
+			padding: .33em;
+			border-radius:10%;
+		}
+/* 600px */
+@media (min-width: 37.5em){
+ ul{
+			margin-right: 20.75em;
+			border: 2px solid #ffffff;
+		}
+}
+
+/* 860px */
+@media(min-width:53.75em)
+{
+ul{
+			margin-right: 30.75em;
+			border: 2px solid #ffffff;
+        }
+}
+
+
+/* 940px */
+@media(min-width: 58.75em){
+ul{
+		margin-right: 50.75em;
+		border:2px solid #ffffff;
+	}
+}
+
+/* 1300px */
+@media(min-width: 81.25em){
+ul{
+	   	margin-right: 60.75em;
+	   	border: 2px solid #ffffff;
+	   }
+}
+	   </style>
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>PHP Percolate Season 7</h1>
+				<h2>Exercises from the book:</h2>
+				<h2>Effortless E-Commerce</h2>
+				<h2>By: Larry Ullman</h2>
+			</header>
+			<nav>
+				<ul>
+					<li><a href="../home.php">Home</a></li>
+					<li><a href="http://www.meetup.com/bostonphp/messages/boards/thread/46086832/" target="blank">Discussion</a></li>
+                    <li><a href="http://www.larryullman.com/books/effortless-e-commerce-with-php-and-mysql-2nd-edition/">Book DL</a></li>
+                    <li><a href="http://www.larryullman.com/forums/index.php?/forum/35-effortless-e-commerce-with-php-and-mysql/">Forum</a></li>
+              
+                    <li><a href="http://www.tinymce.com/index.php" target="blank">tinyMCE</a></li>
+               </ul>
+			</nav>
+
+			<div>
+
+
+<!--site 1-->
+<ul>
+	<li><a href="##" target="blank">Chapter_1</a></li>
+	<li>Getting Started</li>
+</ul>
+
+<ul>
+	<li><a href="##" target="blank">Chapter_2</a></li>
+	<li>Security Fundamentals</li>
+</ul>
+
+<ul>
+	<li><a href="ecom-1/ch_3/index.php" target="blank">Chapter_3</a></li>
+	<li>First Site Design</li>
+</ul>
+
+<ul>
+	<li><a href="ecom-1/ch_4/index.php" target="blank">Chapter_4</a></li>
+	<li>Login</li>
+	<li>Logout</li>
+	<li>Register</li>
+	<li>Forgot Passord</li>
+	<li>Change Password</li>
+</ul>
+
+<ul>
+	<li><a href="ecom-1/ch_5/index.php" target="blank">Chapter_5</a></li>
+	<li>Adding Pages</li>
+	<li>Displaying Page Content</li>
+	<li>Adding PDFS</li>
+	<li>Displaying PDF Content</li>
+</ul>
+
+<ul>
+	<li><a href="ecom-1/ch_6/index.php" target="blank">Chapter_6_1st Half</a></li>
+	<li>Paypal 1st part of chapter_Demo</li>
+	<li>Integrating PayPal</li>
+</ul>
+
+<ul>
+	<li><a href="ecom-1/ch_6_ipn/index.php" target="blank">Chapter_6_2nd_Half</a></li>
+	<li>Paypal 2nd part of chapter_Using_IPN_Demo</li>
+	<li>Integrating PayPal IPN</li>
+</ul>
+<!--
+<ul>
+	<li><a href="ecom-1/ch_6_live/index.php" target="blank">Chapter_6_Using_PP_ipn_Live</a></li>
+	<li>A live version with real $.</li>
+</ul>
+-->
+<!--site 2-->
+<ul>
+	<li><a href="ecom-2/ch_7/index.php" target="blank">Chapter_7</a></li>
+	<li>Second Site : Structure & Design</li>
+	<li>Databse Design</li>
+	<li>Mod_Rewrite</li>
+	<li>Config, Header, Footer</li>
+</ul>
+
+<ul>
+	<li><a href="ecom-2/ch_8/index.php" target="blank">Chapter_8</a></li>
+	<li>Creating a Catalog</li>
+	<li>Populating the Tables</li>
+	<li>Stored Procedures</li>
+	<li>Create Pages: Shop, View, Browse, Sales, Home</li>
+</ul>
+
+<ul>
+	<li><a href="ecom-2/ch_9/index.php" target="blank">Chapter_9</a></li>
+	<li>Building a Cart</li>
+	<li>Defining The Procedures</li>
+	<li>Building Shopping Cart</li>
+	<li>Making a Wish List</li>
+	<li>Calculating Shipping</li>
+</ul>
+
+<ul>
+	<li><a href="ecom-2/ch_10/index.php" target="blank">Chapter_10</a></li>
+	<li>Checking Out</li>
+	<li>Taking Shipping Information</li>
+	<li>Taking Billing Information</li>
+	<li>Processing Credit Cards Using Authorize.net</li>
+	<li>Test The Site</li>
+</ul>
+
+
+<ul>
+	<li><a href="ecom-2/ch_11/index.php" target="blank">Chapter_11</a></li>
+	<li>Site administration</li>
+	<li>Adding Products</li>
+	<li>Adding Inventory</li>
+	<li>Creating Sales</li>
+	<li>Viewing Orders</li>
+	<li>Processing Payment</li>
+</ul>
+
+<ul>
+	<li><a href="ecom-1/ch_12/index.php" target="blank">Chapter_12</a></li>
+	<li></li>
+</ul>
+
+<ul>
+	<li><a href="ecom-2/ch_13/index.php" target="blank">Chapter_13</a></li>
+	<li></li>
+</ul>
+
+<ul>
+	<li>Chapter 14</li>
+	<li><a href="ecom-1/ch_14/page.php?id=3" target="blank">Working With Favorites Page 470</a></li>
+	<li><a href="ecom-1/ch_14/page.php?id=3" target="blank">Recording Notes Page 478</a></li>
+	
+</ul>
+<ul>
+	<li><a href="ecom-2/ch_15/index.php" target="blank">Chapter_15</a></li>
+	<li>Using Stripe</li>
+</ul>
+
+
+			</div>
+
+			<footer>
+	
+    <p>Self-Study Group Completed Exercises by: David Petringa</p>
+    <p>Started: September 14, 2014</p> 	
+    <p>Made in U.S.A  &copy;  2014</p> 
+    <ul>
+    	<li><a href="../contactusform.php">Contact Me here</a></li>
+   
+    </ul>
+			 	
+			 	</footer>
+		</div>
+ 	
+		<!-- Start of StatCounter Code for Default Guide-->
+         <?php include('/stats.php');?>
+
+
+	</body>
+</html>

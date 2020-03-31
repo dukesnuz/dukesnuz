@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+	<title>Lesson 11 - Digital Classroom HTML5</title>
+
+
+	<link rel="stylesheet" media="screen" href="reset.css" type="text/css"  />
+
+	<link rel="stylesheet" media="screen"  href="base.css" type="text/css"  />
+    
+   <style media="all" type="text/css">
+	
+body {
+	padding: 0 40%;
+	background-image: url(images/bg1.png), url(images/bg2.png), url(images/bg3.png);
+}
+.transform {
+	
+margin-top:2em;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(-45deg);
+transform:rotate(-45deg);
+	
+
+}
+
+.fade	{
+	margin-top: 6em;
+	
+}
+
+a.transition{
+	padding: 5px 25px;
+	background: #c9c;
+	/*-webkit-transition-property:background;
+	-webkit-transition-duration: 10s;
+	-webkit-transition-timing-function: ease-out;
+	short hand for above 3 lines is below*/
+	-webkit-transition: background 10s ease-out, color 0.1s linear;
+			  }
+a.transition:hover{
+	background: #F6C;
+		 }
+a.transition:active{
+	color:yellow;
+		 }	
+</style>
+
+
+</head>
+
+
+<body id="home">
+
+<div class="transform">
+<img src="images/learn_more.png">
+
+</div>
+<div class="fade">
+<a href="#" class="transition">Fade</a>
+</div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>index</title>
+		<meta name="description" content="">
+		<meta name="author" content="David Petringa">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!--add cdn links here-->
+    
+     	  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="custom.css">
+		<!--below for less file  not using this-->
+		<!--<link rel="stylesheet" href="bootstrap/css/style.less.css">-->
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body>
+		<!--START navigation bar regular-->
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">MyWebsite</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Page A</a></li>
+						<li><a href="#">Page B</a></li>
+	                   	<li><a href="#">Page C</a></li>
+					</ul>
+				</div>
+			</div>
+	     </nav>
+		<!--END navigation bar regular-->
+		
+		<!--START navigation bar Inverse-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<!--below collapses nav bar-->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!--END collapse nav bar-->
+					<a class="navbar-brand" href="#">MyWebsite</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Page A</a></li>
+						<li><a href="#">Page B</a></li>
+								<!--START dropdown-->
+						<li class="dropdown">
+        					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Page C <b class="caret"></b></a>
+          					<ul class="dropdown-menu">
+								<li><a href="#">Page C - 1</a></li>
+								<li><a href="#">Page C - 2</a></li>
+								<li><a href="#">Page C - 3</a></li>        
+							</ul>        
+        				</li>
+				                  <!--END dropdown-->	
+					</ul>
+					
+					<!--RIGHT aligned navigation bar-->
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="signup.html"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+					    <!--<li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+					</ul>
+					<!--END right navigation bar-->
+					
+				</div>
+			</div>
+	     </nav>
+		<!--END navigation bar Inverse-->
+		
+		 <div class="container">
+		  	<div class="jumbotron">
+				<h1>Hello, welcome to my website!</h1>
+				<p>Watch as we use more and more components from Bootstrap.</p>
+				<a href="#" class="btn btn-primary btn-lg"> More Details<span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+			<!--menus-->
+			<div class="container">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Menu 1</a></li>
+					<li><a href="#">Menu 2</a></li>
+					<li><a href="#">Menu 3</a></li>
+					
+				</ul>
+			</div>
+			
+			<div class="container">
+				<ul class="nav nav-pills">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Menu 1</a></li>
+					<li><a href="#">Menu 2</a></li>
+					
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 3<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Submenu 3-2</a></li>
+							<li><a href="#">Submenu 3-3</a></li>
+							<li><a href="#">Submenu 3-3</a></li>
+							<li><a href="#">Submenu 3-4</a></li>
+						</ul>
+					</li>
+					<!--end drop down-->
+				</ul>
+			</div>
+			
+			
+			<!--END menus-->
+		<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+				<p><img class="img-responsive center-block img-rounded" src="./images/goose.jpg"/></p>
+				<p><img class="img-responsive center-block img-thumbnail" src="./images/goose.jpg"/></p>
+				<p><img class="img-responsive center-block img-circle" src="./images/goose.jpg"/></p>
+				<p>Paragraph 1...</p>
+			</div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+		
+				    <table class="table table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th class="text-center">Name of Produce</th>
+							<th class="col-md-1 text-center">Qty</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-left">Apple</td>
+							<td class="text-center">3</td>
+						</tr>
+					</tbody>
+					</table>
+					<p>Paragraph 2...</p>
+				
+			</div>
+			<!--below line not needed right now..added in case we need in future-->
+			<div class="clearfix visible-md"></div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+				<p>Paragraph 3...</p>
+			</div>
+			
+			<!--replaced below with nav pills
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+			    <p>Paragraph 4...</p>
+			</div>-->
+			
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+				<ul class="nav nav-pills nav-stacked">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Menu 1</a></li>
+					<li><a href="#">Menu 2</a></li>
+					
+					<!--drop down-->
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 3<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Submenu 3-1</a></li>
+								<li><a href="#">Submenu 3-2</a></li>
+							    <li><a href="#">Submenu 3-3</a></li>
+							    <li><a href="#">Submenu 3-4</a></li>
+							</ul>
+					</li>
+					<!--END dropdown-->
+				</ul>
+		    </div>
+			<!--below line not needed right now..added in case we need in future-->
+			<div class="clearfix visible-lg"></div>
+		</div>
+	</div>
+	
+	<!--begin login form modal-->
+		<!--place modal inside  form-->
+	<form action="#" method="post" id="loginForm">
+		<div class="modal fade" id="loginModal" tabindex="-1">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<!--modal header goes here-->
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						
+						<h4 class="modal-title" id="loginModalLabel">Login</h4>
+					</div>
+				
+					<div class="modal-body">
+						<!--modal body goes here-->
+						<div class="form-group" id="inputUserIDFormGroup">
+							<label class="control-label" for="inputUserID">User ID</label>
+							<input type="text" class="form-control" id="inputUserID" placeholder="please enter your ID">
+						</div>
+						
+						<div class="form-group" id="inputPasswordFormGroup">
+							<label class="control-label" for="inputPassword">Password</label>
+							<input type="password" class="form-control" id="inputPassword" placeholder="Please enter your password">
+						</div>
+
+					<div class="modal-footer">
+						<!--modal footer goes here-->
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-primary">Login</button>
+					</div>
+				</div>
+		   </div>
+		</div>
+			</form>
+				<!--END of modal-->
+		
+	
+	
+	
+	
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>		
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	
+	<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+	</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	padding: 0;
+	margin: 0;
+}
+article, aside {
+	max-width: 100%;
+	padding: 3%;
+	margin: auto;
+	margin-bottom: 3%;
+}
+header, footer {
+	width: 100%;
+}
+img {
+	padding: 2%;
+}
+@media screen and (min-width: 480px) {
+	article, aside, #side-bar-left, #side-bar-left {
+		padding: 1%;
+		margin: 0;
+	}
+
+	#side-bar-left {
+		float: left;
+		width: 23%;
+		margin-left: -75%;
+	}
+	article {
+		float: left;
+		width: 48%;
+		margin-left: 25%;
+	}
+
+	#side-bar-right {
+		float: left;
+		width: 23%;
+	}
+
+	#f-column-1, #f-column-2, #f-column-3 {
+		margin: 0;
+		float: left;
+		width: 31.333%;
+		margin: 1%;
+	}
+
+}

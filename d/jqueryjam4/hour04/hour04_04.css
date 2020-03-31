@@ -1,0 +1,71 @@
+
+img{
+	width:48px;
+	height:48px;
+	margin:5px;
+	float:left;
+}
+#buttons, #songInfo{
+	position:fixed;
+	background-color: black;
+	padding: 5px;
+	display:inline-block;
+	border: 8px ridge blue;
+	border-radius: 5px;
+}
+#songInfo{
+	top:70px;
+	left:100px;
+	height:150px;
+	width:300px;
+    z-index:1;
+}
+#buttons{
+	top:200px;
+	left:140px;
+	z-index:2;
+	    
+}
+#title{
+	color:lime;
+	font-weight:bold;
+	font-size:30px;
+	position:relative;
+	top:-20px;
+	
+}
+#artist{
+	color:cyan;
+	font-size:20px;
+	position:relative;
+	left:30px;
+	top:-50px;
+}
+#album{
+	color:yellow;
+	position:relative;
+	left:60px;
+	top:-70px;
+}
+/*excercise 02 plus I added some extra styles*/
+header{
+	background-color:#00FF00;
+	border:6px groove orange;
+	height:48px;
+	border-radius: 50%;
+	padding-bottom:1px;
+  
+}
+header h1{
+	font-size: 15px;
+	font-weight: bold;
+	color:blue;
+	padding:5px 0px 5px 40%;
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+
+}
+.next{
+	border: 2px groove cyan ;
+	
+}

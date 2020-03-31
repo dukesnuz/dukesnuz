@@ -1,0 +1,17 @@
+img{
+  width:80px;
+   }
+ caption, th{
+    background-image:-moz-linear-gradient(center top, #0000FF, #88BBFF);
+    color:white;
+    font:bold 18px arial black;
+   }
+   caption{
+    border-radius: 10px 10px 0px 0px;
+    font-size: 22px;
+    height:30px;
+     }
+    td{
+    border: 1px dotted;
+    padding: 2px
+     }

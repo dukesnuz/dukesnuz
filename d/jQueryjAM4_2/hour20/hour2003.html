@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hour 20-3</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/css/jquery-ui-1.10.3.min.css">
+    
+    	<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" media="all" href="../includes/styles/styles.css" type="text/css"/>
+		
+		 <script src="../includes/js/jquery-1.11.0.min.js"></script>
+		 <script type="text/javascript" src="js/hour20_01.js"></script>
+		 <link rel="stylesheet" type="text/css" href="css/hour20_01.css">
+	    
+  <!--used for jQuery UI-->
+    <script type="text/javascript" src="../hour17/js/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../hour17/js/js/css/jquery-ui-1.10.3.min.css">
+    
+    <!--my custom styles-->
+	<link rel="stylesheet" type="text/css" href="../hour17/js/js/my_css/dot-luv/jquery-ui-1.10.4.custom.css">
+  </head>
+  <script>
+  $(document).ready(function(){
+      $( "#button1" ).button({icons: {primary: "ui-icon-gear"},text: true});
+      $( "#check" ).button();
+      $( "#format" ).buttonset();
+      $( "#radio" ).buttonset();
+    });
+  </script>
+  <style>
+    div {margin:15px; }
+  </style>
+  <body>
+    <div><button id="button1">Configure</button><br></div>
+    <div><input type="checkbox" id="check" /><label for="check">Toggle</label></div>
+    <div id="format">
+      <input type="checkbox" id="check1" /><label for="check1">B</label>
+      <input type="checkbox" id="check2" /><label for="check2">I</label>
+      <input type="checkbox" id="check3" /><label for="check3">U</label>
+    </div>
+    <div id="radio">
+      <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
+      <input type="radio" id="radio2" name="radio" /><label for="radio2">Choice 2</label>
+      <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
+    </div>
+  </body>
+</html>

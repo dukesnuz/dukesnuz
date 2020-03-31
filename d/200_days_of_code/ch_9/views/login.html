@@ -1,0 +1,20 @@
+<!-- login.html - script 9.12 -->
+<section class="threeColumns">
+	<article>
+		<p>
+			Some information can be added here about something.
+		</p>
+	</article>
+	
+	<article class="twoThirds">
+		<h1>Login</h1>
+		
+		<?php if($form->isSubmitted() && $form->validate())
+			{
+				echo '<p class="error">The form values submitted do not match those on file!</p>';
+			}
+		?>
+		<?php echo $form; ?>
+		
+	</article>
+</section>

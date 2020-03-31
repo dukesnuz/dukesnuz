@@ -1,0 +1,67 @@
+table{
+  border:3px ridge blue;
+  padding:0px;
+   }
+ thead{
+   display:block; 
+   width:820px;
+   text-align:left;
+   }
+ tbody{
+   display:block; 
+   max-height:400px;
+   width:820px;
+   overflow-y:scroll;
+   }
+ th{
+  background-image:-moz-linear-gradient(center top, #f1f1f1, #8F8F8F);
+  width:200px;
+  height:30px;
+  font: 16px Arial Black;
+  padding:3px;
+  }
+  .spacer{
+   background-image: -moz-linear-gradient(center top, #f1f1f1, #8F8F8F);
+   width: 15px;
+   border:none;
+ }
+ td{
+  width:200px;
+  border: .5px dotted;
+   }
+ .sortColumn{
+   font-weight:bold;
+    }
+  tr:nth-child(even){
+  background-color:#BBDDFF;
+   }
+img{
+  height:26px;
+   }
+ input{
+   height:20px;
+   width:20px;
+   border-radius:15px;
+   padding: 0 7px 2px 25px;
+   background:url("../../images/search.png") no-repeat scroll left bottom 0 #FFFFFF;
+   background-size: 20px 20px;
+    } 
+ input:focus{
+   width:100px;
+    }
+ span{
+  background:url("../../images/sort.png") no-repeat scroll left;
+  background-size: 20px 20px;
+   }
+ span { background:url("../../images/sort.png") no-repeat scroll left; 
+  background-size:20px 20px;        
+  padding: 0 7px 2px 25px;
+}
+   
+ 
+.ascending{ background:url("../../images/down2.png") no-repeat scroll left; 
+  background-size:20px 20px;
+}
+.descending{ background:url("../../images/up2.png") no-repeat scroll left; 
+  background-size:20px 20px;
+}     

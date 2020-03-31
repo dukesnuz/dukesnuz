@@ -1,0 +1,23 @@
+body {
+	font-family: calibri, verdana, tahoma, helvetica, sans-serif;
+}
+.p1 {
+	padding: 0.5em;
+	width: 20%;
+	border: thin solid green;
+	background-color: #CCFFCC
+}
+#status {
+	background-color: #ccc;
+	margin: 1em;
+	padding: 0.5em;
+	width: 300px;
+	float: right;
+	border: medium solid black;
+}
+#statuscaption {
+	font-size: larger;
+}
+#status img {
+	border: thin solid black;
+}

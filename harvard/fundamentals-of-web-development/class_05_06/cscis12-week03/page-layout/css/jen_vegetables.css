@@ -1,0 +1,41 @@
+/****************styles for vegatables.html****************************************/
+aside{
+	width:22%;
+	float:left;
+
+	background-color:#ffcccc;
+/****use faux columns to make asides all way to bottom******/
+}
+article{
+	width:48%;
+	margin:0;
+	padding:0;
+	background-color:#ccffff;
+}
+
+.sidebar1{
+	float:left;
+	margin:0;
+	padding:0;
+	clear:none;
+	padding:1%;
+	
+}
+.main{
+	float:left;
+	margin:0;
+	padding:0;
+	clear:none;
+	margin: 0 1%;
+	padding:1%;
+}
+.sidebar2{
+	float:left;
+	margin:0;
+	padding:0;
+	clear:none;
+	padding:1%;
+}
+footer{
+	clear:both;
+}

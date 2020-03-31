@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hour 20-4</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/css/jquery-ui-1.10.3.min.css">
+  </head>
+  <script>
+    function dateChanged(dateStr, Object){ $("span").html("Updated to" + dateStr); }
+    $(document).ready(function(){
+      $( "#month" ).datepicker({
+          onSelect:dateChanged,
+          showOn: "button", buttonImage: "../images/calendar.png", buttonImageOnly: true,
+          numberOfMonths:2,
+          showButtonPanel:true,
+          dateFormat: "yy-mm-dd"
+        });
+    });
+  </script>
+  <style>
+    input { border:2px ridge blue; border-radius:5px; }
+  </style>
+  <body>
+    <label>Start Date: </label><input type="text" id="month"></input>
+    <span></span>
+  </body>
+</html>

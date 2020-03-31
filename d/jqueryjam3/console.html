@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>News Headlines</title>
+<link href="_css/site.css" rel="stylesheet">
+<script src="_js/jquery-1.7.2.min.js"></script>
+<script>
+$(document).ready(function(){
+	console.log('READY');				 
+		$('#comments').keyup(function(){
+			console.log('Event: keyup');
+			var text =$(this).val();
+			console.log('Contents of comments: %s' , text);
+			var chars = text.length;
+			console.log('Number of characters: %d', chars);
+		$('#count').text(chars + "characte");
+		}); //end kep up
+}); //end ready
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<p class="logo">JavaScript <i>&</i> jQuery <i class="mm">The<br>Missing<br>Manual</i></p>
+	</div>
+	<div class="content">
+		<div class="main">
+			<h1>Using Firebug&#8217;s console.log() Function</h1>
+			
+ 
+			
+			 <form name="console" method="post" action="">
+<p>
+    <label for="comments">Comments</label>
+    <textarea name="comments" id="comments" cols="35" rows="5"></textarea> <span id="count"></span></p>
+    </form>
+		</div>
+	</div>
+	<div class="footer">
+		<p>JavaScript &amp; jQuery: The Missing Manual, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+	</div>
+</div>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body>
+</html>

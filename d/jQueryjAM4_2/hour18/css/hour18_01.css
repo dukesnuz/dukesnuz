@@ -1,0 +1,40 @@
+img{
+	height:200px;
+}
+#frame1,#frame2,#frame3,#frame4{
+	height:210px;
+	width:212px;
+	border: 1px dotted;
+	display: inline-block;
+	position: absolute;
+	float:left;
+	padding:5px;
+	margin-top:100px;
+	background-color:#00CED1;
+}
+#frame1{
+	/*top:80px*/
+	margin-left:20px
+}
+#frame2{
+	/*top:80px*/
+	margin-left:240px;
+}
+#frame3{
+	/*top:80px*/
+	margin-left:460px;
+}
+#frame4{
+	/*top:80px*/
+	margin-left:680px;
+}
+article{
+	height:700px;
+	background-color:#800080;
+}
+p{
+	color:#00CED1;
+	font-size: .875em;
+	font-style: italic;
+	padding: 10px;
+}

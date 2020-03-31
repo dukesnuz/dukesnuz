@@ -1,0 +1,24 @@
+/************************************HED Graduate Credit Assignemnt One Fall 2016
+ *
+ * This application created, coded and tested by David Petringa
+ * I hope you enjoy this app.
+ *
+ * Thank you for viewing my Graduate assignment one for the class Introduction to Web Programming Using JavaScript at HES.
+ * The main objective is to demonstrate my knowledge of functions, arrays and working with numbers all within JavaScript.
+ * I tried to explain as much as possible regarding how this works. 
+ * I also tried to make the code as easily readable as possible. I am using aptana for my IDE.
+ * Apatna has a tidy/format feature which re-aligns code for human reading.
+ * It tends to wrap my for loops into 2 lines when I have 2 var variables. I think I may change the way I decalre the variables
+ * to stop the wrap in for loops
+ *
+ * This is a  mortage calculator. The Javascript function will verify that numbers greater than zero are enetered in each
+ * field. The results will be stored in a multi-dimensonal array. The display button is set to disabled until at least one element
+ * is in the results array. The display button will display all the results for the current session. I created  a function to create an HTML
+ * table. If more than five calculations are made the visitor is notified by an annoying pop up to insert $.025 to continue. 
+ * The calculations should be accurate.
+ *
+ * More HTML and CSS could have been used to pretty up the page. 
+ * I chose to concentrate on the functionality of the JavaScript.
+ * I hope you enjoy this.
+ * 
+ */

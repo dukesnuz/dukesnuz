@@ -1,0 +1,110 @@
+<IfModule mod_rewrite.c>
+Options -MultiViews
+################################
+#######Last edit 12192015#######
+##Great URL: http://yourdomain.com/furniture/brown-leather-couch
+##http://www.brickmarketing.com/blog/url-tips-for-seo.htm
+##http://httpd.apache.org/docs/2.4/mod/mod_rewrite.html
+##http://httpd.apache.org/docs/2.4/mod/core.html#if
+##below-redirect bad url pointing to my site
+##http://www.webhostingtalk.com/showthread.php?t=462642
+################################
+RewriteEngine on
+
+#############################################################
+##below-redirect bad url pointing to my site
+#https://my.bluehost.com/cgi/help/htaccess_redirect
+#http://webmaster.iu.edu/tools-and-guides/maintenance/redirect-htaccess.phtml
+
+#<IF "%{HTTP_HOST} == 'www.fashionieceta.com'">
+RewriteCond %{HTTP_HOST} ^www.fashionieceta.com$ [NC]
+RewriteRule ^$ http://www.dukesnuz.com/403.shtml [L,R=301]
+#</IF>
+
+#<IF "%{HTTP_HOST} == 'fashionieceta.com'">
+RewriteCond %{HTTP_HOST} ^fashionieceta.com$ [NC]
+RewriteRule ^$ http://www.dukesnuz.com/403.shtml [L,R=301]
+#</IF>
+
+#<IF "%{HTTP_HOST} == '23.229.243.140'">
+RewriteCond %{HTTP_HOST} ^23.229.243.140$ [NC]
+RewriteRule ^$ http://www.dukesnuz.com/403.shtml [L,R=301]
+#</IF>
+
+#############################################################  
+
+RewriteRule ^(dukesnuz/david/petringa)/?$  index.php
+
+##########Primary root folder##########################
+#RewriteRule ^about/dukesnuz/david/petringa/?$  about.php
+#RewriteRule ^contact/dukesnuz/david/petringa/?$  contact.php
+#RewriteRule ^shop/dukesnuz/david/petringa/?$  store.php #page name changed to shop in order to use below rule
+
+
+RewriteRule ^blog/?$ blog/blog.php
+
+RewriteRule ^catagory/blog/([A-Za-z\+\-]+)/?$ blog/blog.php?catagory=$1   
+
+
+#above rewritten to one line below
+RewriteRule ^([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ $1.php
+########END Primary root folder#######################
+
+
+##########Playground folder#############################
+#try to make page names similiar in order to be able to use the below line for more than one page
+RewriteRule ^coding/playground/([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ coding-playground/$1.php
+
+RewriteRule ^coding/playground/css3/radial/gradient/transform/scale/rotate/dukesnuz/david/petringa/?$ coding-playground/playground_12_04_2015.php
+RewriteRule ^coding/playground/storing/sessions/in/a/database/php/mysqli/dukesnuz/david/petringa/?$ coding-playground/sessions.php 
+RewriteRule ^coding/playground/storing/sessions/in/a/database/php/mysqli/dukesnuz/david/petringa/?$ coding-playground/sessions.php?logout=true            
+##############END playground folder####################
+
+############utilities folder##########################
+#try to make page names similiar in order to be able to use the below line for more than one page
+RewriteRule ^utilities/([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ utilities/$1.php
+#############END utilities folder#####################
+
+####redirect for angular apps###
+RewriteRule ^coding-playground/angular/([A-Za-z\+\-]+)/?$ coding-playground/angular/$1/index.html
+
+
+#below works for files in subfolder-uses subfolder name ie self-study-courses name dividers will be whatever is used in folder name and modwrite in config
+#this line replaced with below line RewriteRule ^([A-Za-z\+\-]+)/([A-Za-z\+\-]+)/dukesnuz/david/petringa/?$ $1/$2.php
+#can go into config file and change the modwrite used in order to change the ending of the url 
+#the below line should work with most folders and scripts used
+
+RewriteRule ^([A-Za-z\+\-]+)/([A-Za-z\+\-]+)/([A-Za-z\+\-]+)/?$ $1/$2.php    
+
+
+#below redirects 
+#http://www.dukesnuz.com/websites/
+#to
+#http://www.dukesnuz.com/coding-playground/websites-i-coded.php
+RewriteRule ^websites/?$ portfolio/portfolio.php
+RewriteRule ^portfolio/?$ portfolio/portfolio.php
+
+#below redirects 
+#http://www.dukesnuz.com/websites/david/petringa/coded/
+RewriteRule ^websites/david/petringa/coded/?$ coding-playground/websites_i_coded.php
+
+#below redirects 
+#for games folder
+#to
+#http://www.dukesnuz.com/games/game_name.html
+#RewriteRule ^games/([A-Za-z\+\-\_]+)/([A-Za-z\+\-\_]+)/?$ games/$1/$2.html
+####trying to make this reusable for the format /folder/page.php
+#http://www.dukesnuz.com/games/games.php
+#RewriteRule ^([A-Za-z\+\-\_]+)/([A-Za-z\+\-\_]+)/?$ games/$1/$2.php
+
+#below for accessing games folder trying to make reusable for other folders
+RewriteRule ^([A-Za-z\+\-\_]+)/?$ $1/$1.php
+
+#below used for games pages in format games/a_b_c/d_e_f.html
+RewriteRule ^games/([A-Za-z\+\-\_]+)-([A-Za-z\+\-\_]+)-([A-Za-z\+\-\_]+)/?$ games/$1_$2_$3/$1_$2_$3.html
+
+#below redirects 
+#for weather folder
+RewriteRule ^weather/get-([A-Za-z\+\-\_]+)-([A-Za-z\+\-\_]+)-([A-Za-z\+\-\_]+)/?$ weather/$1_$2_$3.php
+
+</IfModule>

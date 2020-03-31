@@ -1,0 +1,5 @@
+body { font-family: verdana,arial,helvetica,sans-serif; }
+h1,h2,h3,h4,h5 { color: green; border-bottom: thin solid green;}
+a:link { text-decoration: none; color: blue; background-color: white;}
+a:hover { background-color: blue; color: white; text-decoration: underline }
+a:active, a:visited { text-decoration: none; color: blue; background-color: white;}

@@ -1,0 +1,108 @@
+/* news.css */
+
+body {
+	background-color: #3D4D7A;
+	font-size: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+/****************************Links******************************************/
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #00207A;
+	background-color: #FFFFFF;
+}
+a:visited {
+	color: #0000FF;
+	background-color: #FFFFFF;
+}
+a:hover {
+	color: #ffffff;
+	background-color: #36E805;
+}
+a:active {
+
+	background-color: #0000FF;
+}
+/**********************************main**************************************/
+main {
+	margin: 2% 10%;
+	border: 2px solid #ffffff;
+}
+/************header*********************************************************/
+.top-header {
+	background-color: #00207A;
+}
+/***************************main header h1***************************************/
+#main-heading{
+	color: #ffffff;
+	font-family: Helvetica, sans-serif;
+	margin: auto;
+	text-align: center;
+}
+#logo-header {
+	background-color: #00207A;
+	background-image: url("http://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif");
+	font-family: Helvetica, sans-serif;
+	background-repeat: no-repeat;
+	margin-left: 5%;;
+	font-size: 1.25em;
+	padding: 15px;
+}
+/***************************main header h2***************************************/
+#main-sub-heading {
+	font-size: 1em;
+	font-style: italic;
+	color: #ffffff;
+	clear: both;
+	padding: 0 0 0 5%;
+	margin-bottom: 0;
+}
+/***************************article***************************************/
+.sample-read-content {
+	background-color: #ffffff;
+	padding: 5px 5%;
+}
+
+/****************************article header*********************************/
+.sample-read-header {
+	font-size: 1.4em;
+	color: #990000;
+	font-family: Helvetica, sans-serif;
+	margin: 4px 0;
+	padding: 0;
+}
+/****************************article p*********************************/
+.sample-read {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1em;
+	color: #000000;
+	margin: 2px 0;
+}
+
+/****************************article footer*********************************/
+.sample-read-footer {
+	border-bottom: 1px solid #000000;
+	margin-bottom: 5px;
+}
+/*****************************article footer p*****************************/
+.sample-date {
+	font-family: "Times New Roman", Times, serif;
+	font-size: .85em;/* was -1*/
+	font-style: italic;
+}
+
+.read-more {
+	font-size: 1em;
+	font-style: italic;
+}
+.read-more:before, .read-more:after {
+	content: " >>> ";
+}
+/************************************************************************/
+

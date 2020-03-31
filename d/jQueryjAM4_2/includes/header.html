@@ -1,0 +1,82 @@
+<?php #jQuery jAm-04 - header.html ?>
+  
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="utf-8">
+<meta name="description" content="jQuery jAM 4 a self study group by Boston PHP. Completed exercises by David Petringa from
+the book:  jQuery and JavaScript in 24 Hours." />
+<meta name="keywords" content="David Petringa, jQuery jAM, Boston PHP, JavaScript, jQuery, jQuery and JavaScript in 24 Hours" />
+<meta name="author" content="metatags generator">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="3 days">
+<meta name="generator" content="">
+<meta name="dcterms.created" content="wed, 22 jan 2014 04:50:56 GMT">
+    <title>   
+	              <?php if(isset($page_title))
+	              {
+				  echo $page_title; 
+				  }else{
+	              echo $words['title']; 
+			      }?>
+	</title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	   <link rel="stylesheet" media="all" href="includes/styles/styles.css" type="text/css"/>
+	   <link rel="shortcut icon" type="image/x-icon" href="http://dukesnuz.com/d/images/favicon.ico">
+      
+         <!--this need to be on this page in order for  $('#form').hide();// to work
+           <script src="http://code.jquery.com/jquery-latest.min.js"></script>-->
+      <!--below 3 lines used only for the clock-->
+      <script src="includes/js/jquery-1.11.0.min.js"></script>
+     <!--<script type="text/javascript" src="hour11/js/hour11_02.js"></script>-->
+     <script type="text/javascript" src="includes/js/clock.js"></script>
+ 
+		<!--end clock-->
+
+
+<script>
+$(document).ready(function(){
+    $('#headertoggle').click(function(){
+	$('.maintitle').toggle(2000);
+	});//end click
+});//end document ready
+</script>
+</head>
+	<body class="indexpage">
+	
+	<div class="pageWrapper">
+<header>
+
+<div class="maintitle">
+<h1>jQuery jAM Season 4</h1>
+<h2>A Group From <a href="http://www.meetup.com/bostonphp" target="blank" class="press">Boston PHP</a>
+A book <a href="http://astore.amazon.com/boph-20" target="blank" class="press">jQuery and JavaScript in 24 Hours</a> by: Brad Dayley</h2>
+
+</div>
+<?php
+	//for some reason my_drivers.php and my_trucks.php  and search ecity state zip 
+	//is not working with the second menu which is a plugin
+	//so if on 1 of these pages change menue
+  	  echo '<span class="press" id="headertoggle">Slide Title</span>';
+	  //echo '<a href="../home.php" class="press" target="blank" title="My Shameless Self Promotion Page" >DukesNuz</a>';
+if($menu_type == "menu_jquery")
+	{
+	//include('includes/menu_jquery_plugin.php');
+	echo 'menu error';
+	}else{
+     include('includes/menu_css.php');
+	 
+    }
+	
+
+?>
+</header>
+
+
+<div class="contentWrapper">
+<div class="columnWrapper">
+
+   <article class="main">  

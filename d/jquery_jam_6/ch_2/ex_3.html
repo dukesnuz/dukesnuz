@@ -1,0 +1,19 @@
+exercise 2.3
+<script>
+var size = prompt("Greetings. What size grid would you like?");
+var board ="";
+for( var y=0 ; y < size; y=y+1)
+{
+  for(var x=0; x < size;x=x+1)
+    {
+     	if((x+y)%2==0)
+      		board +=" ";
+      	else
+      		board +="#";
+    }
+      board +="\n";
+  }
+
+</script>
+
+console.log(board);

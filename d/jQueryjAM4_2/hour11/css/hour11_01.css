@@ -1,0 +1,12 @@
+span{
+ padding:5px;
+ background-color:blue;
+ color:white;
+ border-radius:10px 20px;
+ border: 35px ridge blue;
+ cursor: pointer;
+  }
+div{ 
+margin-top:60px;
+ padding:10px;
+  }

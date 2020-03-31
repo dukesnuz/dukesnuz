@@ -1,0 +1,18 @@
+p {
+text-align:center;
+ font:italic 45px Helvitica; 
+ color:blue; 
+ margin:5px; 
+ }
+img {
+	height:50px;
+	 width:auto;
+	  }
+img.full { 
+	width:235px; 
+	height:auto; 
+	}
+img.medium { 
+	width:220px;
+	 height:auto;
+	  }

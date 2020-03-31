@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hour 20-7</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../js/css/jquery-ui-1.10.3.min.css">
+  </head>
+  <script>
+    function inc(){
+      var value = $("#progressbar").progressbar("value") + 5; 
+      if (value <= 100){ 
+        $("p").html("Progress: " + value + "%");
+        $("#progressbar").progressbar("value", value);
+        setTimeout(inc, 100);         
+       } 
+    }
+    $(document).ready(function(){
+      $("#progressbar").progressbar({ value: 0});
+      inc();
+    });
+  </script>
+  <style>
+    #progressbar { box-shadow: 5px 5px 5px #888888; border:2px ridge;     
+         display:inline-block; height:20px; width:300px; }
+    #progressbar .ui-progressbar-value{ 
+      background-image: -moz-linear-gradient(top, #0000FF, #88BBFF); 
+      background-image: -webkit-linear-gradient(top, #0000FF, #88BBFF); 
+      background-image: -ms-linear-gradient(top , #0000FF, #88BBFF); } 
+  </style>
+  <body>
+    <p></p>
+    <div id="progressbar"></div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+span{
+	border-radius:5px;
+	margin:3px;
+	padding:5px;
+	background-color:#C0C0C0;
+	display:inline-block;
+	cursor:pointer;
+	border: 3px ridge;
+}
+/* i added below*/
+.columnWrapper{
+	background-color:yellow;
+}

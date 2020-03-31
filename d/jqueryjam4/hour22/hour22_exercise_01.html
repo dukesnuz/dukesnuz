@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>hour22_exercise_01</title>
+		<meta name="description" content="">
+		<meta name="author" content="David">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<!--	<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+		<!--<link rel="stylesheet" media="all" href="../includes/styles/styles.css" type="text/css"/>-->
+
+
+    <!--jquery mobile-->
+     <script type="text/javascript" src="js_book/jquery.min.js"></script>
+     <script src="js/hour22_01_initmobile.js"></script>
+     <script type="text/javascript" src="js_book/jquery.mobile-custom.min.js"></script>
+   <!--	<script src="js/hour22_01.js"</script>-->
+     <link rel="stylesheet" href="js_book/css/jquery.mobile-custom.min.css" />
+   <!-- <link rel="stylesheet" type "text/css"  href="css/hour22_01.css" />-->
+
+<script>
+$(document).ready(function() {
+  checkForMobile();
+  $("#pageOne").on("swipeleft", function(){
+    $.mobile.changePage("#pageTwo", {transition:"slide"}); });
+  $("#pageTwo").on("swiperight", function(){
+    $.mobile.changePage("#pageOne", {transition:"slide", reverse:true}); });
+  $("#pageTwo").on("swipeleft", function(){
+    $.mobile.changePage("hour2201-page3.html", {transition:"slide", }); });
+  $(document).on("pageload", function(e, obj){
+  if($("#pageThree .ui-content").length) {
+    $("#pageThree .ui-content").append("Page loaded from: "+ obj.url); }
+  });
+  
+//$("#adjustSize").on("change", function(){
+	         //  $("img").css({height:$(this).val()});
+	          // $("#imgFrame").css({height:$(this).val()});
+	         //  $("img").css({width:$(this).val()});
+	          // $("#imgFrame").css({width:$(this).val()});
+	           //$("img").css((margin-top:$(this).val()});
+	           //$("#imgFrame").css({margin:$(this).val()});
+	         //  });
+$("#img1").on("click", function(){
+	$(this).css({width:400})
+});
+$("#img2").on("click", function(){
+	$(this).css({width:400})
+});
+
+});
+    </script>
+
+        
+  <style>
+P{
+	text-align: center;
+	font:italic 45px Helvitica;
+	color:blue;
+	margin: 5px;
+}
+img{
+	width:235px;
+}
+
+
+  </style>   
+	</head>
+
+	<body>
+	<header>
+		<!--		<h1>hour21_01</h1>
+				   <h2>A</h2>
+			</header>
+			<nav>
+	
+			</nav>
+
+				<div class="columnWrapper">
+            -
+             <article class="mainwide">-->
+	
+			  
+			 <p>Hour22_xtra_exercise_01</p>
+			<p>Implementing a Mobile Web Page with Multiple Links. Click Pictures to Resize.</p>
+		     <p></p>
+		    <div id="border"><div id="frame">
+      <div data-role="page" id="pageOne">
+        <div data-role="header"><h1>Page 1</h1>
+          <a href="#pageTwo" data-role="button" class="ui-btn-right" 
+             data-transition="slide">Next</a></div>
+        <div data-role="content">
+          <p>Flower</p><img src="../images/flower.jpg" id="img1"/></div>  
+   	
+        <div data-role="footer"><h4>Footer</h4></div>  
+      </div>
+      
+      
+      
+      
+      
+      <div data-role="page"  id="pageTwo">
+        <div data-role="header">
+          <a href="#pageOne" data-role="button" 
+             data-rel="back" data-direction="reverse">Back</a>
+          <h1>Page 2</h1>    
+          <a href="hour2201-page3.html" data-role="button" 
+             data-transition="slide" class="ui-btn-right">Next</a></div>
+        <div data-role="content">
+          <p>Paradise</p><img src="../images/volcano.jpg" id="img2" /></div>  
+         
+           			
+        <div data-role="footer"><h4>Footer</h4></div>  
+      </div>
+      
+      
+      
+    </div></div>
+    
+    
+    
+    
+    
+    <!--
+            </article>
+      
+			</div>
+
+			<footer>
+				<p>
+					
+				</p>
+			</footer>
+-->
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+	</body>
+</html>
+

@@ -1,0 +1,77 @@
+/*
+ CSS file for books.html
+ */
+html {
+	font-size: 1em;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	background-color: #36E805;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #0000FF;
+	background-color: #e6ffff;
+}
+a:visited {
+	color: #0000FF;
+	background-color: #FFFFFF;
+}
+a:hover {
+	background-color: #36E805;
+	color: #ffffff;
+}
+a:active {
+	color: #F8F8FF;
+	background-color: #0000FF;
+}
+
+.book {
+	border: 3px solid #FF7F50;
+	background-color: #FFFFFF;
+	margin-top: 15px;
+	width: 76%;
+	padding: 15px;
+	overflow: auto;
+	margin-left: 10%;
+}
+h1 {
+	border: 3px solid #FF7F50;
+	background-color: #FFFFFF;
+	color: #FF7F50;
+	margin-top: 15px;
+	width: 76%;
+	padding: 0 15px;
+	margin-left: 10%;
+	font-weight: bold;
+	text-align: center;
+}
+img {
+	float: right;
+	padding: 5px;
+	border: 1px solid #FF7F50;
+}
+
+.date, .isbn {
+	font-size: .80rem;
+}
+
+.date {
+	margin-top: 10px;
+}
+.publisher {
+	font-variant: small-caps;
+}
+.author {
+	font-style: italic;
+	color: #FF7F50;
+}

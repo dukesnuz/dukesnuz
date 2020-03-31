@@ -1,0 +1,6 @@
+/*****This file pulls all the style sheets into one place**************/
+@import url(reset.css);
+@import url(nav.css);
+@import url(main.css);
+@import url(colors.css);
+@import url(video_styles.css);

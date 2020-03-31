@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>My Form</title>
+		<link href="css/my_form.css" rel="stylesheet" />
+
+		<script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+		<script src="js/my_form.js"></script>
+	</head>
+	<body>
+
+		<header>
+			<h1>Contact Us</h1>
+		</header>
+
+		<form id="my_form" action="http://cscis12.dce.harvard.edu/echo" method="post">
+			<fieldset>
+				<legend>
+					We would like to hear from you.
+				</legend>
+				<ul>
+
+					<li>
+						<label for="fname">Name
+							<input type="text" name="fname" id="fname" class="required" />
+						</label>
+					</li>
+
+					<li>
+						<label for="email">Email
+							<input type="email" name="email" id="email" class="required email"/>
+						</label>
+					</li>
+
+					<li>
+						<label for="comments">Comments<textarea name="comments" id="comments" rows="3" cols="10"></textarea></label>
+					</li>
+
+					<li>
+						<button type="submit" id="button" name="button" value="Say Hi">
+							Say Hi
+						</button>
+					</li>
+					<li>
+						<button type="reset" id="clear" name="button" value="Clear">
+							Clear Form
+						</button>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+
+	</body>
+</html>

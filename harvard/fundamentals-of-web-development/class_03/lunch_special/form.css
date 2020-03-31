@@ -1,0 +1,64 @@
+/* CSS Rules for the Dado Tea Lunch Special Form */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #000000;
+}
+form {
+	width: 50%;
+	padding: 33px;
+}
+header {
+	margin-bottom: 13.4px;
+}
+header h1, legend {
+	font-size: 1.75em;
+	color: #ffc14d;
+}
+
+p {
+	font-size: 1em;
+	line-height: 100%;
+	font-size: .85em;
+	padding: 3px 0;
+	margin: 0;
+	/*border:2px solid orange;*/
+}
+
+legend {
+	font-weight: bold;
+	font-size: 1em;
+	margin-left: 5%;
+}
+
+fieldset {
+	border: 2px solid #009933;
+	margin-top: 10px;
+}
+fieldset p {
+	font-weight: bold;
+	font-size: .90em;
+	margin-left: 10%;
+}
+
+label {
+	font-size: .70em;
+}
+input[type="text"] {
+	width: 75%;
+}
+fieldset span {
+	font-size: .70em;
+	width: 98px;
+	font-weight: normal;
+}
+button {
+	float: right;
+	width: 100px;
+	background-color: #D3D3D3;
+	padding: 3px;
+	margin: 3px;
+	border-radius: 5%;
+	color: green;
+	border: 1px solid #ffc14d;
+}

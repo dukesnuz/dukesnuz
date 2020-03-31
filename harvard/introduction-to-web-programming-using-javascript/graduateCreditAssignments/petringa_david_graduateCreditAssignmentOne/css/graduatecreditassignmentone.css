@@ -1,0 +1,57 @@
+input[type="text"] {
+	background-color: #F5F5F5;
+	box-shadow: 2px 2px 2px #000000;
+	padding: 3px;
+}
+label {
+	padding: 5px;
+}
+form {
+	margin-left: 100px;
+	width: 300px;
+}
+form p {
+	text-align: right;
+}
+.output {
+	width: 300px;
+	margin-left: 100px;
+	text-align: center;
+	border: 2px dotted #006400;
+	padding: 3px;
+}
+button {
+	background-color: #F5F5F5;
+}
+.error {
+	width: 350px;
+	color: #FF0000;
+	margin-left: 100px;
+	font-weight: bold;
+	text-align: center;
+}
+.noError {
+	width: 300px;
+	color: #006400;
+	margin-left: 100px;
+	font-weight: normal;
+	text-align: center;
+}
+li {
+	background-color: #F5F5F5;
+	width: 150px;
+	margin-left: 100px;
+	padding: 3px;
+}
+table, caption {
+	background-color: #f5f5f5;
+	width: 400px;
+}
+th {
+	text-align: right;
+}
+td {
+	border: 1px solid #000000;
+	text-align: right;
+	padding: 3px;
+}

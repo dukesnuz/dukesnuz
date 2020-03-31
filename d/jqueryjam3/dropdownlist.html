@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Drop Down List Using javaScript Hover() Event</title>
+
+<script src= "_js/jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$('.submenu').hide();
+	function showSubmenu(){
+    	$('.submenu').show();
+        } //end show
+    function hideSubmenu(){
+    	$('.submenu').hide();
+     } //end hide
+	 
+     $('#menu').hover(showSubmenu,hideSubmenu);  
+	
+}); //end ready function
+</script>
+
+
+
+<style type="text/css">
+<!--
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #009;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.oneColElsCtr #container {
+	width: 46em;
+	background: #03C;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 4px solid #FF0;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+.oneColElsCtr #mainContent {
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+
+}
+
+.submenu{
+	width: 20em;
+	background: #9C0;
+	font-size: 14px;
+	color: #9F0;
+	border: 4px solid #C6F;
+	text-align: center; 
+	position: relative;;	
+	text-align:left;
+}
+
+#menu{
+	width: 10em;
+	background: #FF3;
+	font-size: 14px;
+	font-weight:900;
+	color: #F60;
+	border: 4px solid #000000;
+	text-align: center; 
+}
+
+
+-->
+</style>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+
+<body class="oneColElsCtr">
+
+<div id="container">
+
+
+
+  <div id="mainContent">
+    <h1>Drop Down List</h1>
+  
+   <div id="menu" style="cursor:pointer">
+	Drop 1
+				<div class="submenu">
+      <ul>
+       <li><a href="">SubItem1</a></li> 	
+       <li><a href="">SubItem 2</a></li> 
+       <li><a href="">SubItem 3</a></li> 
+       <li><a href="">SubItem 4</a></li> 	
+       <li><a href="">SubItem 5</a></li> 
+       <li><a href="">SubItem 6</a></li> 
+      </ul>
+	</div>
+</div>
+  
+
+
+
+	<!-- end #mainContent --></div>
+<!-- end #container --></div>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6080262; 
+var sc_invisible=0; 
+var sc_security="ed805b7b"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="godaddy web statistics"
+href="http://statcounter.com/godaddy_website_tonight/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/0/"
+alt="godaddy web statistics" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>

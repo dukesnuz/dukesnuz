@@ -1,0 +1,117 @@
+img{ 
+width:40px;
+}
+span{
+    width:40px;
+   height:40px;
+   display:inline-block;
+    }
+#plane{
+ position:fixed; 
+ width:100px;
+ }
+#cone1{
+    position:fixed;
+   top:100px; 
+   left: 500px;
+   width:50px;
+   }
+   
+#cone2{ 
+  position:fixed; 
+  top:200px; 
+  left: 100px; 
+  width:50px;
+  }
+  
+#cone3{ 
+  position:fixed;
+   top:300px; 
+   left: 300px; 
+   width:50px;
+}
+
+
+
+
+.mybuttons{
+  margin-top:10px;
+  margin-right:100px;
+  float:right;
+  border: 4px ridge orange;
+  padding:20px;
+  float:right;
+  }
+ .mybuttons span{
+  /* background-color:orange;*/
+   background-image:url("http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Airport_Sign.svg/90px-Airport_Sign.svg.png");
+   background-repeat:no-repeat;
+   width:100px;
+   height:100px;
+   display:inline-block;
+   cursor: pointer;
+   }
+ #stop1{
+   background-image:url("http://www.clipartcartoondrawings.com/v/vspfiles/photos/water_drop_cartoon_WD01P013.jpg");
+   background-repeat:no-repeat;
+   margin-right:15px;
+   margin-left:5px;
+   }
+  #upleft{
+    transform:rotate(-45deg);
+    
+    transform:-0-rotate(-45deg);
+    transform:-moz-rotate(-45deg);
+    transform:-webkit-rotate(-45deg);
+    /*
+    background-image:-moz-gradient(radial, 60% 60%, 0 100%,from(#4c4c00), to (#000080));alignment-adjust:after-edge;
+    background-image:-webkit-gradient(radial, 60% 60%, 0 100%,from(#4c4c00), to (#000080));alignment-adjust:after-edge;
+    background-image:-o-gradient(radial, 60% 60%, 0 100%,from(#4c4c00), to (#000080));alignment-adjust:after-edge;
+    background-image:gradient(radial, 60% 60%, 0 100%,from(#4c4c00), to (#000080));alignment-adjust:after-edge;
+    */
+    
+    
+  margin-right: 10px;
+  margin-left: 10px;
+  }
+  
+  #upright{
+  transform:rotate(45deg);
+  transform:-0-rotate(45deg);
+  transform:-moz-rotate(45deg);
+  transform:-webkit-rotate(45deg);
+  margin-right: 10px;
+  }
+  #downleft{
+  transform:rotate(-135deg);
+  transform:-0-rotate(-135deg);
+  transform:-moz-rotate(-135deg);
+  transform:-webkit-rotate(-135deg);
+  margin-right: 10px;
+  }
+  
+ #downright{
+  transform:rotate(135deg);
+  transform:-0-rotate(135deg);
+  transform:-moz-rotate(135deg);
+  transform:-webkit-rotate(135deg);
+  margin-right: 10px;
+  }
+  
+  
+.mybuttons p{
+   color:blue;
+   margin-bottom:25px;
+   border: 2px solid orange;
+   background-color:#FFFFFF;
+   text-align:center;
+   font-size:.9em;
+   
+}
+
+
+
+
+
+
+

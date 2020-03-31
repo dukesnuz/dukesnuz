@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checkers</title>
+	<link rel="stylesheet" href="checkers.css"/>
+<script>
+var rows = [],board,dragging;
+function setup()
+{
+	board = document.getElementById('board');
+	board.ondragstart = dragStarted;
+	var squares = board.getElementsByTagName('div');
+	var row = 0;
+	for(var i = 0, square; square = squares[i]; i++){
+		// Enable drag and drop for each square
+		square.ondragenter = preventDefault;	
+		square.ondragover = dragOver;
+		square.ondrop = dragDrop;
+
+		// Organize each square into rows
+		if(!rows[row])
+			rows.push([]);
+		rows[row].push(square);
+		if((i+1) % 8 == 0)
+			row++;
+	}
+	startGame();
+}
+function startGame()
+{
+	var squares = board.getElementsByTagName('div');
+	// Clear existing squares
+	for(var i = 0, square; square = squares[i]; i++)
+		square.innerHTML = '&nbsp;';
+	for(i = 0; i < 8; i++){
+		rows[0][i].innerHTML = '<img src="images/pawn_black.png" alt="Black Pawn"/>';
+		rows[1][i].innerHTML = '<img src="images/pawn_black.png" alt="Black Pawn"/>';
+		rows[6][i].innerHTML = '<img src="images/pawn_red.png" alt="Red Pawn"/>';
+		rows[7][i].innerHTML = '<img src="images/pawn_red.png" alt="Red Pawn"/>';
+	}
+}
+function dragDrop(event){
+	if(this.innerHTML == '&nbsp;'){
+		dragging.parentNode.innerHTML = '&nbsp;';
+		this.innerHTML = event.dataTransfer.getData('text/html');
+	}
+	return preventDefault(event);
+}
+function dragStarted( event ){
+	dragging = event.target;
+	event.dataTransfer.setData( 'text/html', dragging.parentNode.innerHTML );
+}
+function dragOver( event ){
+	if(this.innerHTML == '&nbsp;')
+		return preventDefault(event);
+	return true;
+}
+function preventDefault( event ){
+	event.stopPropagation();
+	event.preventDefault();
+	return false;
+}
+</script>
+</head>
+<body onload="setup()">
+	<div id="board">
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div><br clear="both"/>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div><br clear="both"/>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div><br clear="both"/>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div><br clear="both"/>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div><br clear="both"/>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div><br clear="both"/>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div><br clear="both"/>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div>
+		<div class="black square">&nbsp;</div>
+		<div class="white square">&nbsp;</div><br clear="both"/>
+	</div>
+	
+	<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=6080262; 
+var sc_invisible=1; 
+var sc_security="ed805b7b"; 
+//]]>
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="web counter"
+href="http://statcounter.com/" class="statcounter"><img
+class="statcounter"
+src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+alt="web counter" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body>
+</html>
