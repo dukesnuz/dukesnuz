@@ -4,8 +4,8 @@
     // are we live
     //use below for devlopement
     //if(!defined('LIVE')) DEFINE('LIVE', false);
-	//use below for live
-	if(!defined('LIVE')) DEFINE('LIVE', true);
+	 //use below for live
+   if(!defined('LIVE')) DEFINE('LIVE', true);
 
 	//errors emailed here
 	DEFINE('CONTACT_EMAIL', 'hello@dukesnuz.com');
@@ -77,7 +77,4 @@
 			return true; //So that PHP does nt try to handle the error, too.
 	} //End of my_error_handler() definition
 //Use my error handler
-//turn off email errors if live
-if(!LIVE){
-    set_error_handler('my_error_handler');
-}
+set_error_handler('my_error_handler');
