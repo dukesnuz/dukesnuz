@@ -239,47 +239,20 @@ if(isset($dbh))
 //echo $user_agent;
 //echo $country_abbr;
 
-
+/***************************************below throughing error
     $q= "INSERT INTO page_history (user_id,track_id,item_id,item_name, page_title, page,ip,host,page_from,page_time,url_complete,browser,country,country_abbr,state_abbr,state,city,zip,time_zone,latitude,longitude,metro_code,user_agent)
 					   VALUES('$uid','$track_id','$id','$in','$page_title','$p', '$ip','$host','$page_from','$page_time','$url_complete','$browser','$country','$country_abbr','$state_abbr','$state','$city','$zip','$time_zone','$latitude','$longitude','$metro_code','$user_agent')";
-
-echo '<br>'.$uid;
-echo '<br>'.$track_id;
-echo '<br>'.$id;
-echo '<br>'.$in;
-echo '<br>'.$page_title;
-echo '<br>'.$p;
-echo '<br>'.$ip;
-echo '<br>'.$host;
-echo '<br>'.$page_from;
-echo '<br>'.$page_time;
-echo '<br>'.$url_complete;
-echo '<br>'.$browser;
-echo '<br>'.$country;
-echo '<br>'.$country_abbr;
-echo '<br>'.$state_abbr;
-echo '<br>'.$state;
-echo '<br>'.$city;
-echo '<br>'.$zip;
-echo '<br>'.$time_zone;
-echo '<br>'.$latitude;
-echo '<br>'.$longitude;
-echo '<br>'.$metro_code;
-echo '<br>'.$user_agent;
-	/*  $h= "INSERT INTO page_views(user_id,track_id,ip,browser,host,url,page,page_from,page_time,page_title)
-            VALUES('$uid','$track_id','$ip','$Browser','$host','$url','$page','$page_from','$page_time','$page_title')";
-	 */
 
 
 						    $r = mysqli_query($dbh, $q);
 							if(mysqli_affected_rows($dbh) !=1)
 								{
 									$body = "Error on '.SITE_NAME.'\n";
-									$body .="Page: $page_title Line 243 history query\n";
+									$body .="Page: $page_title Line 248 history query\n";
 									$body .="END email";
 								//mail(CONTACT_EMAIL,'Error'.SITE_NAME.'', $body, 'From:'.CONTACT_EMAIL.'');
 								}
-
+*/
 
 			/********************************grab page views and saved count******/
 			/**I not countin my ip address nor if page accessed without a browser-I believe these may be search bots**/
