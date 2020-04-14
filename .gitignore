@@ -12,6 +12,7 @@ error_log
 /include_2
 index.html
 /d/include_2
+/includes/config.inc.php
 /nbproject
 sandbox.html
 t.png
