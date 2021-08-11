@@ -1,192 +1,195 @@
 <footer id="footer">
-	
-	<?php 
+
+	<?php
 
 	if(file_exists('./site_utilities/page_history.inc.php'))
-   		{
-   				include('./site_utilities/page_history.inc.php');
-   			
-		}elseif(file_exists('../site_utilities/page_history.inc.php'))
-		 {
-		   		include('../site_utilities/page_history.inc.php');
-		   
-        }else{
-         	 $body = "Page: site_utilities/footer.inc.php\rline 15 history.inc.php could not found\rEND email";
- 			 mail(CONTACT_EMAIL,"ERROR DukesNuz",$body,CONTACT_EMAIL);
- 			 //echo $body;
- 			 exit();
-         }
+	{
+		include('./site_utilities/page_history.inc.php');
+
+	}elseif(file_exists('../site_utilities/page_history.inc.php'))
+	{
+		include('../site_utilities/page_history.inc.php');
+
+	}else{
+		$body = "Page: site_utilities/footer.inc.php\rline 15 history.inc.php could not found\rEND email";
+		mail(CONTACT_EMAIL,"ERROR DukesNuz",$body,CONTACT_EMAIL);
+		//echo $body;
+		exit();
+	}
 
 	?>
-	
-	   <div class="social">
-	    	<ul>
-	    	    <!--<li><a href="./index.php">HOME</a></li>-->
-	    		<li><a href="<?php echo MODWRITE;?>">HOME</a></li>
-	    		<li>|</li>
-	    		<!--<li><a href="./about.php">ABOUT</a></li>-->
-	    		<li><a href="/about<?php echo MODWRITE;?>">ABOUT</a></li>
-	    		<li>|</li>
-	    		<li><a href="/shop<?php echo MODWRITE;?>">STORE</a></li>
-	    		<li>|</li>
-	    		<!--<li><a href="./contact.php">CONTACT</a></li>-->
-	    		<li><a href="/contact<?php echo MODWRITE;?>">CONTACT</a></li>
-	    		<li>|</li>
-	    		<li>
-      	        	<a href="mailto:<?php echo CONTACT_EMAIL_ASCII;?>"><?php echo CONTACT_EMAIL_ASCII;?></a>
-      	        </li>
-	    	</ul>
-	    </div>	
-	    
-	   <div class="social">
-	    	<ul>
-	    		<li><a href="http://david.dukesnuz.com" target="blank">David's Laravel App</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://davidpetringa.com" target="blank">David</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://blogposts.dukesnuz.com" target="blank">Blog Coded with PHP and MySQL</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://scrapinventory.dukesnuz.com" target="blank">ScrapInventory Coded with PHP and MySQL</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://robots.dukesnuz.com" target="blank">Robots Coded with WordPress</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://drones.dukesnuz.com" target="blank">Drones Coded with WordPress</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://loadedandrolling.com" target="blank">Loaded and Rolling</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://loadedandrolling.loadedandrolling.com" target="blank">Loaded and Rolling</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://ajaxlofts.dukesnuz.com" target="blank">Ajax Lofts</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://ajaxmarket.dukesnuz.com" target="blank">Ajax Market An E-Commerce Site</a></li>
-	    		<li>|</li>
-	    		<li><a href="http://csscoffeebreak.dukesnuz.com" target="blank">CSS Coffee Break A CSS Tutorial</a></li>
-	    	</ul>
-	    </div>
-	    
-  
-		<div class="social">
-			<ul>
-	 				<li>
-					<a href="https://www.linkedin.com/pub/david-petringa/1b/a52/a91">
-      				<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_120x33.png" width="120" height="33" alt="View David Petringa's profile on LinkedIn"></a>
- 					</li>
- 					
-  					<li><a href="http://www.meetup.com/bostonphp/members/67794352" target="blank">
+
+	<div class="social">
+		<ul>
+			<!--<li><a href="./index.php">HOME</a></li>-->
+			<li><a href="<?php echo MODWRITE;?>">HOME</a></li>
+			<li>|</li>
+			<!--<li><a href="./about.php">ABOUT</a></li>-->
+			<li><a href="/about<?php echo MODWRITE;?>">ABOUT</a></li>
+			<li>|</li>
+			<li><a href="/shop<?php echo MODWRITE;?>">STORE</a></li>
+			<li>|</li>
+			<!--<li><a href="./contact.php">CONTACT</a></li>-->
+			<li><a href="/contact<?php echo MODWRITE;?>">CONTACT</a></li>
+			<li>|</li>
+			<li>
+				<a href="mailto:<?php echo CONTACT_EMAIL_ASCII;?>"><?php echo CONTACT_EMAIL_ASCII;?></a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="social">
+		<ul>
+			<li><a href="http://david.dukesnuz.com" target="blank">David's Laravel App</a></li>
+			<li>|</li>
+			<li><a href="http://davidpetringa.com" target="blank">David</a></li>
+			<li>|</li>
+			<li><a href="http://blogposts.dukesnuz.com" target="blank">Blog Coded with PHP and MySQL</a></li>
+			<li>|</li>
+			<li><a href="http://scrapinventory.dukesnuz.com" target="blank">ScrapInventory Coded with PHP and MySQL</a></li>
+			<li>|</li>
+			<li><a href="http://robots.dukesnuz.com" target="blank">Robots Coded with WordPress</a></li>
+			<li>|</li>
+			<li><a href="http://drones.dukesnuz.com" target="blank">Drones Coded with WordPress</a></li>
+			<li>|</li>
+			<li><a href="http://loadedandrolling.com" target="blank">Loaded and Rolling</a></li>
+			<li>|</li>
+			<li><a href="http://loadedandrolling.loadedandrolling.com" target="blank">Loaded and Rolling</a></li>
+			<li>|</li>
+			<li><a href="http://ajaxlofts.dukesnuz.com" target="blank">Ajax Lofts</a></li>
+			<li>|</li>
+			<li><a href="http://ajaxmarket.dukesnuz.com" target="blank">Ajax Market An E-Commerce Site</a></li>
+			<li>|</li>
+			<li><a href="http://csscoffeebreak.dukesnuz.com" target="blank">CSS Coffee Break A CSS Tutorial</a></li>
+		</ul>
+	</div>
+
+	<div class="social">
+		<ul>
+			<li>
+				<a href="https://www.digitalocean.com/?refcode=3ec7cdf44173&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg" alt="DigitalOcean Referral Badge" /></a>
+			</li>
+
+			<li>
+				<a href="https://www.linkedin.com/pub/david-petringa/1b/a52/a91">
+					<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_120x33.png" width="120" height="33" alt="View David Petringa's profile on LinkedIn"></a>
+				</li>
+
+				<li><a href="http://www.meetup.com/bostonphp/members/67794352" target="blank">
 					<img src="/d/images/global_19943867.jpeg.png" width="120" height="60" alt="View David Petringa on Boston PHP">
-					</a></li>
-	                 
-	                 
-	                <li><a href="/coding/playground/flickr<?php echo MODWRITE;?>">
+				</a></li>
+
+
+				<li><a href="/coding/playground/flickr<?php echo MODWRITE;?>">
 					<img src="/d/images/Flickr_Logo.png" width="60" height="60"  alt="View David Petringa on flickr">
-					</a></li>
-	                 
-	              
- 					<li>
+				</a></li>
+
+
+				<li>
 					<a aria-label="Follow @dukesnuz on GitHub" data-count-aria-label="# followers on GitHub" data-count-api="/users/dukesnuz#followers" data-count-href="/dukesnuz/followers" data-style="mega" href="https://github.com/dukesnuz" class="github-button">
 						<img src="/d/images/Octocat.jpg" width="60" height="60" alt="View David Petringa DukesNuz on Github.">
 					</a>
- 					</li>
-   					
-   					<li>
-   						<a href="https://twitter.com/share" class="twitter-share-button" data-via="Dukesnuz" data-related="Dukesnuz">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-   					</li>
-   					<li>
-   						<a href="https://twitter.com/Dukesnuz" class="twitter-follow-button" data-show-count="false">Follow @Dukesnuz</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-   					</li>
-   					
-					<li><a href="http://smarterer.com/dukesnuz">
-						<img src="/d/images/smaterer.jpg" width="138" height="32" alt="View David Petringa DukesNuz on Smarterer.">
-					</a></li>
-					
-					<li><a href="https://www.codecademy.com/dukenuz" target="blank">Codecademy</a></li>
-					
-					<li>This site is part of the Retronaut Webring. 
-					    <a href='http://webring.dinhe.net/next/www.dukesnuz.com'>Next</a>
-					     and
-                        <a href='http://webring.dinhe.net/prev/www.dukesnuz.com'>Previous</a></li>
+				</li>
+
+				<li>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="Dukesnuz" data-related="Dukesnuz">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</li>
+				<li>
+					<a href="https://twitter.com/Dukesnuz" class="twitter-follow-button" data-show-count="false">Follow @Dukesnuz</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</li>
+
+				<li><a href="http://smarterer.com/dukesnuz">
+					<img src="/d/images/smaterer.jpg" width="138" height="32" alt="View David Petringa DukesNuz on Smarterer.">
+				</a></li>
+
+				<li><a href="https://www.codecademy.com/dukenuz" target="blank">Codecademy</a></li>
+
+				<!--<li>This site is part of the Retronaut Webring.
+				<a href='http://webring.dinhe.net/next/www.dukesnuz.com'>Next</a>
+				and
+				<a href='http://webring.dinhe.net/prev/www.dukesnuz.com'>Previous</a></li>-->
 
 			</ul>
 		</div>
-    	
-
-	     <div class="copy">
-	     	<p>
-	     	<!--below data comes from history.inc.php page-->
-	     	<?php 
-	     	if(isset($page_views))
-	     	{
-	     		echo "Page Views:&nbsp&#91;&nbsp;$page_views&nbsp;&#93;";
-	    
-                echo   '<br><a href="/utilities/site-statistics'.MODWRITE.'">Site Statistics</a>';
-	     	}
-	     	?>
-	     	</p>
-	     	
-	     	<p style="font-style:normal;margin-bottom: 2px">
-	     	 Coded by: David Petringa for Duke&nbsp;
-	     	<?php
-	     	//get currebt year
-	     	$now = new DateTime();
-			echo '<p>&copy;DukesNuz '.$now->format('Y').' &nbsp; &#124; &nbsp; Made in USA </p>';
-			?>
-		</div>	
-   
-   
-
-   
-   
-			</footer>
-
-		
-</article>
-
-<script src="/js/guest_book.js"></script>
-<script src="/js/gb_retrieve.js"></script>
-<script src="/js/contact.js"></script>
 
 
+		<div class="copy">
+			<p>
+				<!--below data comes from history.inc.php page-->
+				<?php
+				if(isset($page_views))
+				{
+					echo "Page Views:&nbsp&#91;&nbsp;$page_views&nbsp;&#93;";
+
+					echo   '<br><a href="/utilities/site-statistics'.MODWRITE.'">Site Statistics</a>';
+				}
+				?>
+			</p>
+
+			<p style="font-style:normal;margin-bottom: 2px">
+				Coded by: David Petringa for Duke&nbsp;
+				<?php
+				//get currebt year
+				$now = new DateTime();
+				echo '<p>&copy;DukesNuz '.$now->format('Y').' &nbsp; &#124; &nbsp; Made in USA </p>';
+				?>
+			</div>
+
+
+
+
+
+		</footer>
+
+
+	</article>
+
+	<script src="/js/guest_book.js"></script>
+	<script src="/js/gb_retrieve.js"></script>
+	<script src="/js/contact.js"></script>
 
 
 
 
 
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/561278e100d3af75029e428b/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
 
-		
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=6080262; 
-var sc_invisible=1; 
-var sc_security="ed805b7b"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="shopify site
-analytics" href="http://statcounter.com/shopify/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
-alt="shopify site analytics"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/561278e100d3af75029e428b/default';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
+
+
+
+	<!-- Start of StatCounter Code for Default Guide -->
+	<script type="text/javascript">
+		var sc_project=6080262;
+		var sc_invisible=1;
+		var sc_security="ed805b7b";
+		var scJsHost = (("https:" == document.location.protocol) ?
+		"https://secure." : "http://www.");
+		document.write("<sc"+"ript type='text/javascript' src='" +
+		scJsHost+
+		"statcounter.com/counter/counter.js'></"+"script>");
+	</script>
+	<noscript><div class="statcounter"><a title="shopify site
+		analytics" href="http://statcounter.com/shopify/"
+		target="_blank"><img class="statcounter"
+		src="http://c.statcounter.com/6080262/0/ed805b7b/1/"
+		alt="shopify site analytics"></a></div></noscript>
+		<!-- End of StatCounter Code for Default Guide -->
 
 	</body>
-</html>
+	</html>
